@@ -4,8 +4,8 @@
 
 - Portfolio-derived colors configured in `src/styles/tokens.css`.
 - IBM Plex Sans for headings, Geist for the interface, and Geist Mono for technical labels.
-- Near-black background, teal surfaces, cool text, and aqua as the only accent.
-- Containers use clipped corners; controls use a small radius.
+- Near-black background, layered neutral-teal surfaces, cool text, and restrained aqua accents.
+- Containers use simple rounded corners and rely on surface contrast more than borders.
 
 ## Implementation
 
