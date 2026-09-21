@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Engineering Compass
 
-## Getting Started
+Plataforma pessoal para orientar estudos, registrar evidências e acompanhar o desenvolvimento em engenharia de software. O projeto será publicado em [skills.misaellima.com](https://skills.misaellima.com).
 
-First, run the development server:
+## Desenvolvimento
+
+Requisitos: Node.js 20+ e pnpm 10.27.0.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Verificações principais:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm lint
+pnpm build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Arquitetura visual
 
-## Learn More
+O Engineering Compass compartilha o DNA visual do portfólio, mas não depende dele em runtime.
 
-To learn more about Next.js, take a look at the following resources:
+- `src/styles/tokens.css`: ponte de marca e tokens semânticos do produto. Se cores ou tipografia do portfólio mudarem, este é o primeiro ponto de atualização.
+- `src/config/product.ts`: nome, domínio, descrição e vínculo com o ecossistema.
+- `src/data/dashboard.ts`: modelo e conteúdo demonstrativo do dashboard inicial.
+- `DESIGN.md`: regras duráveis do sistema visual e decisões de interface.
+- `PRODUCT.md`: propósito, princípios e restrições do produto.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Os componentes consomem tokens semânticos (`--canvas`, `--surface-*`, `--ink-*`, `--accent`) em vez de valores do portfólio. Isso permite atualizar a ponte de marca sem reconstruir a interface.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Escopo desta base
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+O dashboard atual demonstra a arquitetura da aplicação, a navegação, o mapa de competências e o fluxo local de registro de evidência. Os dados são ilustrativos e não são persistidos. Modelagem definitiva do roadmap, autenticação e persistência ficam para as próximas etapas.
