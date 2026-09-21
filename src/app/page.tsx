@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { IconLibrary, IconOverview, IconRoute, IconSettings } from "@/components/icons";
+import { MainContentContainer } from "@/components/layout/main-content-container";
+import { SidebarMenu } from "@/components/layout/sidebar-menu";
+import { PrimaryButton, SecondaryButton } from "@/components/ui/button";
 import { PRODUCT } from "@/config/product";
 
 const navigation = [
@@ -21,25 +24,11 @@ function LogoPlaceholder() {
   );
 }
 
-function NavigationItems() {
-  return navigation.map(({ label, href, icon: Icon, active }) => (
-    <a
-      key={label}
-      href={href}
-      className={`flex min-h-11 items-center gap-3 rounded-[var(--radius-sm)] px-3.5 text-sm transition-colors duration-200 ease-[var(--ease-out)] ${active ? "bg-surface-active text-ink" : "text-ink-muted hover:bg-surface-panel hover:text-ink"}`}
-      aria-current={active ? "page" : undefined}
-    >
-      <Icon className="size-[1.125rem] shrink-0" />
-      {label}
-    </a>
-  ));
-}
-
 function Sidebar() {
   return (
     <aside className="fixed inset-y-0 left-0 z-30 hidden w-60 flex-col bg-surface-base px-4 pb-5 pt-6 min-[781px]:flex">
       <LogoPlaceholder />
-      <nav className="mt-12 grid gap-1" aria-label="Main navigation"><NavigationItems /></nav>
+      <div className="mt-12"><SidebarMenu items={navigation} label="Main navigation" /></div>
       <div className="flex-1" />
       <div className="px-3 pt-5 text-xs leading-relaxed text-ink-faint">Initial shell<br />No business rules</div>
     </aside>
@@ -52,7 +41,7 @@ function MobileHeader() {
       <LogoPlaceholder />
       <details className="relative [&_summary::-webkit-details-marker]:hidden">
         <summary className="cursor-pointer list-none text-xs text-accent">Menu</summary>
-        <nav className="absolute right-0 top-[calc(100%+1rem)] grid w-52 rounded-[var(--radius-md)] bg-surface-raised p-1 shadow-[var(--shadow-raised)]" aria-label="Mobile navigation"><NavigationItems /></nav>
+        <div className="absolute right-0 top-[calc(100%+1rem)] w-52 rounded-[var(--radius-md)] bg-surface-raised p-1 shadow-[var(--shadow-raised)]"><SidebarMenu items={navigation} label="Mobile navigation" /></div>
       </details>
     </header>
   );
@@ -84,8 +73,8 @@ function MainExample() {
         <span className="h-2 w-1/2 bg-line" />
       </div>
       <div className="flex flex-wrap gap-3 pt-5">
-        <button className="min-h-11 rounded-[var(--radius-sm)] bg-accent px-4 text-sm font-bold text-accent-ink transition hover:bg-accent-strong" type="button">Primary action</button>
-        <button className="min-h-11 rounded-[var(--radius-sm)] border border-line-strong px-4 text-sm font-semibold text-ink transition hover:bg-surface-active" type="button">Secondary action</button>
+        <PrimaryButton>Primary action</PrimaryButton>
+        <SecondaryButton>Secondary action</SecondaryButton>
       </div>
     </section>
   );
@@ -116,12 +105,12 @@ export default function Home() {
       <Sidebar />
       <MobileHeader />
       <main id="main-content" className="min-h-screen min-[781px]:ml-60">
-        <div id="overview" className="mx-auto grid w-full max-w-[90rem] gap-6 px-[clamp(1.25rem,3.5vw,4rem)] py-8 max-[780px]:px-4 max-[780px]:py-6">
+        <MainContentContainer id="overview">
           <Header />
           <MainExample />
           <ComponentExamples />
           <footer id="settings" className="flex justify-between gap-4 pt-2 text-[.68rem] text-ink-faint max-[520px]:grid"><span>Engineering Compass · initial foundation</span><a className="hover:text-accent hover:underline" href={PRODUCT.portfolioUrl}>Part of the misaellima.com ecosystem</a></footer>
-        </div>
+        </MainContentContainer>
       </main>
     </div>
   );
