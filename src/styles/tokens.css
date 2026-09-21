@@ -42,12 +42,50 @@
   --font-sans: var(--font-geist);
   --font-display: var(--font-plex-sans);
   --font-mono: var(--font-geist-mono);
+  --text-micro: 0.58rem;
+  --text-label: 0.625rem;
   --color-canvas: var(--canvas);
+  --color-surface-base: var(--surface-1);
+  --color-surface-panel: var(--surface-2);
+  --color-surface-raised: var(--surface-3);
+  --color-surface-active: var(--surface-active);
   --color-surface-1: var(--surface-1);
   --color-surface-2: var(--surface-2);
   --color-surface-3: var(--surface-3);
   --color-ink: var(--ink);
+  --color-ink-secondary: var(--ink-secondary);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
   --color-muted: var(--ink-muted);
   --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
   --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-ink: var(--accent-ink);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --animate-plot-route: plot-route 800ms var(--ease-out) both;
+  --animate-composer-in: composer-in 300ms var(--ease-out) both;
+
+  @keyframes plot-route {
+    from {
+      transform: scaleX(0.15);
+      filter: blur(2px);
+    }
+    to {
+      transform: scaleX(1);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes composer-in {
+    from {
+      transform: translateX(2rem);
+      opacity: 0.2;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
 }
