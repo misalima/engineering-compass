@@ -8,12 +8,12 @@ web
 
 ## Purpose
 
-Engineering Compass será uma plataforma pessoal para acompanhar um roadmap de engenharia de software e registrar progresso. Será publicada em `skills.misaellima.com`.
+Engineering Compass will be a personal platform for following a software engineering roadmap and tracking progress. It will be published at `skills.misaellima.com`.
 
 ## Current Scope
 
-Somente a fundação visual e técnica: logo placeholder, header, sidebar e componentes de exemplo. Regras de negócio ainda não foram definidas.
+Only the visual and technical foundation: a logo placeholder, header, sidebar, and example components. Business rules have not been defined yet.
 
 ## Brand
 
-Compartilha cores, tipografia e personalidade com `misaellima.com`, mas mantém tokens e implementação independentes.
+It shares colors, typography, and visual personality with `misaellima.com` while keeping its tokens and implementation independent.

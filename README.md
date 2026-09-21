@@ -1,16 +1,16 @@
 # Engineering Compass
 
-Base visual da aplicação que será publicada em [skills.misaellima.com](https://skills.misaellima.com).
+Visual foundation for the application that will be published at [skills.misaellima.com](https://skills.misaellima.com).
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-## Estrutura
+## Structure
 
-- `src/app/page.tsx`: shell responsivo construído com Tailwind CSS.
-- `src/styles/tokens.css`: cores, tipografia e tokens configuráveis.
-- `src/app/globals.css`: somente estilos globais do navegador.
+- `src/app/page.tsx`: responsive shell built with Tailwind CSS.
+- `src/styles/tokens.css`: configurable colors, typography, and tokens.
+- `src/app/globals.css`: browser-level global styles only.
 
-O shell não define regras de negócio. Roadmap, progresso e persistência serão projetados depois.
+The shell defines no business rules. The roadmap, progress tracking, and persistence will be designed later.

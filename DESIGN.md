@@ -2,13 +2,13 @@
 
 ## Foundation
 
-- Cores derivadas do portfólio, configuradas em `src/styles/tokens.css`.
-- IBM Plex Sans para títulos, Geist para interface e Geist Mono para labels técnicas.
-- Fundo quase preto, superfícies teal, texto frio e aqua como único destaque.
-- Containers usam cantos recortados; controles usam raio pequeno.
+- Portfolio-derived colors configured in `src/styles/tokens.css`.
+- IBM Plex Sans for headings, Geist for the interface, and Geist Mono for technical labels.
+- Near-black background, teal surfaces, cool text, and aqua as the only accent.
+- Containers use clipped corners; controls use a small radius.
 
 ## Implementation
 
-- Componentes são estilizados com utilities do Tailwind CSS v4.
-- `globals.css` contém apenas base global, seleção, foco e reduced motion.
-- A aplicação não importa estilos ou código do portfólio em runtime.
+- Components are styled with Tailwind CSS v4 utilities.
+- `globals.css` contains only global foundations, selection, focus, and reduced motion.
+- The application imports no portfolio styles or code at runtime.
