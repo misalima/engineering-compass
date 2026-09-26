@@ -28,3 +28,4 @@ pnpm dev
 - `src/data/`: server-only data access layer; checks the owner, then calls `src/db/`. Pages, components, actions, and route handlers only import this (enforced by ESLint)
 - `src/app/`: routes and thin Server Actions (validate → `src/data/` → `refresh()`); everything except `/login` requires the owner session
 - `src/components/`, `src/lib/`: UI and pure helpers (validation, links, owner check)
+- `src/styles/tokens.css`: color tokens as `light-dark(light, dark)`; the theme (system, light, dark) is a `theme` cookie read by the root layout. Wrap always-dark areas (the Depth Gate images) in `.scheme-dark`
