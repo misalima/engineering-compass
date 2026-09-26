@@ -1,4 +1,4 @@
-// Optimistic cookie check only; real authorization happens in src/lib/dal.ts.
+// Optimistic cookie check only; real authorization happens in src/data/auth.ts.
 export { auth as proxy } from "@/auth";
 
 export const config = {

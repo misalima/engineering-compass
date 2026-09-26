@@ -25,7 +25,7 @@ const components: Components = {
 
 export function Markdown({ children }: { children: string }) {
   return (
-    <div className="grid gap-3 text-sm leading-relaxed text-ink-secondary [&_code]:rounded [&_code]:bg-surface-raised [&_code]:px-1 [&_ol]:list-decimal [&_ol]:pl-5 [&_ul]:list-disc [&_ul]:pl-5">
+    <div className="grid min-w-0 gap-3 text-sm leading-relaxed text-ink-secondary [overflow-wrap:anywhere] [&_code]:rounded [&_code]:bg-surface-raised [&_code]:px-1 [&_ol]:list-decimal [&_ol]:pl-5 [&_ul]:list-disc [&_ul]:pl-5">
       <ReactMarkdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeSanitize]}

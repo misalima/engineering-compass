@@ -20,7 +20,7 @@ export default async function ProjectsPage() {
               {projects.map((p) => (
                 <li key={p.id}>
                   <Link href={`/projects/${p.id}`} className="grid gap-1 rounded-[var(--radius-sm)] px-3 py-3 hover:bg-surface-raised">
-                    <span className="flex items-center justify-between gap-4 text-sm text-ink">{p.name}<span className="text-xs capitalize text-ink-faint">{p.visibility}</span></span>
+                    <span className="flex items-center justify-between gap-4 text-sm text-ink"><span className="min-w-0 [overflow-wrap:anywhere]">{p.name}</span><span className="shrink-0 text-xs capitalize text-ink-faint">{p.visibility}</span></span>
                     {p.stack.length ? <span className="text-xs text-ink-muted">{p.stack.join(" · ")}</span> : null}
                   </Link>
                 </li>

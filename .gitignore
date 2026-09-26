@@ -12,7 +12,7 @@
 
 # testing
 /coverage
-/.impeccable/review/
+/.impeccable/
 /.pnpm-store/
 
 # next.js

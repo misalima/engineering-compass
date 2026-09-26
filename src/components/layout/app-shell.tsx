@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { signOut } from "@/auth";
 import { BackButton } from "@/components/layout/back-button";
 import { Logo } from "@/components/layout/logo";
+import { MobileMenu } from "@/components/layout/mobile-menu";
 import { SidebarMenu } from "@/components/layout/sidebar-menu";
 
 function SignOut() {
@@ -35,13 +36,10 @@ function MobileHeader() {
   return (
     <header className="sticky top-0 z-40 flex min-h-[4.25rem] items-center justify-between gap-4 border-b border-line bg-[color-mix(in_oklab,var(--surface-1)_94%,transparent)] px-4 py-2.5 backdrop-blur-[14px] min-[781px]:hidden">
       <Logo />
-      <details className="relative [&_summary::-webkit-details-marker]:hidden">
-        <summary className="cursor-pointer list-none text-xs text-accent">Menu</summary>
-        <div className="absolute right-0 top-[calc(100%+1rem)] w-56 rounded-[var(--radius-md)] bg-surface-raised p-1 shadow-[var(--shadow-raised)]">
-          <SidebarMenu label="Mobile navigation" />
-          <div className="border-t border-line px-3.5 py-3"><SignOut /></div>
-        </div>
-      </details>
+      <MobileMenu>
+        <SidebarMenu label="Mobile navigation" />
+        <div className="border-t border-line px-3.5 py-3"><SignOut /></div>
+      </MobileMenu>
     </header>
   );
 }
