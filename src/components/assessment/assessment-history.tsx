@@ -4,7 +4,7 @@ import type { HistoryEvent as Event } from "@/data/assessments";
 export const formatDateTime = (d: Date) => new Intl.DateTimeFormat("en", { dateStyle: "medium", timeStyle: "short" }).format(d);
 
 export function describeEvent(e: Event) {
-  if (e.fromStatus !== e.toStatus) return `${STATUS_LABEL[e.fromStatus]} → ${STATUS_LABEL[e.toStatus]}`;
+  if (e.fromStatus !== e.toStatus) return `Marked ${STATUS_LABEL[e.toStatus]} (was ${STATUS_LABEL[e.fromStatus]})`;
   const changed = [e.notesChanged && "notes", e.evidenceChanged && "evidence"].filter(Boolean).join(" and ");
   return `Edited ${changed}`;
 }

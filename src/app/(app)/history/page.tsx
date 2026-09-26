@@ -5,7 +5,7 @@ import { MainContentContainer } from "@/components/layout/main-content-container
 import { PageHeader } from "@/components/ui/page-header";
 import { getHistoryPage } from "@/data/assessments";
 import { getActiveStandard } from "@/data/standard";
-import type { ItemKind } from "@/standard/schema";
+import { itemLabels, type ItemKind } from "@/standard/schema";
 import { itemHref } from "@/lib/links";
 
 export const metadata: Metadata = { title: "History" };
@@ -25,11 +25,7 @@ export default async function HistoryPage({ searchParams }: PageProps<"/history"
   const { standard } = await getActiveStandard();
   const { rows, pages } = await getHistoryPage({ page, pageSize: PAGE_SIZE, kind });
 
-  const labels = new Map<string, string>([
-    ...standard.domains.flatMap((d) => d.competencies.map((c) => [c.code, c.statement] as const)),
-    ...standard.experiences.map((e) => [e.code, `${e.number}. ${e.title}`] as const),
-    ...standard.depthGates.flatMap((g) => g.criteria.map((c) => [c.code, `${g.title}: ${c.statement}`] as const)),
-  ]);
+  const labels = itemLabels(standard);
   const href = (p: number, k = kind) => `/history?${new URLSearchParams({ ...(k ? { kind: k } : {}), ...(p > 1 ? { page: String(p) } : {}) })}`;
 
   return (

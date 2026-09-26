@@ -1,105 +1,102 @@
 import Link from "next/link";
+import type { ReactNode } from "react";
 import { describeEvent, formatDateTime } from "@/components/assessment/assessment-history";
+import { FirstRun } from "@/components/first-run";
+import { LevelLadder } from "@/components/level-ladder";
+import { NextUp } from "@/components/next-up";
 import { MainContentContainer } from "@/components/layout/main-content-container";
-import { LevelBars, LevelName } from "@/components/ui/level-badge";
-import { Meter } from "@/components/ui/meter";
-import { PageHeader, Section } from "@/components/ui/page-header";
-import { StatusBadge } from "@/components/ui/status-badge";
+import { LevelName } from "@/components/ui/level-badge";
+import { PageHeader } from "@/components/ui/page-header";
 import { getRecentEvents } from "@/data/assessments";
 import { getOverview } from "@/data/standard";
-import { domainHref, integratedAppHref, itemHref } from "@/lib/links";
-import { DOMAIN_STATUS_LABEL, LEVEL_NAME, type Blocker } from "@/progression";
-
-const blockerHref = (b: Blocker) =>
-  b.kind === "competency" ? itemHref("competency", b.code) : b.kind === "experience" ? itemHref("experience", b.code) : b.kind === "depth_gate" ? "/depth-gates" : integratedAppHref;
+import { domainHref, itemHref } from "@/lib/links";
+import { DOMAIN_STATUS_LABEL, LEVEL_NAME } from "@/progression";
+import { itemLabels } from "@/standard/schema";
 
 export default async function DashboardPage() {
-  const { progress: p } = await getOverview();
-  const recent = await getRecentEvents(8);
-  const m = p.metrics;
-  const inProgress = p.domains.filter((d) => d.status === "in_progress" || d.status === "review_required");
+  const [{ standard, progress: p, details }, recent] = await Promise.all([getOverview(), getRecentEvents(8)]);
+  const labels = itemLabels(standard);
+  const firstRun = !details.competencies.size && !details.experiences.size && !details.depthCriteria.size && !details.deployedIntegratedApp;
+  const inProgress = p.domains.filter((d) => d.status === "in_progress" || d.status === "review_required" || d.status === "advanced_in_progress");
+  const left = p.missingForNext.length;
 
   return (
     <MainContentContainer>
       <PageHeader
-        eyebrow={<span className="inline-flex items-center gap-2"><span className="text-accent"><LevelBars level={p.level} /></span>Current level</span>}
         title={LEVEL_NAME[p.level]}
         description={
           p.nextLevel ? (
             <>
-              Next: <LevelName level={p.nextLevel} />. {p.missingForNext.length} requirement{p.missingForNext.length === 1 ? "" : "s"} left.
+              Your current level. {left} requirement{left === 1 ? "" : "s"} left for <LevelName level={p.nextLevel} />.
             </>
           ) : (
-            "Every tracked level is complete. Senior/Exceptional Engineer is a narrative reference, not a checklist."
+            "Your current level. Every tracked level is complete."
           )
         }
       />
 
-      <section className="grid gap-4 rounded-[var(--radius-lg)] bg-surface-panel p-6 sm:grid-cols-2 sm:p-8 xl:grid-cols-4" aria-label="Metrics">
-        <Meter label="Competency coverage" value={m.competencyCoverage.mastered} total={m.competencyCoverage.total} />
-        <Meter label="Mid-level domains" value={m.midLevelDomains.complete} total={m.midLevelDomains.total} />
-        <Meter label={`Engineering experiences (core ${m.coreExperiences.completed}/${m.coreExperiences.total})`} value={m.experiences.completed} total={m.experiences.total} />
-        <Meter label={`Depth gates${m.depth.ruleSatisfied ? " · rule met" : ""}${m.depth.fullDepth ? " · Full Depth" : ""}`} value={m.depth.completedGates} total={m.depth.totalGates} />
-      </section>
+      <LevelLadder current={p.level} next={p.nextLevel} rungs={p.ladder} />
 
-      <div className="grid gap-6 lg:grid-cols-2">
-        <Section title={p.nextLevel ? <>Missing for <LevelName level={p.nextLevel} /></> : "Missing requirements"} aside={p.missingForNext.length > 8 ? <span className="text-xs text-ink-faint">first 8 of {p.missingForNext.length}</span> : null}>
-          {p.missingForNext.length ? (
-            <ul className="grid gap-3">
-              {p.missingForNext.slice(0, 8).map((b) => (
-                <li key={b.code} className="flex items-start justify-between gap-4">
-                  <Link href={blockerHref(b)} className="text-sm text-ink-secondary hover:text-accent">{b.label}</Link>
-                  {b.status ? <StatusBadge status={b.status} /> : null}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-sm text-ink-muted">Nothing left for the automated levels.</p>
-          )}
-        </Section>
+      <div className="grid gap-x-10 gap-y-8 xl:grid-cols-[minmax(0,1fr)_20rem] xl:items-start">
+        {firstRun ? <FirstRun progress={p} /> : <NextUp progress={p} />}
 
-        <Section title="Requires review">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-1">
           {p.reviewRequired.length ? (
-            <ul className="grid gap-3">
-              {p.reviewRequired.map((c) => (
-                <li key={c.code}><Link href={itemHref("competency", c.code)} className="text-sm text-ink-secondary hover:text-accent">{c.statement}</Link></li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-sm text-ink-muted">No competencies are marked Review required.</p>
-          )}
-        </Section>
+            <Aside title="Review required" aside={<span className="font-mono text-xs text-warning">{p.reviewRequired.length}</span>}>
+              <ul className="grid gap-3">
+                {p.reviewRequired.map((c) => (
+                  <li key={c.code}><Link href={itemHref("competency", c.code)} className="text-sm leading-relaxed text-ink-secondary hover:text-accent">{c.statement}</Link></li>
+                ))}
+              </ul>
+            </Aside>
+          ) : null}
 
-        <Section title="Domains in progress">
-          {inProgress.length ? (
-            <ul className="grid gap-3">
-              {inProgress.map((d) => (
-                <li key={d.code} className="flex items-center justify-between gap-4">
-                  <Link href={domainHref(d.code)} className="text-sm text-ink-secondary hover:text-accent">{d.title}</Link>
-                  <span className="text-xs text-ink-faint">{DOMAIN_STATUS_LABEL[d.status]} · {d.midLevel.mastered}/{d.midLevel.total}</span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-sm text-ink-muted">No domain is in progress yet. Start with <Link className="text-accent" href="/domains">Domains</Link>.</p>
-          )}
-        </Section>
+          <Aside title="Recent activity" aside={<Link href="/history" className="text-xs text-accent hover:text-accent-strong">All history</Link>}>
+            {recent.length ? (
+              <ul className="grid gap-3">
+                {recent.map((e) => (
+                  <li key={e.id} className="grid gap-1">
+                    <Link href={itemHref(e.itemKind, e.itemCode)} className="line-clamp-2 text-sm leading-relaxed text-ink-secondary hover:text-accent">{labels.get(e.itemCode) ?? e.itemCode}</Link>
+                    <span className="text-xs text-ink-faint">{describeEvent(e)} · <time dateTime={e.createdAt.toISOString()}>{formatDateTime(e.createdAt)}</time></span>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-sm leading-relaxed text-ink-muted">Every assessment you save lands here, with what changed and when.</p>
+            )}
+          </Aside>
 
-        <Section title="Recent activity" aside={<Link href="/history" className="text-xs text-accent">All history</Link>}>
-          {recent.length ? (
-            <ul className="grid gap-3">
-              {recent.map((e) => (
-                <li key={e.id} className="grid gap-0.5">
-                  <Link href={itemHref(e.itemKind, e.itemCode)} className="truncate font-mono text-xs text-ink-muted hover:text-accent">{e.itemCode}</Link>
-                  <span className="text-sm text-ink-secondary">{describeEvent(e)} · <time className="text-ink-faint" dateTime={e.createdAt.toISOString()}>{formatDateTime(e.createdAt)}</time></span>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="text-sm text-ink-muted">No assessments yet.</p>
-          )}
-        </Section>
+          <Aside title="Domains in progress">
+            {inProgress.length ? (
+              <ul className="grid gap-3">
+                {inProgress.map((d) => {
+                  const count = d.status === "advanced_in_progress" ? d.advanced : d.midLevel;
+                  return (
+                    <li key={d.code} className="grid gap-1">
+                      <Link href={domainHref(d.code)} className="text-sm text-ink-secondary hover:text-accent">{d.title}</Link>
+                      <span className="text-xs text-ink-faint">{DOMAIN_STATUS_LABEL[d.status]} · {count.mastered} of {count.total} mastered</span>
+                    </li>
+                  );
+                })}
+              </ul>
+            ) : (
+              <p className="text-sm leading-relaxed text-ink-muted">No domain in progress yet. <Link className="text-accent hover:text-accent-strong" href="/domains">Browse domains</Link> to start one.</p>
+            )}
+          </Aside>
+        </div>
       </div>
     </MainContentContainer>
+  );
+}
+
+function Aside({ title, aside, children }: { title: string; aside?: ReactNode; children: ReactNode }) {
+  return (
+    <section className="grid content-start gap-4 border-t border-line pt-5">
+      <div className="flex items-baseline justify-between gap-4">
+        <h2 className="text-sm font-semibold text-ink">{title}</h2>
+        {aside}
+      </div>
+      {children}
+    </section>
   );
 }

@@ -53,3 +53,11 @@ export type StandardDomain = Standard["domains"][number];
 export type StandardCompetency = StandardDomain["competencies"][number];
 export type StandardExperience = Standard["experiences"][number];
 export type StandardDepthGate = Standard["depthGates"][number];
+
+/** Human-readable label for any assessable item, keyed by stable code. */
+export const itemLabels = (standard: Standard) =>
+  new Map<string, string>([
+    ...standard.domains.flatMap((d) => d.competencies.map((c) => [c.code, c.statement] as const)),
+    ...standard.experiences.map((e) => [e.code, `${e.number}. ${e.title}`] as const),
+    ...standard.depthGates.flatMap((g) => g.criteria.map((c) => [c.code, `${g.title}: ${c.statement}`] as const)),
+  ]);

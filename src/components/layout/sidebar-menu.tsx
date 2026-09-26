@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { IconDepth, IconFolder, IconHistory, IconLibrary, IconOverview, IconRoute, IconSettings } from "@/components/icons";
 
 const navigation = [
-  { label: "Dashboard", href: "/", icon: IconOverview, match: ["/"] },
+  { label: "Dashboard", href: "/", icon: IconOverview, match: ["/", "/levels"] },
   { label: "Domains", href: "/domains", icon: IconLibrary, match: ["/domains", "/competencies"] },
   { label: "Experience Matrix", href: "/experiences", icon: IconRoute, match: ["/experiences"] },
   { label: "Depth Gates", href: "/depth-gates", icon: IconDepth, match: ["/depth-gates", "/depth-criteria"] },

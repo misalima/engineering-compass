@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { STANDARD_V1_1 as standard } from "@/standard";
 import type { RequiredLevel } from "@/standard/schema";
-import { depthGateRule, progression, type Assessments, type Status } from ".";
+import { depthGateRule, groupRequirements, progression, recommend, type Assessments, type Status } from ".";
 
 const competencies = standard.domains.flatMap((d) => d.competencies);
 
@@ -77,6 +77,38 @@ describe("level derivation", () => {
     const p = progression(standard, a);
     expect(p.level).toBe("L1");
     expect(p.metrics.competencyCoverage).toEqual({ mastered: 70, total: 454 });
+  });
+});
+
+describe("level ladder", () => {
+  const l1 = (a: Assessments) => progression(standard, a).ladder.find((r) => r.level === "L1")!;
+
+  it("counts met and total requirements for every level, grouped by domain", () => {
+    const p = progression(standard, assessments({ upTo: "L1" }));
+    expect(p.ladder.map((r) => r.level)).toEqual(["L1", "L2", "L3", "L4"]);
+    expect(p.ladder[0]).toMatchObject({ done: 71, total: 71 });
+    expect(p.ladder[1].requirements.some((r) => r.kind === "milestone" && r.label === "Integrated application")).toBe(true);
+    const groups = groupRequirements(p.ladder[0].requirements);
+    expect(groups.every((g) => standard.domains.some((d) => d.code === g.code && d.title === g.title))).toBe(true);
+  });
+
+  it("recommends Standard order first, then the domain closest to done", () => {
+    const empty = assessments();
+    expect(recommend(l1(empty).requirements)).toMatchObject({ reason: "start", requirement: l1(empty).requirements[0] });
+
+    const reqs = l1(empty).requirements;
+    const target = reqs.findLast((r) => groupRequirements(reqs).find((g) => g.code === r.group.code)!.requirements.length > 1)!;
+    const sibling = reqs.find((r) => r.group.code === target.group.code && r.code !== target.code)!;
+    const pick = recommend(l1({ ...empty, competencies: { [sibling.code]: "mastered" } }).requirements)!;
+    expect(pick.reason).toBe("closest");
+    expect(pick.requirement.group.code).toBe(target.group.code);
+  });
+
+  it("prefers Review required, then In progress", () => {
+    const [first, second] = l1(assessments()).requirements.slice(-2);
+    expect(recommend(l1({ ...assessments(), competencies: { [first.code]: "in_progress" } }).requirements)).toMatchObject({ reason: "started", requirement: { code: first.code } });
+    const both = { ...assessments(), competencies: { [first.code]: "in_progress" as Status, [second.code]: "review_required" as Status } };
+    expect(recommend(l1(both).requirements)).toMatchObject({ reason: "review", requirement: { code: second.code } });
   });
 });
 

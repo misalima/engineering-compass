@@ -84,33 +84,105 @@ export const INTEGRATED_APP = {
   statement: "I built and deployed at least one application where frontend, backend, and database work together, rather than completing only isolated exercises.",
 } as const;
 
-export type Blocker = { kind: "competency" | "experience" | "depth_gate" | "milestone"; code: string; label: string; status?: Status };
+/** Competencies group by domain; the other requirement kinds each form one group. */
+export type Requirement = {
+  kind: "competency" | "experience" | "depth_gate" | "milestone";
+  code: string;
+  label: string;
+  status: Status;
+  group: { code: string; title: string };
+};
+const met = (r: Requirement) => r.status === "mastered";
+
+export function groupRequirements(requirements: Requirement[]) {
+  const groups = new Map<string, { code: string; title: string; requirements: Requirement[]; done: number }>();
+  for (const r of requirements) {
+    const g = groups.get(r.group.code) ?? { ...r.group, requirements: [], done: 0 };
+    g.requirements.push(r);
+    if (met(r)) g.done++;
+    groups.set(r.group.code, g);
+  }
+  return [...groups.values()];
+}
+
+export type Recommendation = {
+  requirement: Requirement;
+  reason: "review" | "started" | "closest" | "start";
+  group: ReturnType<typeof groupRequirements>[number];
+};
+
+/** Momentum: Review required, then In progress, then the group closest to done, then Standard order. */
+export function recommend(requirements: Requirement[]): Recommendation | null {
+  const groups = groupRequirements(requirements);
+  const groupOf = (r: Requirement) => groups.find((g) => g.code === r.group.code)!;
+  const share = (r: Requirement) => groupOf(r).done / groupOf(r).requirements.length;
+  const closest = (list: Requirement[]) => [...list].sort((x, y) => share(y) - share(x))[0];
+  const make = (requirement: Requirement, reason: Recommendation["reason"]) => ({ requirement, reason, group: groupOf(requirement) });
+
+  const remaining = requirements.filter((r) => !met(r));
+  if (!remaining.length) return null;
+  const review = remaining.filter((r) => r.status === "review_required");
+  if (review.length) return make(closest(review), "review");
+  const started = remaining.filter((r) => r.status === "in_progress");
+  if (started.length) return make(closest(started), "started");
+  const best = closest(remaining);
+  return share(best) > 0 ? make(best, "closest") : make(remaining[0], "start");
+}
+
+const EXPERIENCES_GROUP = { code: "experiences", title: "Engineering experiences" };
+const DEPTH_GROUP = { code: "depth-gates", title: "Depth Gates" };
 
 export function progression(standard: Standard, a: Assessments) {
-  const competencies = standard.domains.flatMap((d) => d.competencies.map((c) => ({ ...c, domainCode: d.code, status: statusOf(a.competencies, c.code) })));
+  const competencies = standard.domains.flatMap((d) =>
+    d.competencies.map((c) => ({ ...c, domainCode: d.code, domainTitle: d.title, status: statusOf(a.competencies, c.code) })),
+  );
   const experiences = standard.experiences.map((e) => ({ ...e, status: statusOf(a.experiences, e.code) }));
   const completedGates = new Set(standard.depthGates.filter((g) => gateComplete(g, a)).map((g) => g.code));
   const depthRule = depthGateRule(completedGates);
 
-  const blockersFor = (level: RequiredLevel): Blocker[] => {
-    const blockers: Blocker[] = competencies
-      .filter((c) => c.requiredLevel === level && open(c.status))
-      .map((c) => ({ kind: "competency", code: c.code, label: c.statement, status: c.status }));
-    if (level === "L2" && !a.deployedIntegratedApp) blockers.push({ kind: "milestone", code: INTEGRATED_APP.slug, label: `0. ${INTEGRATED_APP.title}` });
-    const expRange = level === "L3" ? experiences.filter((e) => e.tier === "core") : level === "L4" ? experiences.filter((e) => e.tier === "strong") : [];
-    blockers.push(...expRange.filter((e) => open(e.status)).map((e): Blocker => ({ kind: "experience", code: e.code, label: `${e.number}. ${e.title}`, status: e.status })));
-    if (level === "L4" && !depthRule) blockers.push({ kind: "depth_gate", code: "depth.rule", label: "Depth Gate rule: Go + Database + one of {Distributed, Reliability, AI} + two more gates" });
-    return blockers;
+  const requirementsFor = (level: RequiredLevel): Requirement[] => {
+    const requirements: Requirement[] = competencies
+      .filter((c) => c.requiredLevel === level && applicable(c.status))
+      .map((c) => ({ kind: "competency", code: c.code, label: c.statement, status: c.status, group: { code: c.domainCode, title: c.domainTitle } }));
+    if (level === "L2") {
+      requirements.push({
+        kind: "milestone",
+        code: INTEGRATED_APP.slug,
+        label: INTEGRATED_APP.title,
+        status: a.deployedIntegratedApp ? "mastered" : "not_started",
+        group: { code: INTEGRATED_APP.slug, title: INTEGRATED_APP.title },
+      });
+    }
+    const tier = level === "L3" ? "core" : level === "L4" ? "strong" : null;
+    requirements.push(
+      ...experiences
+        .filter((e) => e.tier === tier && applicable(e.status))
+        .map((e): Requirement => ({ kind: "experience", code: e.code, label: `${e.number}. ${e.title}`, status: e.status, group: EXPERIENCES_GROUP })),
+    );
+    if (level === "L4") {
+      requirements.push({
+        kind: "depth_gate",
+        code: "depth.rule",
+        label: "Depth Gate rule: Go + Database + one of {Distributed, Reliability, AI} + two more gates",
+        status: depthRule ? "mastered" : completedGates.size ? "in_progress" : "not_started",
+        group: DEPTH_GROUP,
+      });
+    }
+    return requirements;
   };
 
   const levels: RequiredLevel[] = ["L1", "L2", "L3", "L4"];
+  const ladder = levels.map((level) => {
+    const requirements = requirementsFor(level);
+    return { level, requirements, done: requirements.filter(met).length, total: requirements.length };
+  });
   let current: Level = "L0";
-  for (const level of levels) {
-    if (blockersFor(level).length) break;
-    current = level;
+  for (const rung of ladder) {
+    if (rung.done < rung.total) break;
+    current = rung.level;
   }
   const next = levels[levels.indexOf(current as RequiredLevel) + 1] ?? null;
-  const missingForNext = next ? blockersFor(next) : [];
+  const missingForNext = next ? ladder.find((r) => r.level === next)!.requirements.filter((r) => !met(r)) : [];
 
   const domains = standard.domains.map((d) => ({ code: d.code, title: d.title, ...domainProgress(d, a) }));
   const applicableCompetencies = competencies.filter((c) => applicable(c.status));
@@ -119,6 +191,7 @@ export function progression(standard: Standard, a: Assessments) {
   return {
     level: current,
     nextLevel: next,
+    ladder,
     missingForNext,
     domains,
     completedGates,
