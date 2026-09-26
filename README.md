@@ -1,16 +1,30 @@
 # Engineering Compass
 
-Visual foundation for the application that will be published at [skills.misaellima.com](https://skills.misaellima.com).
+Personal engineering-growth platform, published at [skills.misaellima.com](https://skills.misaellima.com).
+
+- Spec and Standard: [docs/standard/standard-v1.1.md](docs/standard/standard-v1.1.md)
+- Implementation plan: [docs/roadmap.md](docs/roadmap.md)
 
 ```bash
 pnpm install
+cp .env.example .env.local   # fill in the values
+pnpm db:migrate && pnpm db:seed
 pnpm dev
 ```
 
+## Scripts
+
+- `pnpm test`: unit and integration tests (Vitest)
+- `pnpm typecheck`, `pnpm lint`
+- `pnpm db:generate`: create a migration after editing `src/db/schema.ts`
+- `pnpm db:migrate`: apply migrations
+- `pnpm db:seed`: load Standard v1.1 (idempotent)
+
 ## Structure
 
-- `src/app/page.tsx`: responsive shell built with Tailwind CSS.
-- `src/styles/tokens.css`: configurable colors, typography, and tokens.
-- `src/app/globals.css`: browser-level global styles only.
-
-The shell defines no business rules. The roadmap, progress tracking, and persistence will be designed later.
+- `src/standard/`: frozen seed (`standard-v1.1.json`) and its schema
+- `src/progression/`: pure level, domain, and metric rules
+- `src/db/`: Drizzle schema, client, and query functions (take a `db`, no auth, tested on PGlite)
+- `src/data/`: server-only data access layer; checks the owner, then calls `src/db/`. Pages, components, actions, and route handlers only import this (enforced by ESLint)
+- `src/app/`: routes and thin Server Actions (validate → `src/data/` → `refresh()`); everything except `/login` requires the owner session
+- `src/components/`, `src/lib/`: UI and pure helpers (validation, links, owner check)

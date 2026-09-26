@@ -5,6 +5,13 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  {
+    files: ["src/**/*.{ts,tsx}"],
+    ignores: ["src/data/**", "src/db/**", "src/test/**"],
+    rules: {
+      "no-restricted-imports": ["error", { patterns: [{ group: ["@/db/*", "**/db/*"], message: "Use @/data: only the data layer may touch the database." }] }],
+    },
+  },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
