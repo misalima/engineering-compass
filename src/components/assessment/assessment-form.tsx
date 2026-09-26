@@ -23,6 +23,23 @@ type Props = {
   masteredLabel?: string;
 };
 
+const REVIEW_INTERVALS = [
+  { days: 2, label: "2 days" },
+  { days: 5, label: "5 days" },
+  { days: 7, label: "1 week" },
+  { days: 14, label: "2 weeks" },
+  { days: 30, label: "1 month" },
+  { days: 90, label: "3 months" },
+];
+
+/** YYYY-MM-DD in the browser's time zone, so "in 2 days" matches your calendar, not UTC. */
+const localDateIn = (days: number) => {
+  const d = new Date();
+  d.setDate(d.getDate() + days);
+  return d.toLocaleDateString("en-CA");
+};
+const formatDay = (iso: string) => new Intl.DateTimeFormat("en", { dateStyle: "medium" }).format(new Date(`${iso}T00:00:00`));
+
 const field = "w-full rounded-[var(--radius-sm)] border border-line-strong bg-surface-base px-3.5 py-2.5 text-sm text-ink outline-none placeholder:text-ink-faint focus:border-accent";
 const label = "block text-xs font-semibold text-ink-secondary";
 
@@ -52,13 +69,17 @@ export function AssessmentForm({ kind, code, current, projects, masteredLabel = 
   const [notes, setNotes] = useState(current.notesMarkdown ?? "");
   const [evidence, setEvidence] = useState(current.evidenceMarkdown ?? "");
   const [confidence, setConfidence] = useState(current.confidence?.toString() ?? "");
-  const [reviewDueAt, setReviewDueAt] = useState(current.reviewDueAt ?? "");
+  const [reviewChoice, setReviewChoice] = useState(current.reviewDueAt ? "keep" : "");
+  const reviewDueAt = reviewChoice === "keep" ? (current.reviewDueAt ?? "") : reviewChoice ? localDateIn(Number(reviewChoice)) : "";
   const [projectId, setProjectId] = useState(current.projectId?.toString() ?? "");
   const [reason, setReason] = useState("");
   const [seenState, setSeenState] = useState(state);
   if (state !== seenState) {
     setSeenState(state);
-    if (state?.ok) setReason("");
+    if (state?.ok) {
+      setReason("");
+      setReviewChoice(reviewChoice ? "keep" : "");
+    }
   }
   const regressing = current.status === "mastered" && status !== "mastered";
 
@@ -98,7 +119,7 @@ export function AssessmentForm({ kind, code, current, projects, masteredLabel = 
       <MarkdownField name="notesMarkdown" title="Notes" hint="Context, doubts, reminders. Markdown supported." value={notes} onChange={setNotes} />
       <MarkdownField name="evidenceMarkdown" title="Evidence" hint="A short description and links, e.g. [PR](https://github.com/...)" value={evidence} onChange={setEvidence} />
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid items-start gap-4 sm:grid-cols-3">
         <div className="grid gap-2">
           <label className={label} htmlFor="confidence">Confidence</label>
           <select id="confidence" name="confidence" className={`${field} pr-10`} value={confidence} onChange={(e) => setConfidence(e.target.value)}>
@@ -107,8 +128,14 @@ export function AssessmentForm({ kind, code, current, projects, masteredLabel = 
           </select>
         </div>
         <div className="grid gap-2">
-          <label className={label} htmlFor="reviewDueAt">Review on</label>
-          <input id="reviewDueAt" name="reviewDueAt" type="date" className={field} value={reviewDueAt} onChange={(e) => setReviewDueAt(e.target.value)} />
+          <label className={label} htmlFor="reviewIn">Review in</label>
+          <select id="reviewIn" className={`${field} pr-10`} value={reviewChoice} onChange={(e) => setReviewChoice(e.target.value)} aria-describedby="reviewIn-due">
+            {current.reviewDueAt ? <option value="keep">Keep ({formatDay(current.reviewDueAt)})</option> : null}
+            <option value="">{current.reviewDueAt ? "No review" : "Not set"}</option>
+            {REVIEW_INTERVALS.map((r) => <option key={r.days} value={r.days}>{r.label}</option>)}
+          </select>
+          <input type="hidden" name="reviewDueAt" value={reviewDueAt} />
+          <p id="reviewIn-due" className="text-xs text-ink-faint">{reviewDueAt ? `Due ${formatDay(reviewDueAt)}` : "No review scheduled"}</p>
         </div>
         {projects ? (
           <div className="grid gap-2">
