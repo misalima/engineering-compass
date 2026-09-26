@@ -35,6 +35,18 @@ export function IconLibrary(props: IconProps) {
   return <IconBase {...props}><path d="M4 5h5v15H4zM10 5h5v15h-5zM16 7l4-1 2 14-4 1z" /></IconBase>;
 }
 
+export function IconDepth(props: IconProps) {
+  return <IconBase {...props}><path d="M12 3 3 8l9 5 9-5-9-5z" /><path d="m3 13 9 5 9-5M3 17.5l9 4.5 9-4.5" /></IconBase>;
+}
+
+export function IconFolder(props: IconProps) {
+  return <IconBase {...props}><path d="M3 6h6l2 2h10v11H3z" /></IconBase>;
+}
+
+export function IconHistory(props: IconProps) {
+  return <IconBase {...props}><path d="M3 12a9 9 0 1 0 3-6.7L3 8" /><path d="M3 3v5h5M12 7v5l3 2" /></IconBase>;
+}
+
 export function IconSettings(props: IconProps) {
   return <IconBase {...props}><circle cx="12" cy="12" r="3" /><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1" /></IconBase>;
 }
