@@ -21,6 +21,7 @@ export function Logo({ size = "sm" }: { size?: keyof typeof sizes }) {
       <Image
         src="/assets/images/logo.png"
         alt=""
+        loading="eager"
         width={s.px}
         height={s.px}
         className={`${s.className} rounded-[var(--radius-sm)]`}

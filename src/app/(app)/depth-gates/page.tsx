@@ -37,7 +37,7 @@ export default async function DepthGatesPage() {
           const image = GATE_IMAGES[g.code];
           return (
             <li key={g.code}>
-              <Link href={gateHref(g.code)} className="group grid overflow-hidden rounded-[var(--radius-lg)] bg-surface-panel transition-colors hover:bg-surface-raised">
+              <Link href={gateHref(g.code)} className="group grid overflow-hidden rounded-[var(--radius-lg)] bg-surface-panel scheme-dark transition-colors hover:bg-surface-raised">
                 {image ? (
                   <div className="relative mb-[-20%] overflow-hidden">
                     <Image

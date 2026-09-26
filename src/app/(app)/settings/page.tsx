@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
+import { cookies } from "next/headers";
 import { MainContentContainer } from "@/components/layout/main-content-container";
+import { ThemeSelect } from "@/components/theme-select";
 import { PageHeader, Section } from "@/components/ui/page-header";
 import { getActiveStandard } from "@/data/standard";
+import { parseTheme } from "@/lib/theme";
 
 export const metadata: Metadata = { title: "Settings" };
 
 export default async function SettingsPage() {
-  const { standard } = await getActiveStandard();
+  const [{ standard }, cookieStore] = await Promise.all([getActiveStandard(), cookies()]);
+  const theme = parseTheme(cookieStore.get("theme")?.value);
 
   return (
     <MainContentContainer>
       <PageHeader title="Settings" description={`Tracking ${standard.track}, Standard v${standard.version}.`} />
+      <Section title="Appearance">
+        <ThemeSelect initial={theme} />
+      </Section>
       <Section title="Export">
         <p className="mb-4 max-w-[60ch] text-sm text-ink-secondary">Download everything you recorded: assessments, notes, evidence, projects, and full history.</p>
         <div className="flex flex-wrap gap-3">

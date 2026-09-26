@@ -16,10 +16,10 @@ export default async function ProjectsPage() {
       <div className="grid gap-6 lg:grid-cols-2">
         <Section title="Your projects">
           {projects.length ? (
-            <ul className="grid gap-1">
+            <ul className="-mx-5 grid gap-1">
               {projects.map((p) => (
                 <li key={p.id}>
-                  <Link href={`/projects/${p.id}`} className="grid gap-1 rounded-[var(--radius-sm)] px-3 py-3 hover:bg-surface-raised">
+                  <Link href={`/projects/${p.id}`} className="grid gap-1 rounded-[var(--radius-sm)] px-5 py-3 hover:bg-surface-raised">
                     <span className="flex items-center justify-between gap-4 text-sm text-ink"><span className="min-w-0 [overflow-wrap:anywhere]">{p.name}</span><span className="shrink-0 text-xs capitalize text-ink-faint">{p.visibility}</span></span>
                     {p.stack.length ? <span className="text-xs text-ink-muted">{p.stack.join(" · ")}</span> : null}
                   </Link>

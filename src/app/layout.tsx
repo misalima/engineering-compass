@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, IBM_Plex_Sans } from "next/font/google";
+import { cookies } from "next/headers";
 import { PRODUCT } from "@/config/product";
+import { parseTheme } from "@/lib/theme";
 import "./globals.css";
 
 const sans = Geist({ subsets: ["latin", "latin-ext"], variable: "--font-geist" });
@@ -17,9 +19,10 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const theme = parseTheme((await cookies()).get("theme")?.value);
   return (
-    <html lang="en" className={`${sans.variable} ${display.variable} ${mono.variable}`}>
+    <html lang="en" data-theme={theme === "system" ? undefined : theme} className={`${sans.variable} ${display.variable} ${mono.variable}`}>
       <body>
         {children}
       </body>

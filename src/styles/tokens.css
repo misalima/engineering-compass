@@ -1,38 +1,45 @@
-:root {
-  /* Brand bridge: update this small set when the portfolio identity evolves. */
-  --brand-canvas: #08090a;
-  --brand-panel: #0d1413;
-  --brand-panel-raised: #12201e;
-  --brand-ink: #ececee;
-  --brand-muted: #a8abb0;
-  --brand-faint: #8f939a;
-  --brand-line: #222827;
-  --brand-accent: #70e8d8;
-  --brand-accent-strong: #9af0e4;
-  --brand-accent-ink: #062421;
+/* light-dark() resolves where declared, so .scheme-dark re-declares the tokens to force dark in a subtree. */
+.scheme-dark {
+  color-scheme: dark;
+  color: var(--ink);
+}
+
+:root,
+.scheme-dark {
+  /* Brand bridge: update this small set when the portfolio identity evolves. light-dark(light, dark) */
+  --brand-canvas: light-dark(#f5f7f6, #08090a);
+  --brand-panel: light-dark(#ffffff, #0d1413);
+  --brand-panel-raised: light-dark(#eef3f2, #12201e);
+  --brand-ink: light-dark(#111716, #ececee);
+  --brand-muted: light-dark(#525c5a, #a8abb0);
+  --brand-faint: light-dark(#667170, #8f939a);
+  --brand-line: light-dark(#dfe5e3, #222827);
+  --brand-accent: light-dark(#0b766b, #70e8d8);
+  --brand-accent-strong: light-dark(#075c53, #9af0e4);
+  --brand-accent-ink: light-dark(#ffffff, #062421);
 
   /* Product semantics: components depend on these, never on portfolio names. */
   --canvas: var(--brand-canvas);
-  --surface-1: #0b100f;
+  --surface-1: light-dark(#fafbfb, #0b100f);
   --surface-2: var(--brand-panel);
   --surface-3: var(--brand-panel-raised);
-  --surface-active: #172321;
+  --surface-active: light-dark(#e4ecea, #172321);
   --ink: var(--brand-ink);
-  --ink-secondary: #b8c3c1;
+  --ink-secondary: light-dark(#2e3937, #b8c3c1);
   --ink-muted: var(--brand-muted);
   --ink-faint: var(--brand-faint);
   --line: var(--brand-line);
-  --line-strong: #343d3b;
+  --line-strong: light-dark(#c4cecb, #343d3b);
   --accent: var(--brand-accent);
   --accent-strong: var(--brand-accent-strong);
   --accent-ink: var(--brand-accent-ink);
-  --warning: #e8c270;
-  --danger: #ff8f86;
+  --warning: light-dark(#8a5a00, #e8c270);
+  --danger: light-dark(#b8342a, #ff8f86);
 
   --radius-sm: 0.375rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
-  --shadow-raised: 0 18px 44px 8px rgb(0 0 0 / 0.28);
+  --shadow-raised: 0 18px 44px 8px light-dark(rgb(16 24 22 / 0.12), rgb(0 0 0 / 0.28));
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --sidebar-width: 15rem;
   --content-max: 90rem;

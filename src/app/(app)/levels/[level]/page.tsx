@@ -60,10 +60,10 @@ export default async function LevelPage({ params }: PageProps<"/levels/[level]">
           title={<Link href={requirementGroupHref(g.requirements[0])} className="hover:text-accent">{g.title}</Link>}
           aside={<span className="shrink-0 font-mono text-xs text-ink-faint">{g.done}/{g.requirements.length}</span>}
         >
-          <ul className="grid gap-1">
+          <ul className="-mx-5 grid gap-1">
             {g.requirements.map((r) => (
               <li key={r.code}>
-                <Link href={requirementHref(r)} className="flex items-start justify-between gap-6 rounded-[var(--radius-sm)] px-3 py-3 hover:bg-surface-raised">
+                <Link href={requirementHref(r)} className="flex items-start justify-between gap-6 rounded-[var(--radius-sm)] px-5 py-3 hover:bg-surface-raised">
                   <span className="text-sm leading-relaxed text-ink-secondary">{r.label}</span>
                   <StatusBadge status={r.status} />
                 </Link>

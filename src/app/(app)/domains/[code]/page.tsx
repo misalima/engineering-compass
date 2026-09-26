@@ -50,10 +50,10 @@ export default async function DomainPage({ params }: PageProps<"/domains/[code]"
         if (!items.length) return null;
         return (
           <Section key={level} title={<>Required for <LevelName level={level} /></>}>
-            <ul className="grid gap-1">
+            <ul className="-mx-5 grid gap-1">
               {items.map((c) => (
                 <li key={c.code}>
-                  <Link href={itemHref("competency", c.code)} className="flex items-start justify-between gap-6 rounded-[var(--radius-sm)] px-3 py-3 hover:bg-surface-raised">
+                  <Link href={itemHref("competency", c.code)} className="flex items-start justify-between gap-6 rounded-[var(--radius-sm)] px-5 py-3 hover:bg-surface-raised">
                     <span className="text-sm leading-relaxed text-ink-secondary">{c.statement}</span>
                     <StatusBadge status={details.competencies.get(c.code)?.status ?? "not_started"} />
                   </Link>
