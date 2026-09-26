@@ -1,0 +1,3823 @@
+{
+  "version": "1.1",
+  "track": "Backend Engineering + AI",
+  "domains": [
+    {
+      "code": "domain.programming-fundamentals",
+      "order": 1,
+      "title": "Programming Fundamentals",
+      "knowledge": [
+        "variables",
+        "types",
+        "operators",
+        "control flow",
+        "functions",
+        "scope",
+        "immutability",
+        "recursion",
+        "error handling",
+        "input/output",
+        "memory",
+        "compilation",
+        "interpretation",
+        "debugging",
+        "time zones",
+        "money",
+        "Unicode"
+      ],
+      "competencies": [
+        {
+          "code": "competency.programming-fundamentals.break-small-problem-down-inputs",
+          "order": 1,
+          "requiredLevel": "L1",
+          "statement": "I can break a small problem down into inputs, rules, steps, and outputs."
+        },
+        {
+          "code": "competency.programming-fundamentals.choose-suitable-data-types-represent",
+          "order": 2,
+          "requiredLevel": "L1",
+          "statement": "I can choose suitable data types to represent a problem."
+        },
+        {
+          "code": "competency.programming-fundamentals.use-conditionals-iteration-constructs-deliberately",
+          "order": 3,
+          "requiredLevel": "L1",
+          "statement": "I can use conditionals and iteration constructs deliberately."
+        },
+        {
+          "code": "competency.programming-fundamentals.create-small-cohesive-functions-clear",
+          "order": 4,
+          "requiredLevel": "L1",
+          "statement": "I can create small, cohesive functions with clear contracts."
+        },
+        {
+          "code": "competency.programming-fundamentals.predict-where-variable-accessible-how",
+          "order": 5,
+          "requiredLevel": "L1",
+          "statement": "I can predict where a variable is accessible, how long its value remains alive, and whether a mutation is visible to other parts of the program."
+        },
+        {
+          "code": "competency.programming-fundamentals.explain-pass-value-effects-references",
+          "order": 6,
+          "requiredLevel": "L1",
+          "statement": "I can explain pass-by-value and the effects of references or pointers in the language being used."
+        },
+        {
+          "code": "competency.programming-fundamentals.treat-errors-part-program-flow",
+          "order": 7,
+          "requiredLevel": "L1",
+          "statement": "I can treat errors as part of program flow."
+        },
+        {
+          "code": "competency.programming-fundamentals.read-files-process-data-produce",
+          "order": 8,
+          "requiredLevel": "L1",
+          "statement": "I can read files, process data, and produce outputs."
+        },
+        {
+          "code": "competency.programming-fundamentals.explain-recursion-decide-iterative-solution",
+          "order": 9,
+          "requiredLevel": "L1",
+          "statement": "I can explain recursion and decide when an iterative solution is preferable."
+        },
+        {
+          "code": "competency.programming-fundamentals.distinguish-compile-time-errors-runtime",
+          "order": 10,
+          "requiredLevel": "L1",
+          "statement": "I can distinguish compile-time errors, runtime errors, and logic errors."
+        },
+        {
+          "code": "competency.programming-fundamentals.debug-program-using-breakpoints-state",
+          "order": 11,
+          "requiredLevel": "L1",
+          "statement": "I can debug a program using breakpoints, state inspection, and logs."
+        },
+        {
+          "code": "competency.programming-fundamentals.read-small-unfamiliar-codebase-explain",
+          "order": 12,
+          "requiredLevel": "L1",
+          "statement": "I can read a small unfamiliar codebase and explain its flow."
+        },
+        {
+          "code": "competency.programming-fundamentals.explain-conceptually-how-source-code",
+          "order": 13,
+          "requiredLevel": "L1",
+          "statement": "I can explain conceptually how source code becomes a running program."
+        },
+        {
+          "code": "competency.programming-fundamentals.write-deterministic-code-problem-requires",
+          "order": 14,
+          "requiredLevel": "L2",
+          "statement": "I can write deterministic code when the problem requires it."
+        },
+        {
+          "code": "competency.programming-fundamentals.store-timestamps-utc-convert-them",
+          "order": 15,
+          "requiredLevel": "L2",
+          "statement": "I can store timestamps in UTC, convert them for display with a named time zone, and identify DST, ambiguous local times, and date-only values as distinct problems."
+        },
+        {
+          "code": "competency.programming-fundamentals.represent-money-integer-minor-unit",
+          "order": 16,
+          "requiredLevel": "L2",
+          "statement": "I can represent money as an integer minor-unit or a decimal type with an explicit currency, and reject binary floating point for balances, prices, or FX."
+        },
+        {
+          "code": "competency.programming-fundamentals.treat-user-text-unicode-normalize",
+          "order": 17,
+          "requiredLevel": "L2",
+          "statement": "I can treat user text as Unicode, normalize when equality or search requires it, and avoid truncating or sorting strings as raw bytes."
+        }
+      ]
+    },
+    {
+      "code": "domain.data-structures-algorithms",
+      "order": 2,
+      "title": "Data Structures and Algorithms",
+      "knowledge": [
+        "Big O",
+        "arrays/slices",
+        "linked lists",
+        "stack",
+        "queue",
+        "hash table",
+        "set",
+        "tree",
+        "heap",
+        "graph",
+        "sorting",
+        "searching",
+        "recursion",
+        "traversal",
+        "space-time trade-offs",
+        "dynamic programming"
+      ],
+      "competencies": [
+        {
+          "code": "competency.data-structures-algorithms.analyze-time-space-complexity-common",
+          "order": 1,
+          "requiredLevel": "L1",
+          "statement": "I can analyze the time and space complexity of a common solution and say which case — best, average, or worst — matters for its expected input."
+        },
+        {
+          "code": "competency.data-structures-algorithms.choose-among-arrays-slices-maps",
+          "order": 2,
+          "requiredLevel": "L1",
+          "statement": "I can choose among arrays/slices, maps, sets, stacks, and queues from the required lookup, insertion, ordering, and duplication behavior."
+        },
+        {
+          "code": "competency.data-structures-algorithms.explain-trees-heaps-graphs-conceptually",
+          "order": 3,
+          "requiredLevel": "L1",
+          "statement": "I can explain trees, heaps, and graphs conceptually and recognize when a library already implements them."
+        },
+        {
+          "code": "competency.data-structures-algorithms.choose-among-scanning-indexing-hashing",
+          "order": 4,
+          "requiredLevel": "L1",
+          "statement": "I can choose among scanning, indexing, and hashing based on the lookup problem, and explain why production code uses a library sort rather than a hand-written one."
+        },
+        {
+          "code": "competency.data-structures-algorithms.identify-memory-versus-time-trade",
+          "order": 5,
+          "requiredLevel": "L1",
+          "statement": "I can identify memory-versus-time trade-offs."
+        },
+        {
+          "code": "competency.data-structures-algorithms.avoid-sophisticated-data-structures-simple",
+          "order": 6,
+          "requiredLevel": "L1",
+          "statement": "I avoid sophisticated data structures when a simple one solves the problem."
+        },
+        {
+          "code": "competency.data-structures-algorithms.traverse-tree-graph-dfs-bfs",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can traverse a tree or graph with DFS or BFS when the problem is a traversal and explain the choice."
+        },
+        {
+          "code": "competency.data-structures-algorithms.choose-data-structure-dominant-operation",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can choose a data structure from the dominant operation in the workload and solve an unfamiliar collection, search, or traversal problem while explaining invariants, complexity, and edge cases."
+        }
+      ]
+    },
+    {
+      "code": "domain.go",
+      "order": 3,
+      "title": "Go",
+      "knowledge": [
+        "packages",
+        "modules",
+        "types",
+        "structs",
+        "interfaces",
+        "methods",
+        "pointers",
+        "slices",
+        "maps",
+        "errors",
+        "defer",
+        "panic/recover",
+        "generics",
+        "context",
+        "goroutines",
+        "channels",
+        "toolchain",
+        "runtime",
+        "pprof"
+      ],
+      "competencies": [
+        {
+          "code": "competency.go.organize-go-application-packages-clear",
+          "order": 1,
+          "requiredLevel": "L1",
+          "statement": "I can organize a Go application into packages with clear responsibilities."
+        },
+        {
+          "code": "competency.go.use-modules-manage-dependencies",
+          "order": 2,
+          "requiredLevel": "L1",
+          "statement": "I can use modules and manage dependencies."
+        },
+        {
+          "code": "competency.go.model-domain-using-structs-types",
+          "order": 3,
+          "requiredLevel": "L1",
+          "statement": "I can model a domain using structs, types, methods, and composition."
+        },
+        {
+          "code": "competency.go.use-small-interfaces-defined-consumer",
+          "order": 4,
+          "requiredLevel": "L1",
+          "statement": "I can use small interfaces defined by the consumer."
+        },
+        {
+          "code": "competency.go.predict-effects-copying-mutating-passing",
+          "order": 5,
+          "requiredLevel": "L1",
+          "statement": "I can predict the effects of copying, mutating, and passing structs, pointers, slices, and maps, including their zero-value behavior."
+        },
+        {
+          "code": "competency.go.use-slices-maps-without-ignoring",
+          "order": 6,
+          "requiredLevel": "L1",
+          "statement": "I can use slices and maps without ignoring their memory and mutability behavior."
+        },
+        {
+          "code": "competency.go.create-propagate-errors-context",
+          "order": 7,
+          "requiredLevel": "L1",
+          "statement": "I can create and propagate errors with context."
+        },
+        {
+          "code": "competency.go.wrap-errors-context-use-errors",
+          "order": 8,
+          "requiredLevel": "L1",
+          "statement": "I can wrap errors with context and use `errors.Is` or `errors.As` to preserve programmatic inspection through the error chain."
+        },
+        {
+          "code": "competency.go.keep-expected-failures-error-flow",
+          "order": 9,
+          "requiredLevel": "L1",
+          "statement": "I can keep expected failures in the error flow, reserve `panic` for unrecoverable programmer/runtime conditions, and contain a panic at a justified process boundary."
+        },
+        {
+          "code": "competency.go.use-defer-deliberately",
+          "order": 10,
+          "requiredLevel": "L1",
+          "statement": "I can use `defer` deliberately."
+        },
+        {
+          "code": "competency.go.use-generics-they-reduce-duplication",
+          "order": 11,
+          "requiredLevel": "L1",
+          "statement": "I can use generics when they reduce duplication without harming clarity."
+        },
+        {
+          "code": "competency.go.use-context-context-cancellation-deadlines",
+          "order": 12,
+          "requiredLevel": "L1",
+          "statement": "I can use `context.Context` for cancellation, deadlines, and request-scoped values."
+        },
+        {
+          "code": "competency.go.create-http-handlers-middleware-clients",
+          "order": 13,
+          "requiredLevel": "L1",
+          "statement": "I can create HTTP handlers, middleware, and clients using the standard library or a lightweight framework."
+        },
+        {
+          "code": "competency.go.serialize-validate-process-json",
+          "order": 14,
+          "requiredLevel": "L1",
+          "statement": "I can serialize, validate, and process JSON."
+        },
+        {
+          "code": "competency.go.access-relational-database-idiomatically",
+          "order": 15,
+          "requiredLevel": "L1",
+          "statement": "I can access a relational database idiomatically."
+        },
+        {
+          "code": "competency.go.express-repeated-input-output-cases",
+          "order": 16,
+          "requiredLevel": "L1",
+          "statement": "I can express repeated input/output cases as a table-driven test and keep behavior requiring distinct setup or assertions in separate tests."
+        },
+        {
+          "code": "competency.go.use-go-fmt-go-test",
+          "order": 17,
+          "requiredLevel": "L1",
+          "statement": "I can use `go fmt`, `go test`, `go vet`, and analysis tools."
+        },
+        {
+          "code": "competency.go.create-reproducible-builds-configure-go",
+          "order": 18,
+          "requiredLevel": "L1",
+          "statement": "I can create reproducible builds and configure a Go application by environment."
+        },
+        {
+          "code": "competency.go.read-standard-library-documentation-source",
+          "order": 19,
+          "requiredLevel": "L1",
+          "statement": "I can read standard-library documentation and source code to resolve questions."
+        },
+        {
+          "code": "competency.go.explain-idiomatic-decisions-go-code",
+          "order": 20,
+          "requiredLevel": "L1",
+          "statement": "I can explain the idiomatic decisions in the Go code I deliver."
+        },
+        {
+          "code": "competency.go.use-goroutines-channels-mutexes-synchronization",
+          "order": 21,
+          "requiredLevel": "L2",
+          "statement": "I can use goroutines, channels, mutexes, and synchronization primitives deliberately."
+        },
+        {
+          "code": "competency.go.detect-race-conditions-using-language",
+          "order": 22,
+          "requiredLevel": "L2",
+          "statement": "I can detect race conditions using the language toolchain."
+        }
+      ]
+    },
+    {
+      "code": "domain.typescript-node-js",
+      "order": 4,
+      "title": "TypeScript + Node.js",
+      "knowledge": [
+        "JavaScript runtime",
+        "event loop",
+        "types",
+        "narrowing",
+        "generics",
+        "unions",
+        "async/await",
+        "promises",
+        "modules",
+        "Node.js",
+        "NestJS",
+        "validation",
+        "dependency injection",
+        "package management"
+      ],
+      "competencies": [
+        {
+          "code": "competency.typescript-node-js.explain-typescript-checks-transforms-source",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can explain that TypeScript checks and transforms source code while JavaScript executes at runtime, and identify cases where runtime validation is still required."
+        },
+        {
+          "code": "competency.typescript-node-js.use-inference-annotations-unions-intersections",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can use inference, annotations, unions, intersections, and narrowing."
+        },
+        {
+          "code": "competency.typescript-node-js.model-contracts-type-interface-deliberately",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can model contracts with `type` and `interface` deliberately."
+        },
+        {
+          "code": "competency.typescript-node-js.use-generics-they-increase-safety",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can use generics when they increase safety and reuse."
+        },
+        {
+          "code": "competency.typescript-node-js.avoid-any-type-assertions-without",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I avoid `any` and type assertions without justification."
+        },
+        {
+          "code": "competency.typescript-node-js.distinguish-compile-time-validation-runtime",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can distinguish compile-time validation from runtime validation."
+        },
+        {
+          "code": "competency.typescript-node-js.work-promises-async-await",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can work with Promises and `async/await`."
+        },
+        {
+          "code": "competency.typescript-node-js.predict-ordering-synchronous-work-promises",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can predict the ordering of synchronous work, promises, timers, and I/O callbacks, and identify CPU-bound or synchronous operations that block the Node.js event loop."
+        },
+        {
+          "code": "competency.typescript-node-js.handle-asynchronous-errors-propagate-context",
+          "order": 9,
+          "requiredLevel": "L2",
+          "statement": "I can handle asynchronous errors and propagate context."
+        },
+        {
+          "code": "competency.typescript-node-js.organize-modules-dependencies-without-unnecessary",
+          "order": 10,
+          "requiredLevel": "L2",
+          "statement": "I can organize modules and dependencies without unnecessary cycles."
+        },
+        {
+          "code": "competency.typescript-node-js.create-node-js-api-validation",
+          "order": 11,
+          "requiredLevel": "L2",
+          "statement": "I can create a Node.js API with validation, authentication, a database, dependency injection I can explain, consistent error handling, and tests."
+        },
+        {
+          "code": "competency.typescript-node-js.configure-linting-formatting-type-checking",
+          "order": 12,
+          "requiredLevel": "L2",
+          "statement": "I can configure linting, formatting, type checking, builds, and scripts."
+        },
+        {
+          "code": "competency.typescript-node-js.evaluate-dependencies-before-adding-them",
+          "order": 13,
+          "requiredLevel": "L2",
+          "statement": "I can evaluate dependencies before adding them."
+        },
+        {
+          "code": "competency.typescript-node-js.explain-how-semantic-version-ranges",
+          "order": 14,
+          "requiredLevel": "L2",
+          "statement": "I can explain how semantic version ranges select dependency versions, why a lockfile makes installs reproducible, and when the lockfile must be updated."
+        },
+        {
+          "code": "competency.typescript-node-js.diagnose-common-runtime-module-memory",
+          "order": 15,
+          "requiredLevel": "L2",
+          "statement": "I can diagnose common runtime, module, memory, and asynchronous-concurrency errors."
+        },
+        {
+          "code": "competency.typescript-node-js.explain-behavior-typescript-node-js",
+          "order": 16,
+          "requiredLevel": "L2",
+          "statement": "I can explain the behavior of the TypeScript/Node.js code I deliver."
+        }
+      ]
+    },
+    {
+      "code": "domain.python",
+      "order": 5,
+      "title": "Python — Working Proficiency",
+      "knowledge": [
+        "syntax",
+        "collections",
+        "functions",
+        "modules",
+        "virtual environments",
+        "typing",
+        "exceptions",
+        "iterators",
+        "data processing",
+        "notebooks",
+        "testing",
+        "FastAPI",
+        "AI/data ecosystem",
+        "packaging"
+      ],
+      "competencies": [
+        {
+          "code": "competency.python.write-readable-python-scripts-automation",
+          "order": 1,
+          "requiredLevel": "L3",
+          "statement": "I can write readable Python scripts for automation and data processing."
+        },
+        {
+          "code": "competency.python.choose-among-lists-tuples-dictionaries",
+          "order": 2,
+          "requiredLevel": "L3",
+          "statement": "I can choose among lists, tuples, dictionaries, and sets from mutability, ordering, uniqueness, and lookup requirements, and keep comprehensions readable."
+        },
+        {
+          "code": "competency.python.create-simple-functions-modules-packages",
+          "order": 3,
+          "requiredLevel": "L3",
+          "statement": "I can create simple functions, modules, and packages."
+        },
+        {
+          "code": "competency.python.use-virtual-environments-manage-dependencies",
+          "order": 4,
+          "requiredLevel": "L3",
+          "statement": "I can use virtual environments and manage dependencies reproducibly."
+        },
+        {
+          "code": "competency.python.use-type-hints-make-contracts",
+          "order": 5,
+          "requiredLevel": "L3",
+          "statement": "I can use type hints to make contracts clearer."
+        },
+        {
+          "code": "competency.python.handle-exceptions-without-hiding-failures",
+          "order": 6,
+          "requiredLevel": "L3",
+          "statement": "I can handle exceptions without hiding failures."
+        },
+        {
+          "code": "competency.python.read-write-json-csv-tabular",
+          "order": 7,
+          "requiredLevel": "L3",
+          "statement": "I can read and write JSON, CSV, and tabular files."
+        },
+        {
+          "code": "competency.python.use-iterators-generators-they-provide",
+          "order": 8,
+          "requiredLevel": "L3",
+          "statement": "I can use iterators and generators when they provide a benefit."
+        },
+        {
+          "code": "competency.python.work-notebooks-without-turning-them",
+          "order": 9,
+          "requiredLevel": "L3",
+          "statement": "I can work with notebooks without turning them into disorganized production code."
+        },
+        {
+          "code": "competency.python.write-automated-tests-python-components",
+          "order": 10,
+          "requiredLevel": "L3",
+          "statement": "I can write automated tests for Python components."
+        },
+        {
+          "code": "competency.python.consume-apis-create-small-api",
+          "order": 11,
+          "requiredLevel": "L3",
+          "statement": "I can consume APIs and create a small API or worker in Python."
+        },
+        {
+          "code": "competency.python.use-libraries-ai-data-ecosystem",
+          "order": 12,
+          "requiredLevel": "L3",
+          "statement": "I can use libraries from the AI/data ecosystem by consulting their documentation."
+        },
+        {
+          "code": "competency.python.integrate-python-component-go-typescript",
+          "order": 13,
+          "requiredLevel": "L3",
+          "statement": "I can integrate a Python component with a Go or TypeScript application."
+        },
+        {
+          "code": "competency.python.decide-python-more-appropriate-than",
+          "order": 14,
+          "requiredLevel": "L3",
+          "statement": "I can decide when Python is more appropriate than Go or TypeScript for a component."
+        }
+      ]
+    },
+    {
+      "code": "domain.git-development-workflow",
+      "order": 6,
+      "title": "Git and Development Workflow",
+      "knowledge": [
+        "repository",
+        "commit",
+        "branch",
+        "merge",
+        "rebase",
+        "conflicts",
+        "remote",
+        "pull request",
+        "tags",
+        "revert",
+        "bisect",
+        "hooks",
+        "release workflow"
+      ],
+      "competencies": [
+        {
+          "code": "competency.git-development-workflow.initialize-clone-configure-repository",
+          "order": 1,
+          "requiredLevel": "L1",
+          "statement": "I can initialize, clone, and configure a repository."
+        },
+        {
+          "code": "competency.git-development-workflow.create-small-coherent-commits-useful",
+          "order": 2,
+          "requiredLevel": "L1",
+          "statement": "I can create small, coherent commits with useful messages."
+        },
+        {
+          "code": "competency.git-development-workflow.work-branches-remotes",
+          "order": 3,
+          "requiredLevel": "L1",
+          "statement": "I can work with branches and remotes."
+        },
+        {
+          "code": "competency.git-development-workflow.explain-merge-rebase-choose-deliberately",
+          "order": 4,
+          "requiredLevel": "L1",
+          "statement": "I can explain merge and rebase and choose deliberately between them."
+        },
+        {
+          "code": "competency.git-development-workflow.resolve-conflicts-without-losing-changes",
+          "order": 5,
+          "requiredLevel": "L1",
+          "statement": "I can resolve conflicts without losing changes."
+        },
+        {
+          "code": "competency.git-development-workflow.review-history-before-publishing-change",
+          "order": 6,
+          "requiredLevel": "L1",
+          "statement": "I can review history before publishing a change."
+        },
+        {
+          "code": "competency.git-development-workflow.open-pull-request-context-scope",
+          "order": 7,
+          "requiredLevel": "L1",
+          "statement": "I can open a pull request with context, scope, tests, and risks."
+        },
+        {
+          "code": "competency.git-development-workflow.review-another-persons-pull-request",
+          "order": 8,
+          "requiredLevel": "L1",
+          "statement": "I can review another person’s pull request."
+        },
+        {
+          "code": "competency.git-development-workflow.use-revert-undo-changes-safely",
+          "order": 9,
+          "requiredLevel": "L1",
+          "statement": "I can use `revert` to undo changes safely."
+        },
+        {
+          "code": "competency.git-development-workflow.recover-commits-references-without-impulsively",
+          "order": 10,
+          "requiredLevel": "L1",
+          "statement": "I can recover commits and references without impulsively using destructive operations."
+        },
+        {
+          "code": "competency.git-development-workflow.use-stash-deliberately",
+          "order": 11,
+          "requiredLevel": "L1",
+          "statement": "I can use `stash` deliberately."
+        },
+        {
+          "code": "competency.git-development-workflow.use-git-bisect-equivalent-strategy",
+          "order": 12,
+          "requiredLevel": "L1",
+          "statement": "I can use `git bisect` or an equivalent strategy to locate a regression."
+        },
+        {
+          "code": "competency.git-development-workflow.create-use-tags-releases",
+          "order": 13,
+          "requiredLevel": "L1",
+          "statement": "I can create and use tags/releases."
+        },
+        {
+          "code": "competency.git-development-workflow.compare-trunk-based-development-feature",
+          "order": 14,
+          "requiredLevel": "L1",
+          "statement": "I can compare trunk-based development and feature branches in terms of integration frequency, review flow, release strategy, and merge-conflict risk."
+        },
+        {
+          "code": "competency.git-development-workflow.keep-secrets-artifacts-local-files",
+          "order": 15,
+          "requiredLevel": "L1",
+          "statement": "I can keep secrets, artifacts, and local files out of version control."
+        },
+        {
+          "code": "competency.git-development-workflow.adapt-workflow-conventions-existing-team",
+          "order": 16,
+          "requiredLevel": "L1",
+          "statement": "I can adapt my workflow to the conventions of an existing team and repository."
+        }
+      ]
+    },
+    {
+      "code": "domain.linux-runtime-environment",
+      "order": 7,
+      "title": "Linux and Runtime Environment",
+      "knowledge": [
+        "filesystem",
+        "permissions",
+        "users/groups",
+        "processes",
+        "signals",
+        "shell",
+        "environment variables",
+        "pipes",
+        "logs",
+        "services",
+        "ports",
+        "resource usage",
+        "package management"
+      ],
+      "competencies": [
+        {
+          "code": "competency.linux-runtime-environment.navigate-search-copy-move-inspect",
+          "order": 1,
+          "requiredLevel": "L1",
+          "statement": "I can navigate, search, copy, move, and inspect files from the terminal."
+        },
+        {
+          "code": "competency.linux-runtime-environment.resolve-absolute-relative-paths-known",
+          "order": 2,
+          "requiredLevel": "L1",
+          "statement": "I can resolve absolute and relative paths from a known working directory and diagnose errors caused by an unexpected working directory."
+        },
+        {
+          "code": "competency.linux-runtime-environment.work-permissions-users-groups-without",
+          "order": 3,
+          "requiredLevel": "L1",
+          "statement": "I can work with permissions, users, and groups without resorting to excessive permissions."
+        },
+        {
+          "code": "competency.linux-runtime-environment.use-pipes-redirection-combine-commands",
+          "order": 4,
+          "requiredLevel": "L1",
+          "statement": "I can use pipes and redirection to combine commands."
+        },
+        {
+          "code": "competency.linux-runtime-environment.search-text-files-efficiently",
+          "order": 5,
+          "requiredLevel": "L1",
+          "statement": "I can search text and files efficiently."
+        },
+        {
+          "code": "competency.linux-runtime-environment.create-small-safe-shell-scripts",
+          "order": 6,
+          "requiredLevel": "L1",
+          "statement": "I can create small, safe shell scripts."
+        },
+        {
+          "code": "competency.linux-runtime-environment.configure-environment-variables-understand-environment",
+          "order": 7,
+          "requiredLevel": "L1",
+          "statement": "I can configure environment variables and understand environment inheritance."
+        },
+        {
+          "code": "competency.linux-runtime-environment.list-start-stop-investigate-processes",
+          "order": 8,
+          "requiredLevel": "L1",
+          "statement": "I can list, start, stop, and investigate processes."
+        },
+        {
+          "code": "competency.linux-runtime-environment.explain-handle-sigint-sigterm-so",
+          "order": 9,
+          "requiredLevel": "L1",
+          "statement": "I can explain and handle `SIGINT` and `SIGTERM` so an application can stop work and release resources gracefully."
+        },
+        {
+          "code": "competency.linux-runtime-environment.identify-processes-listening-port",
+          "order": 10,
+          "requiredLevel": "L1",
+          "statement": "I can identify processes listening on a port."
+        },
+        {
+          "code": "competency.linux-runtime-environment.inspect-cpu-memory-disk-network",
+          "order": 11,
+          "requiredLevel": "L1",
+          "statement": "I can inspect CPU, memory, disk, and network usage and identify the process or resource responsible for an abnormal condition."
+        },
+        {
+          "code": "competency.linux-runtime-environment.read-application-service-logs",
+          "order": 12,
+          "requiredLevel": "L1",
+          "statement": "I can read application and service logs."
+        },
+        {
+          "code": "competency.linux-runtime-environment.configure-linux-service-start-stop",
+          "order": 13,
+          "requiredLevel": "L1",
+          "statement": "I can configure a Linux service to start, stop, restart, read configuration from the environment, and expose useful logs."
+        },
+        {
+          "code": "competency.linux-runtime-environment.use-ssh-keys-appropriate-practices",
+          "order": 14,
+          "requiredLevel": "L1",
+          "statement": "I can use SSH with keys and appropriate practices."
+        },
+        {
+          "code": "competency.linux-runtime-environment.install-update-packages-deliberately",
+          "order": 15,
+          "requiredLevel": "L1",
+          "statement": "I can install and update packages deliberately."
+        },
+        {
+          "code": "competency.linux-runtime-environment.diagnose-why-application-works-locally",
+          "order": 16,
+          "requiredLevel": "L1",
+          "statement": "I can diagnose why an application works locally but fails on a server."
+        }
+      ]
+    },
+    {
+      "code": "domain.software-design-code-quality",
+      "order": 8,
+      "title": "Software Design and Code Quality",
+      "knowledge": [
+        "cohesion",
+        "coupling",
+        "abstraction",
+        "encapsulation",
+        "composition",
+        "SOLID",
+        "DRY",
+        "KISS",
+        "YAGNI",
+        "dependency inversion",
+        "design patterns",
+        "refactoring",
+        "code smells",
+        "API design"
+      ],
+      "competencies": [
+        {
+          "code": "competency.software-design-code-quality.choose-names-communicate-intent",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can choose names that communicate intent."
+        },
+        {
+          "code": "competency.software-design-code-quality.create-cohesive-functions-classes-modules",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can create cohesive functions, classes/modules, and packages."
+        },
+        {
+          "code": "competency.software-design-code-quality.reduce-coupling-without-introducing-unnecessary",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can reduce coupling without introducing unnecessary abstractions."
+        },
+        {
+          "code": "competency.software-design-code-quality.encapsulate-invariants-hide-details-should",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can encapsulate invariants and hide details that should genuinely remain internal."
+        },
+        {
+          "code": "competency.software-design-code-quality.use-composition-has-capability-relationships",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can use composition for has-a/capability relationships and reserve inheritance for substitutable subtypes that preserve the parent contract."
+        },
+        {
+          "code": "competency.software-design-code-quality.recognize-meaningful-duplication-distinguish-accidental",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can recognize meaningful duplication and distinguish accidental duplication from shared knowledge."
+        },
+        {
+          "code": "competency.software-design-code-quality.apply-kiss-yagni-deliberately",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can apply KISS and YAGNI deliberately."
+        },
+        {
+          "code": "competency.software-design-code-quality.use-dependency-inversion-protects-core",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can use dependency inversion when it protects the core from external details."
+        },
+        {
+          "code": "competency.software-design-code-quality.recognize-code-smells-propose-incremental",
+          "order": 9,
+          "requiredLevel": "L2",
+          "statement": "I can recognize code smells and propose incremental refactoring."
+        },
+        {
+          "code": "competency.software-design-code-quality.use-design-pattern-only-name",
+          "order": 10,
+          "requiredLevel": "L2",
+          "statement": "I can use a design pattern only when I can name the concrete problem it solves and the cost of the extra type."
+        },
+        {
+          "code": "competency.software-design-code-quality.design-coherent-apis-internal-contracts",
+          "order": 11,
+          "requiredLevel": "L2",
+          "statement": "I can design coherent APIs and internal contracts."
+        },
+        {
+          "code": "competency.software-design-code-quality.make-dependencies-side-effects-explicit",
+          "order": 12,
+          "requiredLevel": "L2",
+          "statement": "I can make dependencies and side effects explicit."
+        },
+        {
+          "code": "competency.software-design-code-quality.keep-domain-rule-executable-without",
+          "order": 13,
+          "requiredLevel": "L2",
+          "statement": "I can keep a domain rule executable without HTTP or database concerns and explain when introducing that boundary would add more complexity than it removes."
+        },
+        {
+          "code": "competency.software-design-code-quality.improve-testability-through-design",
+          "order": 14,
+          "requiredLevel": "L2",
+          "statement": "I can improve testability through design."
+        },
+        {
+          "code": "competency.software-design-code-quality.evaluate-readability-maintainability-cost-change",
+          "order": 15,
+          "requiredLevel": "L2",
+          "statement": "I can evaluate readability, maintainability, and cost of change during code review."
+        },
+        {
+          "code": "competency.software-design-code-quality.justify-why-abstraction-exists",
+          "order": 16,
+          "requiredLevel": "L2",
+          "statement": "I can justify why an abstraction exists."
+        },
+        {
+          "code": "competency.software-design-code-quality.remove-abstraction-no-longer-repays",
+          "order": 17,
+          "requiredLevel": "L2",
+          "statement": "I can remove an abstraction when it no longer repays its cost."
+        }
+      ]
+    },
+    {
+      "code": "domain.testing",
+      "order": 9,
+      "title": "Testing",
+      "knowledge": [
+        "unit tests",
+        "integration tests",
+        "contract tests",
+        "end-to-end tests",
+        "test doubles",
+        "determinism",
+        "flaky tests",
+        "property-based testing",
+        "regression tests",
+        "coverage",
+        "testability"
+      ],
+      "competencies": [
+        {
+          "code": "competency.testing.classify-test-unit-integration-contract",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can classify a test as unit, integration, contract, or end-to-end from the boundary it exercises, dependencies it includes, and failure it is intended to detect."
+        },
+        {
+          "code": "competency.testing.choose-justify-lowest-test-level",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can choose and justify the lowest test level that verifies a behavior without hiding an important integration risk."
+        },
+        {
+          "code": "competency.testing.test-business-rule-through-public",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can test a business rule through its public inputs and outputs without starting transport or persistence infrastructure."
+        },
+        {
+          "code": "competency.testing.use-mocks-stubs-fakes-control",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can use mocks, stubs, and fakes to control external boundaries while avoiding tests coupled to internal implementation details."
+        },
+        {
+          "code": "competency.testing.derive-edge-cases-boundaries-empty",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can derive edge cases from boundaries, empty values, duplicates, invalid states, and failure conditions."
+        },
+        {
+          "code": "competency.testing.make-tests-deterministic-controlling-time",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can make tests deterministic by controlling time, randomness, concurrency, external I/O, and shared state."
+        },
+        {
+          "code": "competency.testing.reproduce-bug-failing-automated-test",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can reproduce a bug with a failing automated test, implement the fix, and verify that the test prevents the same behavior from returning."
+        },
+        {
+          "code": "competency.testing.use-coverage-locate-untested-risk",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can use coverage to locate untested risk without treating a coverage percentage as proof of test quality."
+        },
+        {
+          "code": "competency.testing.justify-leaving-code-untested-risk",
+          "order": 9,
+          "requiredLevel": "L2",
+          "statement": "I can justify leaving code untested from its risk, complexity, lifetime, and existing higher-level coverage."
+        },
+        {
+          "code": "competency.testing.isolate-side-effects-inject-uncontrollable",
+          "order": 10,
+          "requiredLevel": "L2",
+          "statement": "I can isolate side effects, inject uncontrollable dependencies, expose behavior through small contracts, and test without accessing private implementation details."
+        },
+        {
+          "code": "competency.testing.test-repository-behavior-against-real",
+          "order": 11,
+          "requiredLevel": "L3",
+          "statement": "I can test repository behavior against a real database schema, including constraints, transaction behavior, and cleanup isolation."
+        },
+        {
+          "code": "competency.testing.test-apis-success-validation-authentication",
+          "order": 12,
+          "requiredLevel": "L3",
+          "statement": "I can test an API’s success, validation, authentication/authorization, and failure responses through its public HTTP contract."
+        },
+        {
+          "code": "competency.testing.force-dependency-validation-timeout-authorization",
+          "order": 13,
+          "requiredLevel": "L3",
+          "statement": "I can force dependency, validation, timeout, authorization, and persistence failures and assert the externally visible behavior and side effects."
+        },
+        {
+          "code": "competency.testing.diagnose-flaky-test-reproducing-isolating",
+          "order": 14,
+          "requiredLevel": "L3",
+          "statement": "I can diagnose a flaky test by reproducing it, isolating shared state/timing dependencies, and verifying the fix through repeated execution."
+        }
+      ]
+    },
+    {
+      "code": "domain.databases-sql",
+      "order": 10,
+      "title": "Databases and SQL",
+      "knowledge": [
+        "relational modeling",
+        "normalization",
+        "SQL",
+        "joins",
+        "aggregations",
+        "CTEs",
+        "window functions",
+        "constraints",
+        "transactions",
+        "ACID",
+        "isolation",
+        "locks",
+        "MVCC",
+        "indexes",
+        "execution plans",
+        "migrations",
+        "key-value",
+        "document",
+        "search index",
+        "time-series",
+        "vector index",
+        "Redis"
+      ],
+      "competencies": [
+        {
+          "code": "competency.databases-sql.model-entities-cardinalities-nullability-uniqueness",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can model entities, cardinalities, nullability, uniqueness, ownership, and referential rules as tables, keys, and constraints."
+        },
+        {
+          "code": "competency.databases-sql.transform-model-update-insertion-deletion",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can transform a model with update, insertion, or deletion anomalies into normalized tables and explain the resulting joins."
+        },
+        {
+          "code": "competency.databases-sql.denormalize-only-after-identifying-measured",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can denormalize only after identifying a measured read/query need and define how duplicated data remains consistent."
+        },
+        {
+          "code": "competency.databases-sql.write-parameterized-select-insert-update",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can write parameterized `SELECT`, `INSERT`, `UPDATE`, and `DELETE` statements that affect only the intended rows and return or verify the required result."
+        },
+        {
+          "code": "competency.databases-sql.choose-write-inner-left-self",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can choose and write inner, left, and self joins from required row-preservation and relationship semantics."
+        },
+        {
+          "code": "competency.databases-sql.group-data-calculate-aggregate-values",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can group data, calculate aggregate values, filter groups with `HAVING`, and explain how null values affect the result."
+        },
+        {
+          "code": "competency.databases-sql.enforce-domain-invariants-using-not",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can enforce domain invariants using NOT NULL, UNIQUE, CHECK, primary-key, and foreign-key constraints."
+        },
+        {
+          "code": "competency.databases-sql.define-foreign-key-actions-deliberately",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can define foreign-key actions deliberately and explain the consequences of restrict, cascade, and set-null behavior."
+        },
+        {
+          "code": "competency.databases-sql.identify-atomicity-boundary-implement-commit",
+          "order": 9,
+          "requiredLevel": "L2",
+          "statement": "I can identify an atomicity boundary, implement commit and rollback paths, keep the transaction scoped to required database work, test partial failure, and explain how the selected isolation level affects the operation."
+        },
+        {
+          "code": "competency.databases-sql.explain-how-atomicity-consistency-isolation",
+          "order": 10,
+          "requiredLevel": "L2",
+          "statement": "I can explain how atomicity, consistency, isolation, and durability apply to a concrete transaction."
+        },
+        {
+          "code": "competency.databases-sql.compare-common-isolation-levels-anomalies",
+          "order": 11,
+          "requiredLevel": "L2",
+          "statement": "I can compare common isolation levels by the anomalies they allow and select one for a concrete operation."
+        },
+        {
+          "code": "competency.databases-sql.derive-candidate-single-composite-index",
+          "order": 12,
+          "requiredLevel": "L2",
+          "statement": "I can derive a candidate single or composite index from predicates, joins, ordering, cardinality, and column order and verify its use with an execution plan."
+        },
+        {
+          "code": "competency.databases-sql.detect-n-1-behavior-repeated",
+          "order": 13,
+          "requiredLevel": "L2",
+          "statement": "I can detect N+1 behavior from repeated queries and replace it with an intentional join, batch load, or prefetch without over-fetching."
+        },
+        {
+          "code": "competency.databases-sql.choose-offset-cursor-pagination-dataset",
+          "order": 14,
+          "requiredLevel": "L2",
+          "statement": "I can choose offset or cursor pagination from dataset size and consistency needs and return stable ordering plus continuation metadata."
+        },
+        {
+          "code": "competency.databases-sql.create-execute-migration-compatibility-locking",
+          "order": 15,
+          "requiredLevel": "L2",
+          "statement": "I can create and execute a migration with compatibility, locking, deployment order, validation, and rollback/roll-forward behavior appropriate to its risk."
+        },
+        {
+          "code": "competency.databases-sql.use-scalar-correlated-set-subquery",
+          "order": 16,
+          "requiredLevel": "L3",
+          "statement": "I can use a scalar, correlated, or set subquery and replace it with a join when the join is clearer or produces a better plan."
+        },
+        {
+          "code": "competency.databases-sql.use-cte-name-multi-step",
+          "order": 17,
+          "requiredLevel": "L3",
+          "statement": "I can use a CTE to name a multi-step query when it makes the SQL clearer."
+        },
+        {
+          "code": "competency.databases-sql.use-window-function-rows-need",
+          "order": 18,
+          "requiredLevel": "L3",
+          "statement": "I can use a window function when rows need ranking, running totals, lag/lead, or partition-level calculations without collapsing the result set."
+        },
+        {
+          "code": "competency.databases-sql.explain-which-rows-resources-operation",
+          "order": 19,
+          "requiredLevel": "L3",
+          "statement": "I can explain which rows or resources an operation may lock, how long locks are held, and how concurrent operations may block each other."
+        },
+        {
+          "code": "competency.databases-sql.draw-conflicting-lock-order-produces",
+          "order": 20,
+          "requiredLevel": "L3",
+          "statement": "I can draw the conflicting lock order that produces a deadlock and remove it through consistent ordering, shorter transactions, or retry behavior."
+        },
+        {
+          "code": "competency.databases-sql.explain-how-mvcc-lets-readers",
+          "order": 21,
+          "requiredLevel": "L3",
+          "statement": "I can explain how MVCC lets readers and writers observe different row versions and how long-running transactions affect cleanup and visibility."
+        },
+        {
+          "code": "competency.databases-sql.explain-indexs-storage-write-amplification",
+          "order": 22,
+          "requiredLevel": "L3",
+          "statement": "I can explain an index’s storage, write-amplification, cache, and maintenance costs and remove an index whose workload does not justify them."
+        },
+        {
+          "code": "competency.databases-sql.read-execution-plan-scans-joins",
+          "order": 23,
+          "requiredLevel": "L3",
+          "statement": "I can read an execution plan for scans, joins, estimates, actual rows, sorts, and expensive nodes and test a query/index change against the same workload."
+        },
+        {
+          "code": "competency.databases-sql.size-configure-connection-pool-database",
+          "order": 24,
+          "requiredLevel": "L3",
+          "statement": "I can size and configure a connection pool from database limits and application concurrency, and diagnose exhaustion, leaks, and excessive idle connections."
+        },
+        {
+          "code": "competency.databases-sql.plan-backfill-batching-resumability-validation",
+          "order": 25,
+          "requiredLevel": "L3",
+          "statement": "I can plan a backfill with batching, resumability, validation, observability, and coexistence between old and new application versions."
+        },
+        {
+          "code": "competency.databases-sql.create-database-backup-restore-separate",
+          "order": 26,
+          "requiredLevel": "L3",
+          "statement": "I can create a database backup, restore it into a separate environment, and verify that schema and representative data are recoverable."
+        },
+        {
+          "code": "competency.databases-sql.choose-among-relational-database-key",
+          "order": 27,
+          "requiredLevel": "L3",
+          "statement": "I can choose among a relational database, a key-value store, a document store, a search index, a time-series store, and a vector index from access patterns, consistency, query shape, and operational cost, and reject a second store when SQL still fits."
+        },
+        {
+          "code": "competency.databases-sql.use-redis-equivalent-store-cache",
+          "order": 28,
+          "requiredLevel": "L3",
+          "statement": "I can use Redis or an equivalent store as cache, lock, or ephemeral queue, and state the behavior on eviction, flush, split brain, and process restart."
+        }
+      ]
+    },
+    {
+      "code": "domain.networking-http-apis",
+      "order": 11,
+      "title": "Networking, HTTP, and APIs",
+      "knowledge": [
+        "IP",
+        "ports",
+        "DNS",
+        "TCP",
+        "TLS",
+        "HTTP",
+        "headers",
+        "cookies",
+        "CORS",
+        "caching",
+        "REST",
+        "pagination",
+        "rate limiting",
+        "idempotency",
+        "webhooks",
+        "WebSockets",
+        "RPC/gRPC",
+        "OpenAPI",
+        "HTTP/2",
+        "CDN"
+      ],
+      "competencies": [
+        {
+          "code": "competency.networking-http-apis.explain-client-dns-tcp-tls",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can explain client → DNS → TCP → TLS → HTTP → server conceptually."
+        },
+        {
+          "code": "competency.networking-http-apis.trace-how-ip-address-port",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can trace how an IP address and port identify the network endpoint used by a client and server."
+        },
+        {
+          "code": "competency.networking-http-apis.explain-connection-establishment-ordered-delivery",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can explain connection establishment, ordered delivery, retransmission, and connection termination in TCP at a conceptual level."
+        },
+        {
+          "code": "competency.networking-http-apis.explain-how-application-uses-socket",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can explain how an application uses a socket to read from and write to a network connection."
+        },
+        {
+          "code": "competency.networking-http-apis.trace-hostname-through-dns-resolution",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can trace a hostname through DNS resolution, caching, record selection, and the resulting connection target."
+        },
+        {
+          "code": "competency.networking-http-apis.explain-certificate-validation-hostname-verification",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can explain certificate validation, hostname verification, encryption, and the role of TLS in an HTTPS request."
+        },
+        {
+          "code": "competency.networking-http-apis.select-get-post-put-patch",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can select GET, POST, PUT, PATCH, DELETE, HEAD, or OPTIONS from safety, idempotency, replacement/partial-update semantics, and the intended resource operation."
+        },
+        {
+          "code": "competency.networking-http-apis.select-status-codes-distinguish-successful",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can select status codes that distinguish successful creation/retrieval, client validation, authentication, authorization, absence, conflict, rate limiting, and server failure."
+        },
+        {
+          "code": "competency.networking-http-apis.use-request-response-headers-content",
+          "order": 9,
+          "requiredLevel": "L2",
+          "statement": "I can use request and response headers for content negotiation, authentication, caching, tracing, and metadata without placing sensitive values in unsafe locations."
+        },
+        {
+          "code": "competency.networking-http-apis.configure-cookies-appropriate-scope-expiration",
+          "order": 10,
+          "requiredLevel": "L2",
+          "statement": "I can configure cookies with appropriate scope, expiration, SameSite, Secure, and HttpOnly attributes."
+        },
+        {
+          "code": "competency.networking-http-apis.explain-why-browser-blocks-cross",
+          "order": 11,
+          "requiredLevel": "L2",
+          "statement": "I can explain why a browser blocks a cross-origin request and configure the narrowest required origin, method, header, and credential policy."
+        },
+        {
+          "code": "competency.networking-http-apis.define-cacheability-freshness-validation-invalidation",
+          "order": 12,
+          "requiredLevel": "L2",
+          "statement": "I can define cacheability, freshness, validation, and invalidation using Cache-Control, validators, and request semantics."
+        },
+        {
+          "code": "competency.networking-http-apis.explain-how-connection-reuse-reduces",
+          "order": 13,
+          "requiredLevel": "L2",
+          "statement": "I can explain how connection reuse reduces handshake overhead and diagnose behavior caused by connection or idle timeouts."
+        },
+        {
+          "code": "competency.networking-http-apis.model-resources-relationships-stable-urls",
+          "order": 14,
+          "requiredLevel": "L2",
+          "statement": "I can model resources and relationships with stable URLs, HTTP semantics, consistent representations, validation, authorization, and predictable errors."
+        },
+        {
+          "code": "competency.networking-http-apis.design-offset-cursor-pagination-stable",
+          "order": 15,
+          "requiredLevel": "L2",
+          "statement": "I can design offset or cursor pagination with stable ordering, limits, continuation metadata, and documented consistency behavior."
+        },
+        {
+          "code": "competency.networking-http-apis.define-allowlisted-filtering-sorting-syntax",
+          "order": 16,
+          "requiredLevel": "L2",
+          "statement": "I can define allowlisted filtering and sorting syntax, validate operators/fields, compose it with pagination, and prevent unbounded queries."
+        },
+        {
+          "code": "competency.networking-http-apis.create-error-contract-stable-machine",
+          "order": 17,
+          "requiredLevel": "L2",
+          "statement": "I can create an error contract with a stable machine code, safe human message, field details where relevant, correlation identifier, and no leaked internals."
+        },
+        {
+          "code": "competency.networking-http-apis.evolve-api-compatibly-identify-breaking",
+          "order": 18,
+          "requiredLevel": "L2",
+          "statement": "I can evolve an API compatibly, identify a breaking change, and define a versioning and deprecation strategy when compatibility cannot be preserved."
+        },
+        {
+          "code": "competency.networking-http-apis.choose-rate-limit-identity-algorithm",
+          "order": 19,
+          "requiredLevel": "L3",
+          "statement": "I can choose a rate-limit identity, algorithm, window/burst policy, storage location, response headers, and behavior for distributed instances."
+        },
+        {
+          "code": "competency.networking-http-apis.accept-idempotency-key-atomically-store",
+          "order": 20,
+          "requiredLevel": "L3",
+          "statement": "I can accept an idempotency key, atomically store request/result state, handle concurrent duplicates, define mismatch/expiry behavior, and return the original outcome."
+        },
+        {
+          "code": "competency.networking-http-apis.verify-webhook-authenticity-acknowledge-delivery",
+          "order": 21,
+          "requiredLevel": "L3",
+          "statement": "I can verify webhook authenticity, acknowledge delivery quickly, handle duplicates idempotently, retry outbound delivery with limits, and retain enough state to diagnose failures."
+        },
+        {
+          "code": "competency.networking-http-apis.implement-websocket-connection-lifecycle-authentication",
+          "order": 22,
+          "requiredLevel": "L3",
+          "statement": "I can implement a WebSocket connection lifecycle with authentication, message handling, disconnection cleanup, heartbeats, and bounded resource usage."
+        },
+        {
+          "code": "competency.networking-http-apis.compare-rest-rpc-grpc-contract",
+          "order": 23,
+          "requiredLevel": "L3",
+          "statement": "I can compare REST and RPC/gRPC by contract strength, streaming, latency, browser support, operational complexity, and consumer needs."
+        }
+      ]
+    },
+    {
+      "code": "domain.concurrency",
+      "order": 12,
+      "title": "Concurrency",
+      "knowledge": [
+        "process",
+        "thread",
+        "goroutine/task",
+        "concurrency",
+        "parallelism",
+        "shared state",
+        "race condition",
+        "mutex",
+        "atomics",
+        "deadlock",
+        "starvation",
+        "cancellation",
+        "timeouts",
+        "bounded concurrency"
+      ],
+      "competencies": [
+        {
+          "code": "competency.concurrency.explain-which-memory-resources-are",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can explain which memory and resources are isolated or shared among processes, OS threads, and language-level goroutines/tasks."
+        },
+        {
+          "code": "competency.concurrency.distinguish-overlapping-progress-simultaneous-execution",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can distinguish overlapping progress from simultaneous execution and predict whether a design improves latency, throughput, or neither."
+        },
+        {
+          "code": "competency.concurrency.trace-every-reader-writer-mutable",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can trace every reader and writer of mutable state and identify which accesses may overlap."
+        },
+        {
+          "code": "competency.concurrency.propagate-cancellation-caller-every-blocking",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can propagate cancellation from caller to every blocking operation and make cleanup happen exactly once."
+        },
+        {
+          "code": "competency.concurrency.prove-every-started-goroutine-task",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can prove every started goroutine/task has a termination path on success, error, cancellation, and shutdown."
+        },
+        {
+          "code": "competency.concurrency.describe-interleaving-violates-invariant-confirm",
+          "order": 6,
+          "requiredLevel": "L3",
+          "statement": "I can describe an interleaving that violates an invariant and confirm it with a race detector, stress test, or controlled reproduction."
+        },
+        {
+          "code": "competency.concurrency.protect-smallest-invariant-preserving-critical",
+          "order": 7,
+          "requiredLevel": "L3",
+          "statement": "I can protect the smallest invariant-preserving critical section with a mutex and avoid copying locks, inconsistent lock order, or lock-held external I/O."
+        },
+        {
+          "code": "competency.concurrency.identify-read-modify-write-operation",
+          "order": 8,
+          "requiredLevel": "L3",
+          "statement": "I can identify when a read-modify-write operation must be atomic and choose an atomic primitive or lock that preserves the invariant."
+        },
+        {
+          "code": "competency.concurrency.construct-wait-cycle-causes-deadlock",
+          "order": 9,
+          "requiredLevel": "L3",
+          "statement": "I can construct a wait-for cycle that causes deadlock and prevent it through lock ordering, timeouts, or reduced lock scope."
+        },
+        {
+          "code": "competency.concurrency.recognize-starvation-caused-unfair-scheduling",
+          "order": 10,
+          "requiredLevel": "L3",
+          "statement": "I can recognize starvation caused by unfair scheduling or lock acquisition and change the design so work eventually progresses."
+        },
+        {
+          "code": "competency.concurrency.start-multiple-tasks-collect-results",
+          "order": 11,
+          "requiredLevel": "L3",
+          "statement": "I can start multiple tasks, collect results/errors, define fail-fast or collect-all behavior, and wait for every started task to terminate."
+        },
+        {
+          "code": "competency.concurrency.place-deadlines-around-bounded-operations",
+          "order": 12,
+          "requiredLevel": "L3",
+          "statement": "I can place deadlines around bounded operations, distinguish timeout from other failure, and avoid leaving work running after the caller gives up."
+        },
+        {
+          "code": "competency.concurrency.bound-concurrent-work-semaphore-worker",
+          "order": 13,
+          "requiredLevel": "L3",
+          "statement": "I can bound concurrent work with a semaphore/worker pool and define queueing or rejection behavior when capacity is exhausted."
+        },
+        {
+          "code": "competency.concurrency.test-concurrent-component-controlled-synchronization",
+          "order": 14,
+          "requiredLevel": "L3",
+          "statement": "I can test a concurrent component with controlled synchronization, repeated/stress execution, cancellation assertions, and race detection."
+        },
+        {
+          "code": "competency.concurrency.reproduce-concurrency-bug-identify-violated",
+          "order": 15,
+          "requiredLevel": "L3",
+          "statement": "I can reproduce a concurrency bug, identify the violated ordering/ownership invariant, and verify the fix under race/stress tooling."
+        }
+      ]
+    },
+    {
+      "code": "domain.distributed-systems-messaging",
+      "order": 13,
+      "title": "Distributed Systems and Messaging",
+      "knowledge": [
+        "partial failure",
+        "timeouts",
+        "retry",
+        "backoff",
+        "jitter",
+        "idempotency",
+        "consistency",
+        "delivery semantics",
+        "ordering",
+        "queues",
+        "dead-letter queue",
+        "pub/sub",
+        "distributed locks",
+        "backpressure",
+        "CAP",
+        "transactional outbox",
+        "inbox",
+        "saga / compensation",
+        "circuit breaker",
+        "bulkhead",
+        "CDC"
+      ],
+      "competencies": [
+        {
+          "code": "competency.distributed-systems-messaging.enumerate-timeout-refusal-reset-partial",
+          "order": 1,
+          "requiredLevel": "L3",
+          "statement": "I can enumerate timeout, refusal, reset, partial response, malformed response, overload, and ambiguous-success behavior for each remote call."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.set-connect-request-operation-timeouts",
+          "order": 2,
+          "requiredLevel": "L3",
+          "statement": "I can set connect/request/operation timeouts from the caller’s latency budget and ensure cancellation reaches the network operation."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.retry-only-transient-safe-idempotent",
+          "order": 3,
+          "requiredLevel": "L3",
+          "statement": "I can retry only transient and safe/idempotent operations, cap attempts and elapsed time, use backoff/jitter, and expose final failure."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.calculate-exponential-backoff-sequence-cap",
+          "order": 4,
+          "requiredLevel": "L3",
+          "statement": "I can calculate an exponential-backoff sequence, cap its growth, and explain how it reduces repeated pressure on a failing dependency."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.add-jitter-retry-timing-explain",
+          "order": 5,
+          "requiredLevel": "L3",
+          "statement": "I can add jitter to retry timing and explain how it prevents synchronized clients from retrying together."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.define-idempotency-identity-atomically-prevent",
+          "order": 6,
+          "requiredLevel": "L3",
+          "statement": "I can define an idempotency identity and atomically prevent a retry from duplicating persistence, messages, or external side effects."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.describe-which-stale-states-user",
+          "order": 7,
+          "requiredLevel": "L3",
+          "statement": "I can describe which stale states a user may observe under eventual consistency, what a network partition makes impossible to guarantee at once, and design reconciliation or UX for those states."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.identify-operation-requires-reading-latest",
+          "order": 8,
+          "requiredLevel": "L3",
+          "statement": "I can identify an operation that requires reading the latest committed value and explain the latency/availability cost of that guarantee."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.design-consumer-detects-safely-tolerates",
+          "order": 9,
+          "requiredLevel": "L3",
+          "statement": "I can design a consumer that detects or safely tolerates duplicate delivery."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.state-whether-workflow-requires-global",
+          "order": 10,
+          "requiredLevel": "L3",
+          "statement": "I can state whether a workflow requires global, per-key, or no ordering and design partitioning/sequence handling accordingly."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.compare-most-once-least-once",
+          "order": 11,
+          "requiredLevel": "L3",
+          "statement": "I can compare at-most-once and at-least-once delivery by their loss and duplication risks and choose one for a concrete workflow."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.configure-queue-explicit-delivery-acknowledgement",
+          "order": 12,
+          "requiredLevel": "L3",
+          "statement": "I can configure a queue with explicit delivery, acknowledgement, retention, visibility/lease, ordering, and capacity behavior for a workflow."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.publish-versioned-message-consume-validation",
+          "order": 13,
+          "requiredLevel": "L3",
+          "statement": "I can publish a versioned message and consume it with validation, idempotency, acknowledgement only after success, and graceful shutdown."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.classify-retryable-failures-define-attempts",
+          "order": 14,
+          "requiredLevel": "L3",
+          "statement": "I can classify retryable failures and define attempts, backoff, jitter, delay, timeout, and final disposition."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.move-exhausted-messages-dead-letter",
+          "order": 15,
+          "requiredLevel": "L3",
+          "statement": "I can move exhausted messages to a dead-letter path with failure context, alerting, inspection, and a safe replay procedure."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.design-pub-sub-flow-which",
+          "order": 16,
+          "requiredLevel": "L3",
+          "statement": "I can design a pub/sub flow in which publishers do not address individual subscribers and explain fan-out, subscription lifecycle, and delivery-failure behavior."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.recognize-producers-exceed-consumer-capacity",
+          "order": 17,
+          "requiredLevel": "L3",
+          "statement": "I can recognize when producers exceed consumer capacity and apply bounded queues, rate limiting, batching, load shedding, or flow control."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.keep-database-write-message-publish",
+          "order": 18,
+          "requiredLevel": "L3",
+          "statement": "I can keep a database write and a message publish consistent using a transactional outbox or an equivalent atomic handoff, and explain what duplicate or lost events look like if I publish after commit."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.split-multi-system-workflow-local",
+          "order": 19,
+          "requiredLevel": "L3",
+          "statement": "I can split a multi-system workflow into local transactions plus compensating actions, define what happens after a partial failure, and reject a saga when a single atomic boundary would suffice."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.isolate-failing-dependency-circuit-breaker",
+          "order": 20,
+          "requiredLevel": "L3",
+          "statement": "I can isolate a failing dependency with a circuit breaker and a bulkhead/limit so retries and slow calls cannot exhaust the caller’s threads, connections, or event loop."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.explain-cqrs-event-sourcing-would",
+          "order": 21,
+          "requiredLevel": "L3",
+          "statement": "I can explain when CQRS or event sourcing would pay for their operational cost and when a modular monolith plus an outbox is the smaller correct design."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.trace-critical-workflow-identify-every",
+          "order": 22,
+          "requiredLevel": "L3",
+          "statement": "I can trace a critical workflow and identify every component, dependency, credential, data store, or operator action whose loss stops the whole workflow."
+        },
+        {
+          "code": "competency.distributed-systems-messaging.implement-reject-distributed-lock-unique",
+          "order": 23,
+          "requiredLevel": "L4",
+          "statement": "I can implement or reject a distributed lock from unique ownership, bounded lease, safe release, pause or lost-connectivity failure, and whether idempotency or a single-writer queue is the smaller design."
+        }
+      ]
+    },
+    {
+      "code": "domain.architecture-system-design",
+      "order": 14,
+      "title": "Architecture and System Design",
+      "knowledge": [
+        "functional requirements",
+        "non-functional requirements",
+        "constraints",
+        "layered architecture",
+        "ports and adapters",
+        "modular monolith",
+        "microservices",
+        "event-driven architecture",
+        "boundaries",
+        "capacity estimation",
+        "scaling",
+        "load balancing",
+        "caching",
+        "replication",
+        "sharding",
+        "ADRs",
+        "FinOps"
+      ],
+      "competencies": [
+        {
+          "code": "competency.architecture-system-design.turn-stakeholder-needs-explicit-actors",
+          "order": 1,
+          "requiredLevel": "L3",
+          "statement": "I can turn stakeholder needs into explicit actors, triggers, flows, rules, outputs, errors, and acceptance criteria."
+        },
+        {
+          "code": "competency.architecture-system-design.define-measurable-latency-throughput-availability",
+          "order": 2,
+          "requiredLevel": "L3",
+          "statement": "I can define measurable latency, throughput, availability, consistency, security, privacy, operability, and cost requirements where they matter."
+        },
+        {
+          "code": "competency.architecture-system-design.identify-fixed-technology-budget-deadline",
+          "order": 3,
+          "requiredLevel": "L3",
+          "statement": "I can identify fixed technology, budget, deadline, compliance, team, data, integration, and deployment constraints and separate them from preferences."
+        },
+        {
+          "code": "competency.architecture-system-design.assign-concrete-rule-dependency-domain",
+          "order": 4,
+          "requiredLevel": "L3",
+          "statement": "I can assign a concrete rule or dependency to domain, application, or infrastructure and keep dependencies pointing toward the stable business core."
+        },
+        {
+          "code": "competency.architecture-system-design.map-responsibilities-allowed-dependencies-across",
+          "order": 5,
+          "requiredLevel": "L3",
+          "statement": "I can map responsibilities and allowed dependencies across layers and identify a dependency that violates the layering rule."
+        },
+        {
+          "code": "competency.architecture-system-design.define-independently-testable-modules-inside",
+          "order": 6,
+          "requiredLevel": "L3",
+          "statement": "I can define independently testable modules inside one deployment and enforce boundaries without network calls."
+        },
+        {
+          "code": "competency.architecture-system-design.identify-independent-deployment-data-ownership",
+          "order": 7,
+          "requiredLevel": "L3",
+          "statement": "I can identify the independent deployment, data ownership, failure, and operational responsibilities introduced by a microservice boundary."
+        },
+        {
+          "code": "competency.architecture-system-design.choose-monolith-modular-monolith-microservices",
+          "order": 8,
+          "requiredLevel": "L3",
+          "statement": "I can choose a monolith, modular monolith, or microservices from team autonomy, deployment boundaries, data ownership, scaling, failure isolation, and operational capacity."
+        },
+        {
+          "code": "competency.architecture-system-design.model-event-producing-workflow-define",
+          "order": 9,
+          "requiredLevel": "L3",
+          "statement": "I can model an event-producing workflow, define event ownership and schema, handle duplicate/out-of-order delivery, and explain when asynchronous coupling is worth its operational cost."
+        },
+        {
+          "code": "competency.architecture-system-design.define-module-service-around-cohesive",
+          "order": 10,
+          "requiredLevel": "L3",
+          "statement": "I can define a module/service around cohesive business capability and data ownership, list its public contracts, and identify prohibited cross-boundary access."
+        },
+        {
+          "code": "competency.architecture-system-design.compare-increasing-resources-one-instance",
+          "order": 11,
+          "requiredLevel": "L3",
+          "statement": "I can compare increasing resources on one instance with adding instances and identify the state, cost, and bottleneck constraints of each approach."
+        },
+        {
+          "code": "competency.architecture-system-design.design-request-handling-so-any",
+          "order": 12,
+          "requiredLevel": "L3",
+          "statement": "I can design request handling so any healthy instance can serve the request, or explicitly identify and externalize required state."
+        },
+        {
+          "code": "competency.architecture-system-design.place-multiple-instances-behind-load",
+          "order": 13,
+          "requiredLevel": "L3",
+          "statement": "I can place multiple instances behind a load balancer, choose a distribution/health-check strategy, and explain the effect of unhealthy instances and sticky sessions."
+        },
+        {
+          "code": "competency.architecture-system-design.identify-repeated-expensive-read-define",
+          "order": 14,
+          "requiredLevel": "L3",
+          "statement": "I can identify a repeated expensive read, define key/value/TTL/invalidation/consistency behavior, and reject caching when correctness or invalidation cost dominates."
+        },
+        {
+          "code": "competency.architecture-system-design.explain-leader-follower-replication-replication",
+          "order": 15,
+          "requiredLevel": "L3",
+          "statement": "I can explain leader/follower replication, replication lag, failover, and the consistency behavior visible to reads and writes."
+        },
+        {
+          "code": "competency.architecture-system-design.enumerate-component-dependency-overload-network",
+          "order": 16,
+          "requiredLevel": "L3",
+          "statement": "I can enumerate component, dependency, overload, network, deployment, data, and operator failure modes and define detection, containment, recovery, and user impact."
+        },
+        {
+          "code": "competency.architecture-system-design.trace-critical-workflow-identify-every",
+          "order": 17,
+          "requiredLevel": "L3",
+          "statement": "I can trace a critical workflow and identify every dependency whose loss prevents completion, then define redundancy or an accepted risk."
+        },
+        {
+          "code": "competency.architecture-system-design.compare-least-two-solutions-against",
+          "order": 18,
+          "requiredLevel": "L3",
+          "statement": "I can compare at least two solutions against the same requirements, complexity, cost, failure modes, reversibility, and expected evolution."
+        },
+        {
+          "code": "competency.architecture-system-design.record-context-decision-alternatives-consequences",
+          "order": 19,
+          "requiredLevel": "L3",
+          "statement": "I can record context, decision, alternatives, consequences, status, and revisit triggers in an ADR."
+        },
+        {
+          "code": "competency.architecture-system-design.remove-defer-component-whose-current",
+          "order": 20,
+          "requiredLevel": "L3",
+          "statement": "I can remove or defer a component whose current requirement is already met by a simpler design and state the trigger for reconsidering it."
+        },
+        {
+          "code": "competency.architecture-system-design.attribute-services-cost-compute-data",
+          "order": 21,
+          "requiredLevel": "L3",
+          "statement": "I can attribute a service’s cost to compute, data store, network, logs/traces, and third-party APIs, and change a design after a measured cost problem rather than after a monthly surprise."
+        },
+        {
+          "code": "competency.architecture-system-design.estimate-average-peak-requests-events",
+          "order": 22,
+          "requiredLevel": "L4",
+          "statement": "I can estimate average and peak requests/events per second and storage growth from stated assumptions, show the calculation and uncertainty, and reject planet-scale design when a single instance still fits."
+        },
+        {
+          "code": "competency.architecture-system-design.choose-candidate-partition-key-explain",
+          "order": 23,
+          "requiredLevel": "L4",
+          "statement": "I can choose a candidate partition key and explain its effect on data locality, skew, cross-partition operations, and rebalancing — or state why the workload does not need sharding."
+        }
+      ]
+    },
+    {
+      "code": "domain.security",
+      "order": 15,
+      "title": "Security",
+      "knowledge": [
+        "authentication",
+        "authorization",
+        "password hashing",
+        "sessions",
+        "JWT",
+        "OAuth 2.0",
+        "OpenID Connect",
+        "RBAC",
+        "least privilege",
+        "secrets",
+        "injection",
+        "XSS",
+        "CSRF",
+        "SSRF",
+        "access control",
+        "supply chain",
+        "threat modeling",
+        "encryption at rest",
+        "encryption in transit",
+        "key management",
+        "data classification",
+        "data minimization",
+        "retention/deletion",
+        "PII",
+        "LGPD/GDPR",
+        "SBOM",
+        "multi-tenancy",
+        "fail closed"
+      ],
+      "competencies": [
+        {
+          "code": "competency.security.separate-identity-verification-permission-checks",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can separate identity verification from permission checks and locate both controls in a request flow."
+        },
+        {
+          "code": "competency.security.hash-verify-passwords-password-specific",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can hash and verify passwords with a password-specific adaptive algorithm, unique salts, safe parameters, and a rehash strategy."
+        },
+        {
+          "code": "competency.security.implement-session-creation-secure-cookie",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can implement session creation, secure cookie delivery, server-side lookup, rotation, expiration, logout/revocation, and fixation protection."
+        },
+        {
+          "code": "competency.security.validate-jwts-signature-issuer-audience",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can validate a JWT’s signature, issuer, audience, expiration, and allowed algorithm, and explain revocation and data-exposure limitations."
+        },
+        {
+          "code": "competency.security.define-roles-permissions-enforce-them",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can define roles and permissions, enforce them server-side on every protected operation, and test allowed and denied paths."
+        },
+        {
+          "code": "competency.security.assign-minimum-permissions-required-user",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can assign the minimum permissions required by a user, service, or credential and identify permissions that can be removed."
+        },
+        {
+          "code": "competency.security.keep-secrets-out-code-images",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can keep secrets out of code, images, logs, client bundles, and version control and detect accidental exposure before release."
+        },
+        {
+          "code": "competency.security.demonstrate-how-sql-injection-occurs",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can demonstrate how SQL injection occurs and prevent it through parameterized queries, input boundaries, and restricted database privileges."
+        },
+        {
+          "code": "competency.security.validate-type-shape-range-length",
+          "order": 9,
+          "requiredLevel": "L2",
+          "statement": "I can validate type, shape, range, length, format, and business invariants at the trust boundary and return a safe, consistent error."
+        },
+        {
+          "code": "competency.security.throttle-authentication-attempts-appropriate-identities",
+          "order": 10,
+          "requiredLevel": "L2",
+          "statement": "I can throttle authentication attempts by appropriate identities, introduce progressive delay/lockout without easy denial of service, and monitor attack patterns."
+        },
+        {
+          "code": "competency.security.fail-closed-authentication-authorization-validation",
+          "order": 11,
+          "requiredLevel": "L2",
+          "statement": "I can fail closed on authentication, authorization, validation, and payment or inventory uncertainty, and fail open only for a named non-critical degradation."
+        },
+        {
+          "code": "competency.security.classify-data-public-internal-confidential",
+          "order": 12,
+          "requiredLevel": "L2",
+          "statement": "I can classify data as public, internal, confidential, or personal/sensitive and apply collection, access, logging, retention, and sharing rules from that class."
+        },
+        {
+          "code": "competency.security.keep-secrets-tokens-personal-data",
+          "order": 13,
+          "requiredLevel": "L2",
+          "statement": "I can keep secrets, tokens, and personal data out of logs, traces, error reports, and eval datasets, and test that a failure path does not leak them."
+        },
+        {
+          "code": "competency.security.trace-oauth-2-0-authorization",
+          "order": 14,
+          "requiredLevel": "L3",
+          "statement": "I can trace an OAuth 2.0 authorization-code flow with PKCE and distinguish client, resource owner, authorization server, and resource server."
+        },
+        {
+          "code": "competency.security.explain-how-openid-connect-adds",
+          "order": 15,
+          "requiredLevel": "L3",
+          "statement": "I can explain how OpenID Connect adds identity to OAuth 2.0 and validate the ID token and nonce in a login flow."
+        },
+        {
+          "code": "competency.security.provision-secrets-per-environment-least",
+          "order": 16,
+          "requiredLevel": "L3",
+          "statement": "I can provision secrets per environment with least access, rotation, revocation, auditability, and documented ownership."
+        },
+        {
+          "code": "competency.security.prevent-stored-reflected-xss-through",
+          "order": 17,
+          "requiredLevel": "L3",
+          "statement": "I can prevent stored and reflected XSS through contextual output encoding and safe APIs, and explain when a Content-Security-Policy adds defense in depth."
+        },
+        {
+          "code": "competency.security.explain-browser-credentials-make-request",
+          "order": 18,
+          "requiredLevel": "L3",
+          "statement": "I can explain when browser credentials make a request vulnerable to CSRF and apply SameSite cookies, anti-CSRF tokens, or origin checks."
+        },
+        {
+          "code": "competency.security.identify-server-side-requests-influenced",
+          "order": 19,
+          "requiredLevel": "L3",
+          "statement": "I can identify server-side requests influenced by untrusted input and constrain schemes, hosts, redirects, DNS resolution, and network access to prevent SSRF."
+        },
+        {
+          "code": "competency.security.isolate-tenant-data-queries-caches",
+          "order": 20,
+          "requiredLevel": "L3",
+          "statement": "I can isolate tenant data in queries, caches, jobs, and search indexes, test cross-tenant leakage, and treat a missing tenant predicate as an incident."
+        },
+        {
+          "code": "competency.security.enforce-role-resource-ownership-checks",
+          "order": 21,
+          "requiredLevel": "L3",
+          "statement": "I can enforce role and resource-ownership checks server-side for every operation and test horizontal and vertical privilege escalation."
+        },
+        {
+          "code": "competency.security.constrain-upload-size-type-count",
+          "order": 22,
+          "requiredLevel": "L3",
+          "statement": "I can constrain upload size/type/count, verify content rather than trusting names, generate safe storage names, isolate storage, control retrieval, and scan when risk requires it."
+        },
+        {
+          "code": "competency.security.identify-vulnerable-direct-transitive-dependencies",
+          "order": 23,
+          "requiredLevel": "L3",
+          "statement": "I can identify vulnerable direct and transitive dependencies, assess reachability/severity, update or mitigate, and verify the application afterward."
+        },
+        {
+          "code": "competency.security.pin-verify-dependencies-build-inputs",
+          "order": 24,
+          "requiredLevel": "L3",
+          "statement": "I can pin and verify dependencies/build inputs, protect CI credentials, review installation scripts, and restrict who can publish or change the release path."
+        },
+        {
+          "code": "competency.security.log-authentication-authorization-credential-administrative",
+          "order": 25,
+          "requiredLevel": "L3",
+          "statement": "I can log authentication, authorization, credential, administrative, and suspicious-input events with actor/time/outcome/correlation context and no secrets."
+        },
+        {
+          "code": "competency.security.revoke-rotate-compromised-credential-identify",
+          "order": 26,
+          "requiredLevel": "L3",
+          "statement": "I can revoke and rotate a compromised credential, identify its access and exposure window, inspect relevant logs, limit impact, and document preventive action."
+        },
+        {
+          "code": "competency.security.map-assets-actors-trust-boundaries",
+          "order": 27,
+          "requiredLevel": "L3",
+          "statement": "I can map assets, actors, trust boundaries, entry points, abuse cases, mitigations, and residual risks for a feature before implementation."
+        },
+        {
+          "code": "competency.security.encrypt-data-transit-current-tls",
+          "order": 28,
+          "requiredLevel": "L3",
+          "statement": "I can encrypt data in transit with current TLS and data at rest with a managed key, describe where the key lives, who can use it, and how rotation or revocation works without rewriting application records."
+        },
+        {
+          "code": "competency.security.trace-personal-data-collection-through",
+          "order": 29,
+          "requiredLevel": "L3",
+          "statement": "I can trace personal data from collection through processing, storage, logs, backups, analytics, model prompts, and third-party APIs, then implement access, retention, and deletion that reach each copy."
+        }
+      ]
+    },
+    {
+      "code": "domain.docker-ci-cd-infrastructure",
+      "order": 16,
+      "title": "Docker, CI/CD, and Infrastructure",
+      "knowledge": [
+        "containers",
+        "images",
+        "layers",
+        "multi-stage build",
+        "volumes",
+        "networking",
+        "Compose",
+        "CI",
+        "CD",
+        "artifacts",
+        "rollback",
+        "environments",
+        "DNS",
+        "HTTPS",
+        "reverse proxy",
+        "cloud primitives",
+        "IAM",
+        "IaC",
+        "Kubernetes basics",
+        "feature flags",
+        "blue-green",
+        "canary",
+        "progressive delivery"
+      ],
+      "competencies": [
+        {
+          "code": "competency.docker-ci-cd-infrastructure.create-minimal-non-root-reproducible",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can create a minimal, non-root, reproducible Docker image with explicit runtime dependencies, configuration boundaries, and a health-aware startup command."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.order-dockerfile-instructions-maximize-reusable",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can order Dockerfile instructions to maximize reusable layers and explain which change invalidates each cached layer."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.separate-dependency-build-runtime-stages",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can separate dependency/build/runtime stages so build tools and source artifacts do not remain in the final image."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.choose-between-ephemeral-container-storage",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can choose between ephemeral container storage, a bind mount, and a managed volume and verify persistence across container replacement."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.connect-containers-through-isolated-network",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can connect containers through an isolated network, resolve services by name, and distinguish container ports from published host ports."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.define-local-multi-service-environment",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can define a local multi-service environment with networks, volumes, health checks, dependencies, and reproducible startup/teardown in Docker Compose."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.separate-non-secret-configuration-secrets",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can separate non-secret configuration from secrets, validate required values at startup, and prevent environment-specific values from entering source or images."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.create-ci-pipeline-triggered-repository",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can create a CI pipeline triggered by repository events with isolated dependency install, static checks, tests, build, caching, and clear failure output."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.make-pipeline-run-same-deterministic",
+          "order": 9,
+          "requiredLevel": "L2",
+          "statement": "I can make the pipeline run the same deterministic test commands used locally and fail before build/deploy when a required check fails."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.generate-immutable-versioned-artifact-image",
+          "order": 10,
+          "requiredLevel": "L2",
+          "statement": "I can generate an immutable versioned artifact/image, attach source/version metadata, and promote the same artifact between environments."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.deploy-immutable-artifact-controlled-configuration",
+          "order": 11,
+          "requiredLevel": "L2",
+          "statement": "I can deploy an immutable artifact with controlled configuration, health verification, migration ordering, and a failure strategy."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.restore-previous-working-application-configuration",
+          "order": 12,
+          "requiredLevel": "L2",
+          "statement": "I can restore the previous working application/configuration version and verify service health without corrupting newer data."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.define-which-configuration-data-access",
+          "order": 13,
+          "requiredLevel": "L2",
+          "statement": "I can define which configuration, data, access, deployment, and observability controls differ across development, staging, and production."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.configure-required-dns-records-verify",
+          "order": 14,
+          "requiredLevel": "L3",
+          "statement": "I can configure the required DNS records, verify propagation/resolution, and distinguish apex, subdomain, CNAME, and address-record behavior."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.provision-renew-certificate-redirect-http",
+          "order": 15,
+          "requiredLevel": "L3",
+          "statement": "I can provision and renew a certificate, redirect HTTP safely, validate hostname/TLS configuration, and avoid exposing the origin through an insecure path."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.configure-reverse-proxy-terminate-tls",
+          "order": 16,
+          "requiredLevel": "L3",
+          "statement": "I can configure a reverse proxy to terminate TLS, forward requests, preserve client/proxy headers safely, and route traffic to an application."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.map-application-requirement-compute-managed",
+          "order": 17,
+          "requiredLevel": "L3",
+          "statement": "I can map an application requirement to compute, managed database, object storage, and load-balancing services and explain the operational responsibility of each."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.define-iam-principal-role-policy",
+          "order": 18,
+          "requiredLevel": "L3",
+          "statement": "I can define an IAM principal, role/policy, resource, and action and reduce a policy to the minimum permissions required."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.describe-infrastructure-declarative-reviewable-repeatable",
+          "order": 19,
+          "requiredLevel": "L3",
+          "statement": "I can describe infrastructure as declarative, reviewable, repeatable state and explain planning, applying, drift, state storage, and rollback concerns."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.explain-how-kubernetes-deployment-maintains",
+          "order": 20,
+          "requiredLevel": "L3",
+          "statement": "I can explain how a Kubernetes Deployment maintains Pods, how a Service reaches them, and how Ingress exposes them, without needing to operate a cluster."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.hide-incomplete-risky-behavior-behind",
+          "order": 21,
+          "requiredLevel": "L3",
+          "statement": "I can hide an incomplete or risky behavior behind a server-side flag with a default-safe state, independent of deploy, and remove the flag after the change is the default."
+        },
+        {
+          "code": "competency.docker-ci-cd-infrastructure.choose-between-rolling-blue-green",
+          "order": 22,
+          "requiredLevel": "L3",
+          "statement": "I can choose between rolling, blue-green, canary, and immediate rollback from blast radius, schema compatibility, and how quickly a bad release must leave traffic."
+        }
+      ]
+    },
+    {
+      "code": "domain.observability-reliability",
+      "order": 17,
+      "title": "Observability and Reliability",
+      "knowledge": [
+        "structured logs",
+        "log levels",
+        "correlation IDs",
+        "metrics",
+        "latency",
+        "traffic",
+        "errors",
+        "saturation",
+        "tracing",
+        "OpenTelemetry",
+        "dashboards",
+        "alerts",
+        "availability",
+        "SLI",
+        "SLO",
+        "SLA",
+        "health checks",
+        "degradation",
+        "incidents",
+        "postmortems",
+        "RPO",
+        "RTO",
+        "on-call",
+        "toil"
+      ],
+      "competencies": [
+        {
+          "code": "competency.observability-reliability.produce-machine-parseable-logs-timestamp",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I produce machine-parseable logs with timestamp, level, event/message, service/version, correlation context, and structured fields rather than concatenated text."
+        },
+        {
+          "code": "competency.observability-reliability.assign-debug-info-warn-error",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can assign debug, info, warn, and error levels from operational meaning so normal behavior is not logged as failure and actionable failures are not hidden."
+        },
+        {
+          "code": "competency.observability-reliability.accept-generate-request-correlation-id",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I accept or generate a request/correlation ID, propagate it across boundaries, and include it in logs and responses without trusting unsafe external values."
+        },
+        {
+          "code": "competency.observability-reliability.use-propagated-correlation-context-reconstruct",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can use propagated correlation context to reconstruct one request across application and database logs."
+        },
+        {
+          "code": "competency.observability-reliability.choose-counter-gauge-histogram-metrics",
+          "order": 5,
+          "requiredLevel": "L3",
+          "statement": "I can choose counter, gauge, or histogram metrics with stable names/labels and avoid unbounded-cardinality dimensions."
+        },
+        {
+          "code": "competency.observability-reliability.measure-end-end-dependency-latency",
+          "order": 6,
+          "requiredLevel": "L3",
+          "statement": "I can measure end-to-end and dependency latency as distributions and inspect p50, p95, and p99 over a stated window."
+        },
+        {
+          "code": "competency.observability-reliability.measure-requests-events-bytes-per",
+          "order": 7,
+          "requiredLevel": "L3",
+          "statement": "I can measure requests/events/bytes per unit time and segment traffic by meaningful bounded dimensions."
+        },
+        {
+          "code": "competency.observability-reliability.define-eligible-operations-measure-failed",
+          "order": 8,
+          "requiredLevel": "L3",
+          "statement": "I can define eligible operations and measure failed operations as a rate segmented by stable error category."
+        },
+        {
+          "code": "competency.observability-reliability.observe-cpu-memory-threads-goroutines",
+          "order": 9,
+          "requiredLevel": "L3",
+          "statement": "I can observe CPU, memory, threads/goroutines, connections, queue depth, disk, and dependency capacity and identify the limiting resource."
+        },
+        {
+          "code": "competency.observability-reliability.instrument-service-vendor-neutral-traces",
+          "order": 10,
+          "requiredLevel": "L3",
+          "statement": "I can instrument a service with vendor-neutral traces and metrics (OpenTelemetry or equivalent), propagate context across HTTP and queues, and use a trace to locate latency or failure without logging the whole payload."
+        },
+        {
+          "code": "competency.observability-reliability.build-dashboard-answers-current-user",
+          "order": 11,
+          "requiredLevel": "L3",
+          "statement": "I can build a dashboard that answers current user impact, latency/traffic/errors/saturation, dependency health, and recent-change questions for a service."
+        },
+        {
+          "code": "competency.observability-reliability.create-alert-tied-user-impact",
+          "order": 12,
+          "requiredLevel": "L3",
+          "statement": "I can create an alert tied to user impact or imminent exhaustion with threshold/window, owner, severity, runbook, deduplication, and recovery behavior."
+        },
+        {
+          "code": "competency.observability-reliability.define-calculate-availability-eligible-successful",
+          "order": 13,
+          "requiredLevel": "L3",
+          "statement": "I can define and calculate availability from eligible successful service events over a stated time window."
+        },
+        {
+          "code": "competency.observability-reliability.define-measurable-sli-user-visible",
+          "order": 14,
+          "requiredLevel": "L3",
+          "statement": "I can define a measurable SLI from the user-visible behavior of a service and its valid/invalid event criteria."
+        },
+        {
+          "code": "competency.observability-reliability.set-slo-target-time-window",
+          "order": 15,
+          "requiredLevel": "L3",
+          "statement": "I can set an SLO with a target and time window and use its error budget to guide reliability work."
+        },
+        {
+          "code": "competency.observability-reliability.distinguish-internal-slo-contractual-sla",
+          "order": 16,
+          "requiredLevel": "L3",
+          "statement": "I can distinguish an internal SLO from a contractual SLA and explain the consequence of violating each."
+        },
+        {
+          "code": "competency.observability-reliability.separate-liveness-readiness-startup-checks",
+          "order": 17,
+          "requiredLevel": "L3",
+          "statement": "I can separate liveness, readiness, and startup checks and keep them fast, bounded, and representative without creating dependency cascades."
+        },
+        {
+          "code": "competency.observability-reliability.identify-non-critical-dependency-define",
+          "order": 18,
+          "requiredLevel": "L3",
+          "statement": "I can identify a non-critical dependency, define a fallback or reduced-capability response, and prevent its failure from taking down the core user flow."
+        },
+        {
+          "code": "competency.observability-reliability.identify-affected-users-operations-tenants",
+          "order": 19,
+          "requiredLevel": "L3",
+          "statement": "I can identify affected users, operations, tenants, regions, versions, data, and time window during a failure."
+        },
+        {
+          "code": "competency.observability-reliability.decide-whether-rollback-safe-schema",
+          "order": 20,
+          "requiredLevel": "L3",
+          "statement": "I can decide whether rollback is safe from schema/data compatibility, execute it, and verify user-visible recovery."
+        },
+        {
+          "code": "competency.observability-reliability.construct-incident-timeline-telemetry-changes",
+          "order": 21,
+          "requiredLevel": "L3",
+          "statement": "I can construct an incident timeline from telemetry and changes, test causal hypotheses, and separate trigger, contributing conditions, and impact."
+        },
+        {
+          "code": "competency.observability-reliability.write-blameless-postmortem-impact-detection",
+          "order": 22,
+          "requiredLevel": "L3",
+          "statement": "I can write a blameless postmortem with impact, detection, timeline, causes, response analysis, and owned preventive actions."
+        },
+        {
+          "code": "competency.observability-reliability.state-rpo-rto-service-map",
+          "order": 23,
+          "requiredLevel": "L3",
+          "statement": "I can state RPO and RTO for a service, map them to backup, replica, and multi-instance strategy, and run a restore or failover that meets those numbers or revises them."
+        }
+      ]
+    },
+    {
+      "code": "domain.performance",
+      "order": 18,
+      "title": "Performance",
+      "knowledge": [
+        "baseline",
+        "p50/p95/p99",
+        "throughput",
+        "CPU",
+        "memory",
+        "I/O",
+        "profiling",
+        "benchmarks",
+        "load tests",
+        "stress tests",
+        "slow queries",
+        "caching",
+        "batching",
+        "async processing",
+        "connection pools"
+      ],
+      "competencies": [
+        {
+          "code": "competency.performance.do-not-optimize-without-measuring",
+          "order": 1,
+          "requiredLevel": "L3",
+          "statement": "I do not optimize without measuring."
+        },
+        {
+          "code": "competency.performance.define-representative-workload-environment-record",
+          "order": 2,
+          "requiredLevel": "L3",
+          "statement": "I can define a representative workload/environment and record latency, throughput, errors, CPU, memory, I/O, and saturation before changing the system."
+        },
+        {
+          "code": "competency.performance.collect-latency-distribution-over-stated",
+          "order": 3,
+          "requiredLevel": "L3",
+          "statement": "I can collect a latency distribution over a stated workload/window and interpret p50, p95, and p99 rather than relying on an average."
+        },
+        {
+          "code": "competency.performance.measure-completed-operations-per-unit",
+          "order": 4,
+          "requiredLevel": "L3",
+          "statement": "I can measure completed operations per unit time alongside latency and errors so higher throughput is not mistaken for improvement when quality degrades."
+        },
+        {
+          "code": "competency.performance.measure-process-container-host-cpu",
+          "order": 5,
+          "requiredLevel": "L3",
+          "statement": "I can measure process/container/host CPU utilization and profiling samples and distinguish CPU saturation from waiting."
+        },
+        {
+          "code": "competency.performance.measure-working-set-heap-allocation",
+          "order": 6,
+          "requiredLevel": "L3",
+          "statement": "I can measure working set, heap, allocation rate, garbage collection, and retention over time and distinguish pressure from a leak."
+        },
+        {
+          "code": "competency.performance.measure-disk-network-database-o",
+          "order": 7,
+          "requiredLevel": "L3",
+          "statement": "I can measure disk/network/database I/O latency, throughput, queueing, and wait time and connect it to the responsible operation."
+        },
+        {
+          "code": "competency.performance.capture-interpret-profiler-output-identify",
+          "order": 8,
+          "requiredLevel": "L3",
+          "statement": "I can capture and interpret a profiler output, identify a measured hotspot, and avoid optimizing code that is not responsible for meaningful cost."
+        },
+        {
+          "code": "competency.performance.create-reproducible-benchmark-controlled-inputs",
+          "order": 9,
+          "requiredLevel": "L3",
+          "statement": "I can create a reproducible benchmark with controlled inputs, warmup, repeated samples, allocation/resource reporting, and regression comparison."
+        },
+        {
+          "code": "competency.performance.identify-whether-bottleneck-application-database",
+          "order": 10,
+          "requiredLevel": "L3",
+          "statement": "I can identify whether a bottleneck is in the application, database, network, or external dependency."
+        },
+        {
+          "code": "competency.performance.identify-slow-high-impact-queries",
+          "order": 11,
+          "requiredLevel": "L3",
+          "statement": "I can identify slow/high-impact queries from database telemetry, reproduce them, inspect their plans and data distribution, and verify a fix."
+        },
+        {
+          "code": "competency.performance.evaluate-caching-read-frequency-computation",
+          "order": 12,
+          "requiredLevel": "L3",
+          "statement": "I can evaluate caching from read frequency, computation/I/O cost, acceptable staleness, key design, invalidation, and measured hit rate."
+        },
+        {
+          "code": "competency.performance.evaluate-batching-per-operation-overhead",
+          "order": 13,
+          "requiredLevel": "L3",
+          "statement": "I can evaluate batching from per-operation overhead, acceptable latency, batch size, partial failure, and memory limits."
+        },
+        {
+          "code": "competency.performance.evaluate-asynchronous-processing-response-time",
+          "order": 14,
+          "requiredLevel": "L3",
+          "statement": "I can evaluate asynchronous processing from response-time requirements, delivery guarantees, retries, observability, and user-visible completion state."
+        },
+        {
+          "code": "competency.performance.evaluate-connection-pool-changes-database",
+          "order": 15,
+          "requiredLevel": "L3",
+          "statement": "I can evaluate connection-pool changes from database limits, request concurrency, wait time, utilization, and connection lifetime."
+        },
+        {
+          "code": "competency.performance.compare-same-workload-environment-before",
+          "order": 16,
+          "requiredLevel": "L3",
+          "statement": "I can compare the same workload/environment before and after a change, including confidence/variance and regressions in other resources."
+        },
+        {
+          "code": "competency.performance.state-target-metric-measured-improvement",
+          "order": 17,
+          "requiredLevel": "L3",
+          "statement": "I can state the target metric, measured improvement, experimental conditions, trade-offs, and why the difference is attributable to the change."
+        }
+      ]
+    },
+    {
+      "code": "domain.maintenance-evolution",
+      "order": 19,
+      "title": "Maintenance and Evolution",
+      "knowledge": [
+        "program comprehension",
+        "impact analysis",
+        "corrective maintenance",
+        "adaptive maintenance",
+        "perfective maintenance",
+        "preventive maintenance",
+        "incremental refactoring",
+        "dependency updates",
+        "backward compatibility",
+        "deprecation",
+        "data migration",
+        "technical debt"
+      ],
+      "competencies": [
+        {
+          "code": "competency.maintenance-evolution.trace-unfamiliar-codebase-entry-points",
+          "order": 1,
+          "requiredLevel": "L3",
+          "statement": "I can trace an unfamiliar codebase from entry points through domain logic, persistence, side effects, configuration, and tests and document the relevant flow."
+        },
+        {
+          "code": "competency.maintenance-evolution.identify-callers-contracts-data-migrations",
+          "order": 2,
+          "requiredLevel": "L3",
+          "statement": "I can identify callers, contracts, data, migrations, side effects, tests, deployments, and consumers affected by a proposed behavior change."
+        },
+        {
+          "code": "competency.maintenance-evolution.fix-bug-without-using-excuse",
+          "order": 3,
+          "requiredLevel": "L3",
+          "statement": "I can fix a bug without using it as an excuse to rewrite half the system."
+        },
+        {
+          "code": "competency.maintenance-evolution.preserve-behavior-tests-make-one",
+          "order": 4,
+          "requiredLevel": "L3",
+          "statement": "I can preserve behavior with tests, make one reviewable structural change at a time, keep the system deployable, and stop without requiring a rewrite."
+        },
+        {
+          "code": "competency.maintenance-evolution.update-dependency-reviewing-release-notes",
+          "order": 5,
+          "requiredLevel": "L3",
+          "statement": "I can update a dependency by reviewing release notes and security impact, running relevant tests, checking transitive changes, and defining a rollback path."
+        },
+        {
+          "code": "competency.maintenance-evolution.evolve-interface-schema-without-breaking",
+          "order": 6,
+          "requiredLevel": "L3",
+          "statement": "I can evolve an interface or schema without breaking current consumers, or provide a versioned migration and deprecation path when compatibility is impossible."
+        },
+        {
+          "code": "competency.maintenance-evolution.define-replacement-guidance-compatibility-period",
+          "order": 7,
+          "requiredLevel": "L3",
+          "statement": "I can define replacement guidance, compatibility period, consumer communication, telemetry, removal criteria, and target dates for a deprecation."
+        },
+        {
+          "code": "competency.maintenance-evolution.migrate-data-through-validated-resumable",
+          "order": 8,
+          "requiredLevel": "L3",
+          "statement": "I can migrate data through validated, resumable, observable steps while preserving a recoverable source or rollback/roll-forward path."
+        },
+        {
+          "code": "competency.maintenance-evolution.identify-technical-debt-recurring-delivery",
+          "order": 9,
+          "requiredLevel": "L3",
+          "statement": "I can identify technical debt from recurring delivery, reliability, security, operability, or comprehension cost rather than mere stylistic preference."
+        },
+        {
+          "code": "competency.maintenance-evolution.document-debt-context-impact-risk",
+          "order": 10,
+          "requiredLevel": "L3",
+          "statement": "I can document debt with context, impact, risk, workaround, proposed direction, owner/revisit trigger, and avoid presenting uncertain rewrites as commitments."
+        },
+        {
+          "code": "competency.maintenance-evolution.improve-system-did-not-create",
+          "order": 11,
+          "requiredLevel": "L3",
+          "statement": "I can improve a system I did not create."
+        }
+      ]
+    },
+    {
+      "code": "domain.product-requirements-domain",
+      "order": 20,
+      "title": "Product, Requirements, and Domain",
+      "knowledge": [
+        "problem framing",
+        "stakeholders",
+        "user needs",
+        "business rules",
+        "edge cases",
+        "assumptions",
+        "acceptance criteria",
+        "scope decomposition",
+        "technical risk",
+        "trade-offs",
+        "scope negotiation",
+        "business impact"
+      ],
+      "competencies": [
+        {
+          "code": "competency.product-requirements-domain.turn-vague-need-questions-about",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can turn a vague need into questions about user, problem, current behavior, desired outcome, frequency, constraints, exceptions, and success."
+        },
+        {
+          "code": "competency.product-requirements-domain.identify-people-who-use-approve",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can identify people who use, approve, operate, fund, support, provide data to, or are affected by a change and state their conflicting interests."
+        },
+        {
+          "code": "competency.product-requirements-domain.distinguish-person-requesting-feature-person",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can distinguish the person requesting a feature from the person performing the workflow and validate needs with the actual user."
+        },
+        {
+          "code": "competency.product-requirements-domain.describe-user-problem-outcome-independently",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can describe the user/problem/outcome independently of an implementation and compare multiple possible solutions."
+        },
+        {
+          "code": "competency.product-requirements-domain.express-business-rules-inputs-conditions",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can express business rules as inputs, conditions, decisions, outputs, invariants, exceptions, and examples."
+        },
+        {
+          "code": "competency.product-requirements-domain.derive-edge-cases-boundaries-missing",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can derive edge cases from boundaries, missing/duplicate data, invalid states, concurrency, retries, permissions, and partial failure."
+        },
+        {
+          "code": "competency.product-requirements-domain.record-each-assumption-why-believed",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can record each assumption, why it is believed, its risk if false, and how/when it will be validated."
+        },
+        {
+          "code": "competency.product-requirements-domain.write-acceptance-criteria-observable-preconditions",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can write acceptance criteria with observable preconditions, action, expected result, errors, and relevant non-functional constraints."
+        },
+        {
+          "code": "competency.product-requirements-domain.split-feature-independently-valuable-deployable",
+          "order": 9,
+          "requiredLevel": "L2",
+          "statement": "I can split a feature into independently valuable, deployable vertical slices rather than horizontal technical layers."
+        },
+        {
+          "code": "competency.product-requirements-domain.identify-technical-risks-likelihood-impact",
+          "order": 10,
+          "requiredLevel": "L2",
+          "statement": "I can identify technical risks by likelihood/impact, define an early validation or mitigation, and make residual uncertainty visible before implementation."
+        },
+        {
+          "code": "competency.product-requirements-domain.explain-trade-offs-non-technical",
+          "order": 11,
+          "requiredLevel": "L2",
+          "statement": "I can explain trade-offs to a non-technical person."
+        },
+        {
+          "code": "competency.product-requirements-domain.challenge-technically-poor-requirement-without",
+          "order": 12,
+          "requiredLevel": "L2",
+          "statement": "I can challenge a technically poor requirement without simply saying “no.”"
+        },
+        {
+          "code": "competency.product-requirements-domain.present-must-have-outcomes-removable",
+          "order": 13,
+          "requiredLevel": "L2",
+          "statement": "I can present must-have outcomes, removable behavior, sequencing alternatives, cost/risk trade-offs, and agree on an explicit smaller delivery."
+        },
+        {
+          "code": "competency.product-requirements-domain.connect-technical-decision-user-business",
+          "order": 14,
+          "requiredLevel": "L2",
+          "statement": "I can connect a technical decision to user or business impact."
+        }
+      ]
+    },
+    {
+      "code": "domain.professional-work-autonomy",
+      "order": 21,
+      "title": "Professional Work and Autonomy",
+      "knowledge": [
+        "ownership",
+        "ambiguity",
+        "decomposition",
+        "estimation",
+        "risk communication",
+        "decision scope",
+        "asking for help",
+        "documentation",
+        "technical presentation",
+        "code review",
+        "mentoring",
+        "accountability",
+        "RFC",
+        "ethics"
+      ],
+      "competencies": [
+        {
+          "code": "competency.professional-work-autonomy.receive-reasonably-defined-feature-drive",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can receive a reasonably defined feature and drive it from start to deployment."
+        },
+        {
+          "code": "competency.professional-work-autonomy.decompose-problem-reviewable-tasks-dependencies",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can decompose a problem into reviewable tasks with dependencies, outputs, validation, and an integration/deployment path."
+        },
+        {
+          "code": "competency.professional-work-autonomy.estimate-work-range-state-assumptions",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can estimate work as a range, state assumptions and unknowns, separate effort from elapsed time, and revise the estimate when evidence changes."
+        },
+        {
+          "code": "competency.professional-work-autonomy.ask-help-problem-expected-actual",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can ask for help with the problem, expected and actual behavior, attempted hypotheses, relevant evidence, and the smallest remaining uncertainty."
+        },
+        {
+          "code": "competency.professional-work-autonomy.communicate-blocker-before-threatens-delivery",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can communicate a blocker before it threatens delivery, stating impact, attempted work, needed decision/help, owner, and next checkpoint."
+        },
+        {
+          "code": "competency.professional-work-autonomy.review-change-behavior-design-fit",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can review a change for behavior, design fit, security, data, concurrency, tests, operability, and maintainability and leave prioritized, actionable feedback."
+        },
+        {
+          "code": "competency.professional-work-autonomy.take-responsibility-failure-something-delivered",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can take responsibility for a failure in something I delivered and drive its correction."
+        },
+        {
+          "code": "competency.professional-work-autonomy.work-productively-codebase-did-not",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can work productively in a codebase I did not create."
+        },
+        {
+          "code": "competency.professional-work-autonomy.receive-partially-ambiguous-problem-discover",
+          "order": 9,
+          "requiredLevel": "L3",
+          "statement": "I can receive a partially ambiguous problem and discover the missing information."
+        },
+        {
+          "code": "competency.professional-work-autonomy.identify-product-data-dependency-security",
+          "order": 10,
+          "requiredLevel": "L3",
+          "statement": "I can identify product, data, dependency, security, migration, operational, and schedule risks and define an owner or mitigation before starting."
+        },
+        {
+          "code": "competency.professional-work-autonomy.make-local-technical-decisions-without",
+          "order": 11,
+          "requiredLevel": "L3",
+          "statement": "I can make local technical decisions without needing approval for every detail."
+        },
+        {
+          "code": "competency.professional-work-autonomy.recognize-decision-exceeds-scope-requires",
+          "order": 12,
+          "requiredLevel": "L3",
+          "statement": "I can recognize when a decision exceeds my scope and requires involving someone else."
+        },
+        {
+          "code": "competency.professional-work-autonomy.document-important-decision-context-options",
+          "order": 13,
+          "requiredLevel": "L3",
+          "statement": "I can document an important decision with context, options, choice, rationale, consequences, and revisit conditions."
+        },
+        {
+          "code": "competency.professional-work-autonomy.write-short-rfc-design-note",
+          "order": 14,
+          "requiredLevel": "L3",
+          "statement": "I can write a short RFC or design note that a teammate can implement without a meeting: context, options, decision, risks, rollout, and rollback."
+        },
+        {
+          "code": "competency.professional-work-autonomy.present-solutions-problem-constraints-architecture",
+          "order": 15,
+          "requiredLevel": "L3",
+          "statement": "I can present a solution’s problem, constraints, architecture, critical flow, trade-offs, validation, operational behavior, and remaining risks."
+        },
+        {
+          "code": "competency.professional-work-autonomy.defend-decision-arguments-evidence",
+          "order": 16,
+          "requiredLevel": "L3",
+          "statement": "I can defend a decision with arguments and evidence."
+        },
+        {
+          "code": "competency.professional-work-autonomy.change-mind-response-better-evidence",
+          "order": 17,
+          "requiredLevel": "L3",
+          "statement": "I can change my mind in response to better evidence."
+        },
+        {
+          "code": "competency.professional-work-autonomy.help-less-experienced-person-understand",
+          "order": 18,
+          "requiredLevel": "L3",
+          "statement": "I can help a less experienced person understand part of the system."
+        },
+        {
+          "code": "competency.professional-work-autonomy.refuse-change-unsafe-dishonest-illegal",
+          "order": 19,
+          "requiredLevel": "L3",
+          "statement": "I can refuse a change that is unsafe, dishonest, or illegal, and escalate with the evidence."
+        }
+      ]
+    },
+    {
+      "code": "domain.ai-engineering",
+      "order": 22,
+      "title": "AI Engineering",
+      "knowledge": [
+        "LLM APIs",
+        "sampling parameters",
+        "structured outputs",
+        "tool calling",
+        "streaming",
+        "state",
+        "prompt construction",
+        "prompt versioning",
+        "tokens",
+        "context windows",
+        "cost",
+        "evals",
+        "embeddings",
+        "semantic search",
+        "RAG",
+        "chunking",
+        "agents",
+        "prompt injection",
+        "human-in-the-loop",
+        "hybrid search",
+        "reranking",
+        "error analysis",
+        "LLM-as-judge",
+        "offline vs online evals",
+        "MCP / tool protocol",
+        "model routing",
+        "prompt/semantic cache",
+        "PII in prompts",
+        "data residency",
+        "fairness"
+      ],
+      "competencies": [
+        {
+          "code": "competency.ai-engineering.integrate-llm-api-authenticated-configuration",
+          "order": 1,
+          "requiredLevel": "L3",
+          "statement": "I can integrate an LLM API with authenticated configuration, typed request/response handling, timeout, cancellation, error mapping, and usage metadata."
+        },
+        {
+          "code": "competency.ai-engineering.vary-temperature-sampling-output-limits",
+          "order": 2,
+          "requiredLevel": "L3",
+          "statement": "I can vary temperature/sampling, output limits, stop behavior, and reasoning controls where supported and measure their effect on quality, determinism, latency, and cost."
+        },
+        {
+          "code": "competency.ai-engineering.define-schema-request-structured-output",
+          "order": 3,
+          "requiredLevel": "L3",
+          "statement": "I can define a schema, request structured output, validate it at runtime, reject/repair invalid output with limits, and keep model text from bypassing domain validation."
+        },
+        {
+          "code": "competency.ai-engineering.stream-model-output-cancellation-partial",
+          "order": 4,
+          "requiredLevel": "L3",
+          "statement": "I can stream model output with cancellation, partial UI state, error handling, final usage capture, and no duplicated final message."
+        },
+        {
+          "code": "competency.ai-engineering.assemble-prompts-versioned-instructions-trusted",
+          "order": 5,
+          "requiredLevel": "L3",
+          "statement": "I can assemble prompts from versioned instructions, trusted context, user input, and tool results while preserving clear trust boundaries."
+        },
+        {
+          "code": "competency.ai-engineering.estimate-how-input-output-tools",
+          "order": 6,
+          "requiredLevel": "L3",
+          "statement": "I can estimate how input, output, tools, and retrieved content consume tokens and design truncation or summarization behavior for context-window limits."
+        },
+        {
+          "code": "competency.ai-engineering.estimate-per-request-end-end",
+          "order": 7,
+          "requiredLevel": "L3",
+          "statement": "I can estimate per-request and end-to-end flow cost from input/output/cached tokens, model pricing, retries, tool calls, and expected traffic."
+        },
+        {
+          "code": "competency.ai-engineering.apply-timeout-cancellation-retry-only",
+          "order": 8,
+          "requiredLevel": "L3",
+          "statement": "I can apply timeout/cancellation, retry only eligible failures with limits, and define a fallback that preserves safety and communicates reduced capability."
+        },
+        {
+          "code": "competency.ai-engineering.record-model-provider-version-prompt",
+          "order": 9,
+          "requiredLevel": "L3",
+          "statement": "I can record model/provider/version, prompt version, latency, token usage, retries, tool calls, error class, and estimated cost without logging sensitive content."
+        },
+        {
+          "code": "competency.ai-engineering.decide-what-data-may-leave",
+          "order": 10,
+          "requiredLevel": "L3",
+          "statement": "I can decide what data may leave the trust boundary to a third-party model, redact or refuse the rest, and record that decision as part of the feature design."
+        },
+        {
+          "code": "competency.ai-engineering.identify-ai-feature-cause-unfair",
+          "order": 11,
+          "requiredLevel": "L3",
+          "statement": "I can identify when an AI feature can cause unfair, unsafe, or irreversible effects on people, define a human override, and refuse silent autonomy on that path."
+        },
+        {
+          "code": "competency.ai-engineering.state-which-data-logs-model",
+          "order": 12,
+          "requiredLevel": "L3",
+          "statement": "I can state which data, logs, and model calls an AI feature makes, who can access them, and which retention, residency, consent, or review rule would change the design."
+        },
+        {
+          "code": "competency.ai-engineering.reject-ai-deterministic-logic-search",
+          "order": 13,
+          "requiredLevel": "L3",
+          "statement": "I can reject AI when deterministic logic, search, rules, templates, or conventional software meet the quality requirement with lower cost, latency, risk, or operational complexity."
+        },
+        {
+          "code": "competency.ai-engineering.expose-tool-narrow-schema-description",
+          "order": 14,
+          "requiredLevel": "L4",
+          "statement": "I can expose a tool with a narrow schema and description, validate and authorize arguments server-side, execute it safely, and return bounded results to the model."
+        },
+        {
+          "code": "competency.ai-engineering.select-persist-trim-summarize-reconstruct",
+          "order": 15,
+          "requiredLevel": "L4",
+          "statement": "I can select, persist, trim, summarize, and reconstruct conversation state without mixing users or exceeding the context budget."
+        },
+        {
+          "code": "competency.ai-engineering.assign-immutable-prompt-version-each",
+          "order": 16,
+          "requiredLevel": "L4",
+          "statement": "I can assign an immutable prompt version to each execution and compare/rollback versions through evaluation rather than editing production text silently."
+        },
+        {
+          "code": "competency.ai-engineering.keep-trusted-system-developer-instructions",
+          "order": 17,
+          "requiredLevel": "L4",
+          "statement": "I can keep trusted system/developer instructions separate from untrusted user/retrieved content and prevent that content from being treated as higher-priority instructions."
+        },
+        {
+          "code": "competency.ai-engineering.create-representative-normal-boundary-adversarial",
+          "order": 18,
+          "requiredLevel": "L4",
+          "statement": "I can create representative normal, boundary, adversarial, and failure evaluation cases with expected behavior and scoring criteria."
+        },
+        {
+          "code": "competency.ai-engineering.run-same-evaluation-set-against",
+          "order": 19,
+          "requiredLevel": "L4",
+          "statement": "I can run the same evaluation set against two versions, compare quality/latency/cost regressions, inspect failures, and make a release decision."
+        },
+        {
+          "code": "competency.ai-engineering.inspect-traces-cluster-failures-cause",
+          "order": 20,
+          "requiredLevel": "L4",
+          "statement": "I can inspect traces, cluster failures by cause (retrieval miss, bad chunk, tool error, instruction conflict, hallucination, eval mismatch), and change the stage that actually failed instead of rewriting the prompt at random."
+        },
+        {
+          "code": "competency.ai-engineering.choose-among-exact-code-based",
+          "order": 21,
+          "requiredLevel": "L4",
+          "statement": "I can choose among exact/code-based checks, LLM-as-judge, and human review, state how the judge can be gamed or disagree with users, and keep a small labeled set to evaluate the evaluator."
+        },
+        {
+          "code": "competency.ai-engineering.explain-how-embeddings-map-content",
+          "order": 22,
+          "requiredLevel": "L4",
+          "statement": "I can explain how embeddings map content to vectors for similarity comparison and identify semantic-search cases where keyword search or structured filtering is preferable."
+        },
+        {
+          "code": "competency.ai-engineering.ingest-content-create-embeddings-store",
+          "order": 23,
+          "requiredLevel": "L4",
+          "statement": "I can ingest content, create embeddings, store metadata, query by similarity with structured filters, return ranked results, and evaluate retrieval relevance against keyword search."
+        },
+        {
+          "code": "competency.ai-engineering.combine-lexical-vector-retrieval-apply",
+          "order": 24,
+          "requiredLevel": "L4",
+          "statement": "I can combine lexical and vector retrieval, apply metadata filters, add a reranker when ranking quality is the bottleneck, and measure whether the change improved retrieval before touching generation."
+        },
+        {
+          "code": "competency.ai-engineering.build-rag-flow-ingestion-chunking",
+          "order": 25,
+          "requiredLevel": "L4",
+          "statement": "I can build a RAG flow with ingestion, chunking, metadata, retrieval, context construction, grounded generation, citations where appropriate, and separate retrieval/generation evaluation."
+        },
+        {
+          "code": "competency.ai-engineering.choose-chunk-boundaries-size-overlap",
+          "order": 26,
+          "requiredLevel": "L4",
+          "statement": "I can choose chunk boundaries, size, overlap, and metadata from document structure and retrieval needs, then evaluate whether the choice improves relevant retrieval."
+        },
+        {
+          "code": "competency.ai-engineering.score-whether-retrieval-returned-necessary",
+          "order": 27,
+          "requiredLevel": "L4",
+          "statement": "I can score whether retrieval returned the necessary relevant context before judging whether generation used that context faithfully."
+        },
+        {
+          "code": "competency.ai-engineering.expose-tools-through-narrow-authenticated",
+          "order": 28,
+          "requiredLevel": "L4",
+          "statement": "I can expose tools through a narrow, authenticated contract (MCP or equivalent), version that contract, and keep the model from inventing tools or arguments the server does not allow."
+        },
+        {
+          "code": "competency.ai-engineering.implement-agent-loop-selects-narrow",
+          "order": 29,
+          "requiredLevel": "L4",
+          "statement": "I can implement an agent loop that selects from narrow tools, records state, handles tool/model errors, and terminates with a user-visible result."
+        },
+        {
+          "code": "competency.ai-engineering.enforce-maximum-iterations-time-tokens",
+          "order": 30,
+          "requiredLevel": "L4",
+          "statement": "I can enforce maximum iterations, time, tokens/cost, repeated-call detection, cancellation, and an explicit terminal condition."
+        },
+        {
+          "code": "competency.ai-engineering.validate-tool-schemas-results-authorize",
+          "order": 31,
+          "requiredLevel": "L4",
+          "statement": "I can validate tool schemas and results, authorize each call for the current user/resource, apply least privilege, and require confirmation for risky effects."
+        },
+        {
+          "code": "competency.ai-engineering.account-prompt-injection-untrusted-data",
+          "order": 32,
+          "requiredLevel": "L4",
+          "statement": "I account for prompt injection and untrusted data."
+        },
+        {
+          "code": "competency.ai-engineering.identify-irreversible-external-financial-permission",
+          "order": 33,
+          "requiredLevel": "L4",
+          "statement": "I can identify irreversible, external, financial, permission, privacy, or destructive effects and require an informed human confirmation immediately before execution."
+        },
+        {
+          "code": "competency.ai-engineering.route-cache-model-calls-model",
+          "order": 34,
+          "requiredLevel": "L4",
+          "statement": "I can route or cache model calls (model choice, prompt cache, semantic cache) from latency, cost, and staleness constraints, and prove a cache hit cannot leak another user’s context."
+        },
+        {
+          "code": "competency.ai-engineering.use-python-library-model-does",
+          "order": 35,
+          "requiredLevel": "L4",
+          "statement": "I can use Python when a library/model does not make sense in Go or TypeScript."
+        }
+      ]
+    },
+    {
+      "code": "domain.frontend-literacy",
+      "order": 23,
+      "title": "Frontend Literacy",
+      "knowledge": [
+        "semantic HTML",
+        "CSS layout",
+        "browser JavaScript",
+        "DOM",
+        "forms",
+        "storage",
+        "API consumption",
+        "client authentication",
+        "components",
+        "state",
+        "rendering",
+        "CSR/SSR",
+        "devtools",
+        "React/Next.js",
+        "accessibility",
+        "responsive design"
+      ],
+      "competencies": [
+        {
+          "code": "competency.frontend-literacy.structure-page-meaningful-landmarks-headings",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can structure a page with meaningful landmarks, headings, lists, buttons, links, labels, tables, and form controls instead of generic containers."
+        },
+        {
+          "code": "competency.frontend-literacy.build-responsive-one-two-dimensional",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can build a responsive one- or two-dimensional layout with normal flow, Flexbox, Grid, sizing, spacing, and overflow without relying on arbitrary positioning."
+        },
+        {
+          "code": "competency.frontend-literacy.explain-debug-how-browser-javascript",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can explain and debug how browser JavaScript handles events, asynchronous requests, modules, and access to Web APIs."
+        },
+        {
+          "code": "competency.frontend-literacy.inspect-modify-dom-through-events",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can inspect and modify the DOM through events and selectors while avoiding unnecessary direct manipulation inside React."
+        },
+        {
+          "code": "competency.frontend-literacy.build-accessible-form-labels-native",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can build an accessible form with labels, native controls, client/server validation, submission states, and error feedback."
+        },
+        {
+          "code": "competency.frontend-literacy.choose-among-cookies-localstorage-sessionstorage",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can choose among cookies, localStorage, sessionStorage, and IndexedDB from lifetime, size, server access, and security requirements."
+        },
+        {
+          "code": "competency.frontend-literacy.call-api-loading-success-empty",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can call an API with loading, success, empty, validation, unauthorized, rate-limited, server-error, timeout, and cancellation states."
+        },
+        {
+          "code": "competency.frontend-literacy.support-login-logout-session-refresh",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can support login/logout/session refresh in the client without exposing secrets, treat server authorization as authoritative, and handle expired sessions safely."
+        },
+        {
+          "code": "competency.frontend-literacy.split-interface-components-clear-inputs",
+          "order": 9,
+          "requiredLevel": "L2",
+          "statement": "I can split an interface into components with clear inputs, responsibilities, and composition boundaries."
+        },
+        {
+          "code": "competency.frontend-literacy.place-state-smallest-shared-owner",
+          "order": 10,
+          "requiredLevel": "L2",
+          "statement": "I can place state at the smallest shared owner, derive values instead of duplicating them, and avoid using state for constants or computable values."
+        },
+        {
+          "code": "competency.frontend-literacy.inspect-request-url-method-headers",
+          "order": 11,
+          "requiredLevel": "L2",
+          "statement": "I can inspect request URL/method/headers/body, CORS/preflight, cookies, timing, response, cache, and initiator in browser devtools to locate a client/server failure."
+        },
+        {
+          "code": "competency.frontend-literacy.implement-react-screen-routing-forms",
+          "order": 12,
+          "requiredLevel": "L2",
+          "statement": "I can implement a React screen with routing, forms, API/data access, authentication state, errors, loading, and accessible interaction."
+        },
+        {
+          "code": "competency.frontend-literacy.provide-semantic-structure-keyboard-access",
+          "order": 13,
+          "requiredLevel": "L2",
+          "statement": "I can provide semantic structure, keyboard access, visible focus, labels, meaningful names, sufficient contrast, and non-color status cues for a simple interface."
+        },
+        {
+          "code": "competency.frontend-literacy.make-interface-usable-across-narrow",
+          "order": 14,
+          "requiredLevel": "L2",
+          "statement": "I can make an interface usable across narrow and wide viewports without horizontal overflow, inaccessible controls, or unreadable content."
+        },
+        {
+          "code": "competency.frontend-literacy.explain-what-triggers-render-identify",
+          "order": 15,
+          "requiredLevel": "L3",
+          "statement": "I can explain what triggers a render, identify an unnecessary render, and keep side effects outside rendering."
+        },
+        {
+          "code": "competency.frontend-literacy.choose-client-side-server-side",
+          "order": 16,
+          "requiredLevel": "L3",
+          "statement": "I can choose client-side or server-side rendering from interactivity, data access, SEO, latency, caching, and hydration requirements."
+        }
+      ]
+    },
+    {
+      "code": "domain.engineering-with-ai",
+      "order": 24,
+      "title": "Engineering with AI",
+      "knowledge": [
+        "task delegation",
+        "context engineering",
+        "diff review",
+        "architecture compliance",
+        "hallucination verification",
+        "agent-generated tests",
+        "AI-assisted debugging",
+        "technical investigation",
+        "human judgment",
+        "high-risk review",
+        "verifiers",
+        "multi-agent",
+        "sandbox"
+      ],
+      "competencies": [
+        {
+          "code": "competency.engineering-with-ai.delegate-task-explicit-goal-boundaries",
+          "order": 1,
+          "requiredLevel": "L2",
+          "statement": "I can delegate a task with explicit goal, boundaries, relevant files/contracts, constraints, acceptance criteria, validation commands, and prohibited changes."
+        },
+        {
+          "code": "competency.engineering-with-ai.provide-agent-current-architecture-ownership",
+          "order": 2,
+          "requiredLevel": "L2",
+          "statement": "I can provide the agent with current architecture, ownership boundaries, data flow, conventions, constraints, and the specific decision it must not make autonomously."
+        },
+        {
+          "code": "competency.engineering-with-ai.give-agent-verifier-run-itself",
+          "order": 3,
+          "requiredLevel": "L2",
+          "statement": "I can give an agent a verifier it can run itself (tests, typecheck, lint, a failing repro, or an eval) so the loop ends on evidence rather than on a confident summary."
+        },
+        {
+          "code": "competency.engineering-with-ai.keep-agent-away-production-credentials",
+          "order": 4,
+          "requiredLevel": "L2",
+          "statement": "I can keep an agent away from production credentials, live databases, and irreversible cloud changes, and use a disposable environment when the task needs execution."
+        },
+        {
+          "code": "competency.engineering-with-ai.review-every-changed-file-intended",
+          "order": 5,
+          "requiredLevel": "L2",
+          "statement": "I can review every changed file for intended behavior, unrelated changes, architecture fit, security/data risk, error paths, tests, and dependency/API validity before merge."
+        },
+        {
+          "code": "competency.engineering-with-ai.trace-generated-change-against-dependency",
+          "order": 6,
+          "requiredLevel": "L2",
+          "statement": "I can trace a generated change against dependency direction, module ownership, public contracts, data ownership, and side-effect boundaries and reject violations."
+        },
+        {
+          "code": "competency.engineering-with-ai.identify-generated-layer-interface-factory",
+          "order": 7,
+          "requiredLevel": "L2",
+          "statement": "I can identify a generated layer, interface, factory, service, or generic abstraction with no second use case or protected boundary and simplify it."
+        },
+        {
+          "code": "competency.engineering-with-ai.verify-generated-library-api-against",
+          "order": 8,
+          "requiredLevel": "L2",
+          "statement": "I can verify a generated library/API against installed versions and authoritative documentation and replace nonexistent, deprecated, or misused calls."
+        },
+        {
+          "code": "competency.engineering-with-ai.require-tests-changes-behavior-failure",
+          "order": 9,
+          "requiredLevel": "L2",
+          "statement": "I can require tests for the change’s behavior and failure paths, inspect whether they can fail for the right reason, and run them rather than trusting generated assertions."
+        },
+        {
+          "code": "competency.engineering-with-ai.reproduce-ai-produced-defect-form",
+          "order": 10,
+          "requiredLevel": "L2",
+          "statement": "I can reproduce an AI-produced defect, form and test my own hypotheses, trace the causal chain, and implement/verify the correction."
+        },
+        {
+          "code": "competency.engineering-with-ai.change-generated-control-flow-data",
+          "order": 11,
+          "requiredLevel": "L2",
+          "statement": "I can change the generated control flow, data model, contract, or design without needing the agent to regenerate the feature from scratch."
+        },
+        {
+          "code": "competency.engineering-with-ai.explain-merged-changes-control-flow",
+          "order": 12,
+          "requiredLevel": "L2",
+          "statement": "I can explain the merged change’s control flow, state, dependencies, failure behavior, tests, security implications, and architectural fit."
+        },
+        {
+          "code": "competency.engineering-with-ai.conduct-technical-investigation-without-accepting",
+          "order": 13,
+          "requiredLevel": "L2",
+          "statement": "I can conduct a technical investigation without accepting the AI’s first hypothesis."
+        },
+        {
+          "code": "competency.engineering-with-ai.use-ai-accelerate-exploration-without",
+          "order": 14,
+          "requiredLevel": "L2",
+          "statement": "I can use AI to accelerate exploration without delegating the architectural decision."
+        },
+        {
+          "code": "competency.engineering-with-ai.stop-failing-agent-path-revert",
+          "order": 15,
+          "requiredLevel": "L2",
+          "statement": "I can stop a failing agent path, revert or isolate its changes, preserve verified work, reduce the task, provide corrected context, or continue manually."
+        },
+        {
+          "code": "competency.engineering-with-ai.identify-ai-generated-changes-involving",
+          "order": 16,
+          "requiredLevel": "L2",
+          "statement": "I can identify AI-generated changes involving authentication, authorization, secrets, destructive operations, concurrency, migrations, money, personal data, or external side effects and apply stricter human review before execution or merge."
+        },
+        {
+          "code": "competency.engineering-with-ai.split-large-change-across-agents",
+          "order": 17,
+          "requiredLevel": "L3",
+          "statement": "I can split a large change across agents or sessions with explicit ownership of files/contracts, a shared spec, and a human merge of conflicting edits."
+        }
+      ]
+    }
+  ],
+  "experiences": [
+    {
+      "code": "experience.production-api",
+      "number": 1,
+      "title": "Production API",
+      "statement": "I built and deployed an API with authentication, authorization, validation, and a relational database.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.real-relational-model",
+      "number": 2,
+      "title": "Real relational model",
+      "statement": "I modeled a non-trivial domain with multiple entities, constraints, and relationships.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.transaction",
+      "number": 3,
+      "title": "Transaction",
+      "statement": "I solved a real problem that required atomicity/a transaction.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.migration",
+      "number": 4,
+      "title": "Migration",
+      "statement": "I changed schema/data in an existing system while preserving data.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.external-integration",
+      "number": 5,
+      "title": "External integration",
+      "statement": "I integrated an external API and handled errors, timeouts, and retries.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.authentication",
+      "number": 6,
+      "title": "Authentication",
+      "statement": "I implemented OAuth/OIDC or another real authentication flow.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.authorization",
+      "number": 7,
+      "title": "Authorization",
+      "statement": "I implemented authorization through roles, permissions, or resource ownership.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.background-processing",
+      "number": 8,
+      "title": "Background processing",
+      "statement": "I built asynchronous processing outside the main request.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.queue",
+      "number": 9,
+      "title": "Queue",
+      "statement": "I implemented a producer/consumer with retries and failed-message handling.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.cache",
+      "number": 10,
+      "title": "Cache",
+      "statement": "I used caching to solve a measurable problem and defined an invalidation strategy.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.webhook",
+      "number": 11,
+      "title": "Webhook",
+      "statement": "I implemented authenticated webhook delivery or receipt with idempotency, bounded retries, duplicate handling, and failure diagnostics.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.ci-cd",
+      "number": 12,
+      "title": "CI/CD",
+      "statement": "I configured automated builds, tests, and deployment.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.observability",
+      "number": 13,
+      "title": "Observability",
+      "statement": "I instrumented structured logs, metrics, and correlation IDs in a system.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.production-debugging",
+      "number": 14,
+      "title": "Production debugging",
+      "statement": "I investigated and fixed a failure in a deployed environment.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.existing-codebase",
+      "number": 15,
+      "title": "Existing codebase",
+      "statement": "I implemented a significant change in a codebase I did not start.",
+      "tier": "core"
+    },
+    {
+      "code": "experience.concurrency",
+      "number": 16,
+      "title": "Concurrency",
+      "statement": "I built a concurrent feature that protects shared state, propagates cancellation, bounds concurrency, and terminates without leaked work.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.distributed-coordination",
+      "number": 17,
+      "title": "Distributed coordination",
+      "statement": "I solved a real coordination problem across processes/instances, such as distributed locking, distributed idempotency, an outbox, or compensation.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.performance-investigation",
+      "number": 18,
+      "title": "Performance investigation",
+      "statement": "I found a bottleneck using metrics/profiling and quantitatively demonstrated the improvement.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.load-test",
+      "number": 19,
+      "title": "Load test",
+      "statement": "I ran load/stress tests and used the results to change the system.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.incident",
+      "number": 20,
+      "title": "Incident",
+      "statement": "I participated in a meaningful failure, helped mitigate it, found the cause, and implemented prevention.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.architecture-ownership",
+      "number": 21,
+      "title": "Architecture ownership",
+      "statement": "I designed a non-trivial subsystem, documented decisions, and followed its implementation through production.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.rag-system",
+      "number": 22,
+      "title": "RAG system",
+      "statement": "I built RAG with ingestion, retrieval, generation, and evaluation.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.agent-system",
+      "number": 23,
+      "title": "Agent system",
+      "statement": "I built an agent with tools, state, execution limits, observability, and failure handling.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.python-ai-component",
+      "number": 24,
+      "title": "Python AI component",
+      "statement": "I built a real Python component or service related to AI/data and integrated it with the rest of a system.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.significant-refactor-evolution",
+      "number": 25,
+      "title": "Significant refactor/evolution",
+      "statement": "I substantially evolved an existing system without disrupting users or simply rewriting it.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.privacy-data-lifecycle",
+      "number": 26,
+      "title": "Privacy / data lifecycle",
+      "statement": "I classified, encrypted or isolated, and implemented deletion or retention for personal data in a real feature.",
+      "tier": "strong"
+    },
+    {
+      "code": "experience.cross-store-workflow",
+      "number": 27,
+      "title": "Cross-store workflow",
+      "statement": "I shipped a workflow that needed an outbox, compensation, or an explicit single-atom alternative, and can explain why I chose that shape.",
+      "tier": "strong"
+    }
+  ],
+  "depthGates": [
+    {
+      "code": "depth.go",
+      "order": 1,
+      "title": "Go",
+      "criteria": [
+        {
+          "code": "depth.go.repeatedly-review-go-code-api",
+          "order": 1,
+          "statement": "I can repeatedly review Go code for API design, error handling, cancellation, concurrency, ownership, and idiomatic use and propose changes that improve it."
+        },
+        {
+          "code": "depth.go.reproduce-go-concurrency-failure-identify",
+          "order": 2,
+          "statement": "I can reproduce a Go concurrency failure, identify the violated synchronization/cancellation invariant with race traces or runtime evidence, and verify the fix."
+        },
+        {
+          "code": "depth.go.use-profiles-runtime-metrics-locate",
+          "order": 3,
+          "statement": "I can use profiles and runtime metrics to locate a Go CPU, allocation, heap-retention, or goroutine problem and quantify the improvement."
+        },
+        {
+          "code": "depth.go.design-packages-cohesive-responsibilities-minimal",
+          "order": 4,
+          "statement": "I can design packages with cohesive responsibilities, minimal consumer-defined interfaces, explicit ownership, and APIs that make invalid use difficult."
+        },
+        {
+          "code": "depth.go.explain-how-scheduling-garbage-collection",
+          "order": 5,
+          "statement": "I can explain how scheduling, garbage collection, allocation, escape behavior, or goroutine management affects a concrete Go design."
+        }
+      ]
+    },
+    {
+      "code": "depth.database-engineering",
+      "order": 2,
+      "title": "Database Engineering",
+      "criteria": [
+        {
+          "code": "depth.database-engineering.use-execution-plans-row-estimates",
+          "order": 1,
+          "statement": "I can use execution plans, row estimates, runtime statistics, and query rewrites to locate and correct a complex query bottleneck."
+        },
+        {
+          "code": "depth.database-engineering.design-validate-indexes-real-predicates",
+          "order": 2,
+          "statement": "I can design and validate indexes from real predicates, joins, ordering, cardinality, and write frequency rather than indexing columns in isolation."
+        },
+        {
+          "code": "depth.database-engineering.predict-lock-acquisition-transaction-interaction",
+          "order": 3,
+          "statement": "I can predict lock acquisition and transaction interaction for a concurrent workflow and prevent blocking, deadlock, or lost-update behavior."
+        },
+        {
+          "code": "depth.database-engineering.design-high-risk-schema-data",
+          "order": 4,
+          "statement": "I can design a high-risk schema/data migration with staged rollout, compatibility window, validation, monitoring, and a tested rollback or roll-forward strategy."
+        },
+        {
+          "code": "depth.database-engineering.state-consistency-guarantee-workflow-needs",
+          "order": 5,
+          "statement": "I can state the consistency guarantee a workflow needs, quantify the performance/operational cost, and reject a stronger guarantee when it provides no user value."
+        }
+      ]
+    },
+    {
+      "code": "depth.distributed-systems",
+      "order": 3,
+      "title": "Distributed Systems",
+      "criteria": [
+        {
+          "code": "depth.distributed-systems.enumerate-remote-failure-timeout-retry",
+          "order": 1,
+          "statement": "I can enumerate remote failure, timeout, retry, overload, and recovery behavior for every network dependency in a design."
+        },
+        {
+          "code": "depth.distributed-systems.define-required-duplication-ordering-consistency",
+          "order": 2,
+          "statement": "I can define the required duplication, ordering, and consistency semantics per workflow and handle violations explicitly."
+        },
+        {
+          "code": "depth.distributed-systems.choose-among-synchronous-request-queue",
+          "order": 3,
+          "statement": "I can choose among a synchronous request, queue, and pub/sub from latency, coupling, fan-out, durability, ordering, and failure-handling requirements."
+        },
+        {
+          "code": "depth.distributed-systems.carry-idempotency-identity-across-request",
+          "order": 4,
+          "statement": "I can carry an idempotency identity across request, persistence, message, and external-side-effect boundaries and define its retention/concurrency behavior."
+        },
+        {
+          "code": "depth.distributed-systems.correlate-logs-traces-metrics-message",
+          "order": 5,
+          "statement": "I can correlate logs, traces, metrics, message state, and deployment changes to isolate a failure spanning multiple services."
+        },
+        {
+          "code": "depth.distributed-systems.implement-reject-distributed-lock-uniqueness",
+          "order": 6,
+          "statement": "I can implement or reject a distributed lock from uniqueness, lease, pause/lost-connectivity failure, and whether a smaller design exists."
+        }
+      ]
+    },
+    {
+      "code": "depth.architecture",
+      "order": 4,
+      "title": "Architecture",
+      "criteria": [
+        {
+          "code": "depth.architecture.turn-ambiguous-requirements-explicit-functional",
+          "order": 1,
+          "statement": "I can turn ambiguous requirements into explicit functional flows, quality attributes, constraints, boundaries, data ownership, failure behavior, and an incremental implementation plan."
+        },
+        {
+          "code": "depth.architecture.compare-least-two-architectural-options",
+          "order": 2,
+          "statement": "I can compare at least two architectural options using the same requirements, operational costs, risks, reversibility, and expected evolution."
+        },
+        {
+          "code": "depth.architecture.identify-where-likely-change-propagates",
+          "order": 3,
+          "statement": "I can identify where a likely change propagates across modules/services and move a boundary only when it measurably reduces that coupling."
+        },
+        {
+          "code": "depth.architecture.simplify-architecture-removing-unnecessary-layer",
+          "order": 4,
+          "statement": "I can simplify an architecture by removing an unnecessary layer, service, abstraction, synchronization point, or duplicated source of truth without losing a requirement."
+        },
+        {
+          "code": "depth.architecture.review-architecture-proposed-engineer-ai",
+          "order": 5,
+          "statement": "I can review architecture proposed by an engineer or AI, verify its assumptions, expose missing failure/operational concerns, and propose a simpler valid alternative."
+        }
+      ]
+    },
+    {
+      "code": "depth.reliability-operations",
+      "order": 5,
+      "title": "Reliability/Operations",
+      "criteria": [
+        {
+          "code": "depth.reliability-operations.select-logs-traces-latency-traffic",
+          "order": 1,
+          "statement": "I can select logs, traces, latency, traffic, errors, saturation, dependency health, and recent changes relevant to a concrete failure."
+        },
+        {
+          "code": "depth.reliability-operations.maintain-timeline-observations-tested-hypotheses",
+          "order": 2,
+          "statement": "I can maintain a timeline of observations and tested hypotheses and distinguish measured facts from assumptions during an investigation."
+        },
+        {
+          "code": "depth.reliability-operations.choose-execute-lowest-risk-mitigation",
+          "order": 3,
+          "statement": "I can choose and execute the lowest-risk mitigation—rollback, traffic reduction, feature disablement, failover, or degradation—before completing root-cause analysis."
+        },
+        {
+          "code": "depth.reliability-operations.turn-incident-cause-concrete-prevention",
+          "order": 4,
+          "statement": "I can turn an incident cause into a concrete prevention, detection, containment, recovery, or process improvement and verify that it was implemented."
+        },
+        {
+          "code": "depth.reliability-operations.define-sli-slo-user-visible",
+          "order": 5,
+          "statement": "I can define an SLI and SLO from user-visible success, select a meaningful window/target, and connect the error budget to operational decisions."
+        }
+      ]
+    },
+    {
+      "code": "depth.security",
+      "order": 6,
+      "title": "Security",
+      "criteria": [
+        {
+          "code": "depth.security.map-assets-actors-trust-boundaries",
+          "order": 1,
+          "statement": "I can map assets, actors, trust boundaries, entry points, abuse cases, mitigations, and residual risks for a feature before implementation."
+        },
+        {
+          "code": "depth.security.trace-identity-permission-checks-through",
+          "order": 2,
+          "statement": "I can trace identity and permission checks through a code change and detect missing object ownership, role, tenant, or server-side enforcement."
+        },
+        {
+          "code": "depth.security.trace-sensitive-data-collection-through",
+          "order": 3,
+          "statement": "I can trace sensitive data from collection through processing, storage, logging, sharing, retention, and deletion and remove unnecessary exposure."
+        },
+        {
+          "code": "depth.security.reduce-user-service-database-infrastructure",
+          "order": 4,
+          "statement": "I can reduce user, service, database, and infrastructure permissions to the minimum actions and resources required by the workflow."
+        },
+        {
+          "code": "depth.security.add-explicit-security-requirements-abuse",
+          "order": 5,
+          "statement": "I can add explicit security requirements and abuse cases to design and acceptance criteria before implementation begins."
+        }
+      ]
+    },
+    {
+      "code": "depth.performance",
+      "order": 7,
+      "title": "Performance",
+      "criteria": [
+        {
+          "code": "depth.performance.establish-baseline-narrow-bottleneck-across",
+          "order": 1,
+          "statement": "I can establish a baseline, narrow a bottleneck across application/database/network/dependency layers, profile the responsible resource, and reproduce it with a controlled workload."
+        },
+        {
+          "code": "depth.performance.state-competing-performance-hypotheses-select",
+          "order": 2,
+          "statement": "I can state competing performance hypotheses and select measurements that can falsify each before changing code."
+        },
+        {
+          "code": "depth.performance.correlate-profiles-latency-percentiles-throughput",
+          "order": 3,
+          "statement": "I can correlate profiles with latency percentiles, throughput, errors, saturation, and workload characteristics."
+        },
+        {
+          "code": "depth.performance.implement-improvement-demonstrate-meaningful-before",
+          "order": 4,
+          "statement": "I can implement an improvement and demonstrate a meaningful before/after change under the same workload without hiding regressions."
+        },
+        {
+          "code": "depth.performance.quantify-added-memory-infrastructure-complexity",
+          "order": 5,
+          "statement": "I can quantify the added memory, infrastructure, complexity, staleness, maintenance, or failure cost introduced by an optimization."
+        }
+      ]
+    },
+    {
+      "code": "depth.ai-engineering",
+      "order": 8,
+      "title": "AI Engineering",
+      "criteria": [
+        {
+          "code": "depth.ai-engineering.define-llm-features-user-outcome",
+          "order": 1,
+          "statement": "I can define an LLM feature’s user outcome, quality bar, data flow, prompt/model/tool boundaries, failure behavior, observability, evaluation, and staged production rollout."
+        },
+        {
+          "code": "depth.ai-engineering.create-representative-evaluation-cases-scoring",
+          "order": 2,
+          "statement": "I can create representative evaluation cases, scoring criteria, baselines, and regression checks and use them to compare two versions."
+        },
+        {
+          "code": "depth.ai-engineering.measure-retrieval-relevance-coverage-separately",
+          "order": 3,
+          "statement": "I can measure retrieval relevance/coverage separately from answer faithfulness/helpfulness and change the correct stage of the pipeline."
+        },
+        {
+          "code": "depth.ai-engineering.budget-measure-model-calls-tokens",
+          "order": 4,
+          "statement": "I can budget and measure model calls, tokens, latency, concurrency, retries, timeouts, and fallback behavior against a service target."
+        },
+        {
+          "code": "depth.ai-engineering.constrain-agent-tools-through-schemas",
+          "order": 5,
+          "statement": "I can constrain agent tools through schemas, authorization, least privilege, iteration/time/cost limits, untrusted-data handling, and human approval for risky effects."
+        },
+        {
+          "code": "depth.ai-engineering.choose-go-typescript-python-component",
+          "order": 6,
+          "statement": "I can choose Go, TypeScript, or Python for a component from runtime needs, ecosystem/library fit, team ownership, deployment, performance, and integration cost."
+        }
+      ]
+    }
+  ]
+}
