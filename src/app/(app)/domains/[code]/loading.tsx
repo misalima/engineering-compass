@@ -1,4 +1,10 @@
-import { Bone, SkeletonHeader, SkeletonMeter, SkeletonPage, SkeletonPanel, SkeletonRows } from "@/components/ui/skeleton";
+import {
+  SkeletonHeader,
+  SkeletonMeter,
+  SkeletonPage,
+  SkeletonPanel,
+  SkeletonRows,
+} from "@/components/ui/skeleton";
 
 export default function Loading() {
   return (
@@ -9,9 +15,7 @@ export default function Loading() {
         <SkeletonMeter />
       </SkeletonPanel>
       <SkeletonPanel>
-        <div className="flex flex-wrap gap-2">
-          {["w-24", "w-32", "w-20", "w-28", "w-36", "w-24", "w-28"].map((w, i) => <Bone key={i} className={`h-7 rounded-full ${w}`} />)}
-        </div>
+        <SkeletonRows count={3} twoLine />
       </SkeletonPanel>
       <SkeletonPanel>
         <SkeletonRows count={5} />

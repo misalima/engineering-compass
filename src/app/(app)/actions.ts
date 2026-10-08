@@ -1,6 +1,6 @@
 "use server";
 
-import { refresh } from "next/cache";
+import { invalidateOwnerViews } from "@/data/invalidate";
 import { unstable_rethrow } from "next/navigation";
 import { saveAssessment } from "@/data/assessments";
 import { parseAssessmentForm } from "@/lib/validation";
@@ -13,7 +13,7 @@ export async function saveAssessmentAction(_prev: ActionState, formData: FormDat
 
   try {
     const { changed } = await saveAssessment(parsed.data);
-    refresh();
+    invalidateOwnerViews();
     return { ok: true, message: changed ? "Saved." : "No changes to save." };
   } catch (error) {
     unstable_rethrow(error);

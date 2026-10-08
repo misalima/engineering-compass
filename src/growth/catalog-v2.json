@@ -1,0 +1,1742 @@
+{
+  "version": "2.0",
+  "competencyStandardVersion": "1.1",
+  "reviewedAt": "2026-10-05",
+  "sources": [
+    {
+      "id": "sfia",
+      "title": "SFIA 9 — Programming/software development",
+      "url": "https://sfia-online.org/en/sfia-9/skills/programming-software-development"
+    },
+    {
+      "id": "swebok",
+      "title": "IEEE Computer Society — SWEBOK v4",
+      "url": "https://www.computer.org/education/bodies-of-knowledge/software-engineering"
+    },
+    {
+      "id": "algorithms",
+      "title": "MIT — Introduction to Algorithms",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/pages/syllabus/"
+    },
+    {
+      "id": "go",
+      "title": "Go — Effective Go",
+      "url": "https://go.dev/doc/effective_go"
+    },
+    {
+      "id": "typescript",
+      "title": "TypeScript Handbook",
+      "url": "https://www.typescriptlang.org/docs/handbook/intro.html"
+    },
+    {
+      "id": "node",
+      "title": "Node.js — Event loop and worker pool",
+      "url": "https://nodejs.org/en/learn/asynchronous-work/dont-block-the-event-loop"
+    },
+    {
+      "id": "python",
+      "title": "Python Tutorial",
+      "url": "https://docs.python.org/3/tutorial/"
+    },
+    {
+      "id": "git",
+      "title": "Pro Git",
+      "url": "https://git-scm.com/book/en/v2"
+    },
+    {
+      "id": "postgres",
+      "title": "PostgreSQL — SQL and database programming",
+      "url": "https://www.postgresql.org/docs/current/"
+    },
+    {
+      "id": "postgres-transactions",
+      "title": "PostgreSQL — Transactions",
+      "url": "https://www.postgresql.org/docs/current/tutorial-transactions.html"
+    },
+    {
+      "id": "postgres-isolation",
+      "title": "PostgreSQL — Transaction Isolation",
+      "url": "https://www.postgresql.org/docs/current/transaction-iso.html"
+    },
+    {
+      "id": "http",
+      "title": "IETF — HTTP Semantics (RFC 9110)",
+      "url": "https://www.rfc-editor.org/rfc/rfc9110.html"
+    },
+    {
+      "id": "distributed",
+      "title": "MIT — Distributed Systems",
+      "url": "https://pdos.csail.mit.edu/6.824/schedule.html"
+    },
+    {
+      "id": "owasp",
+      "title": "OWASP Top 10",
+      "url": "https://owasp.org/projects/top-ten"
+    },
+    {
+      "id": "docker",
+      "title": "Docker — Overview",
+      "url": "https://docs.docker.com/get-started/docker-overview/"
+    },
+    {
+      "id": "sre",
+      "title": "Google — Site Reliability Engineering",
+      "url": "https://sre.google/sre-book/table-of-contents/"
+    },
+    {
+      "id": "otel",
+      "title": "OpenTelemetry — Observability primer",
+      "url": "https://opentelemetry.io/docs/concepts/observability-primer/"
+    },
+    {
+      "id": "nist",
+      "title": "NIST — AI Risk Management Framework",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    },
+    {
+      "id": "mdn",
+      "title": "MDN — Core web development",
+      "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core"
+    },
+    {
+      "id": "go-docs",
+      "title": "Go — Language, modules and tutorials",
+      "url": "https://go.dev/doc/"
+    },
+    {
+      "id": "ai-outputs",
+      "title": "Google AI — Structured outputs",
+      "url": "https://ai.google.dev/gemini-api/docs/structured-output"
+    },
+    {
+      "id": "ai-tools",
+      "title": "Google AI — Function calling",
+      "url": "https://ai.google.dev/gemini-api/docs/function-calling"
+    },
+    {
+      "id": "rag",
+      "title": "Google Cloud — RAG overview",
+      "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/rag-engine/rag-overview"
+    },
+    {
+      "id": "evals",
+      "title": "Google Cloud — Gen AI evaluation overview",
+      "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/evaluation-overview"
+    }
+  ],
+  "topics": [
+    {
+      "code": "topic.problem-solving",
+      "domainCode": "domain.programming-fundamentals",
+      "title": "Problem decomposition and control flow",
+      "scope": "Inputs, outputs, types, branching, loops, function contracts and recursion.",
+      "milestone": "foundations",
+      "competencyCodes": [
+        "competency.programming-fundamentals.break-small-problem-down-inputs",
+        "competency.programming-fundamentals.choose-suitable-data-types-represent",
+        "competency.programming-fundamentals.use-conditionals-iteration-constructs-deliberately",
+        "competency.programming-fundamentals.create-small-cohesive-functions-clear",
+        "competency.programming-fundamentals.explain-recursion-decide-iterative-solution"
+      ],
+      "sourceIds": [
+        "swebok",
+        "python"
+      ]
+    },
+    {
+      "code": "topic.memory",
+      "domainCode": "domain.programming-fundamentals",
+      "title": "Scope, references and mutation",
+      "scope": "Variable lifetime, aliasing, copying and visible state changes.",
+      "milestone": "foundations",
+      "competencyCodes": [
+        "competency.programming-fundamentals.predict-where-variable-accessible-how",
+        "competency.programming-fundamentals.explain-pass-value-effects-references"
+      ],
+      "sourceIds": [
+        "swebok",
+        "python"
+      ]
+    },
+    {
+      "code": "topic.debugging",
+      "domainCode": "domain.programming-fundamentals",
+      "title": "Errors, debugging and program execution",
+      "scope": "Error paths, file I/O, breakpoints, logs and tracing an unfamiliar program.",
+      "milestone": "foundations",
+      "competencyCodes": [
+        "competency.programming-fundamentals.treat-errors-part-program-flow",
+        "competency.programming-fundamentals.read-files-process-data-produce",
+        "competency.programming-fundamentals.distinguish-compile-time-errors-runtime",
+        "competency.programming-fundamentals.debug-program-using-breakpoints-state",
+        "competency.programming-fundamentals.read-small-unfamiliar-codebase-explain",
+        "competency.programming-fundamentals.explain-conceptually-how-source-code"
+      ],
+      "sourceIds": [
+        "swebok",
+        "python"
+      ]
+    },
+    {
+      "code": "topic.data-correctness",
+      "domainCode": "domain.programming-fundamentals",
+      "title": "Time, money and text correctness",
+      "scope": "Determinism, UTC and time zones, decimal money and Unicode.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.programming-fundamentals.write-deterministic-code-problem-requires",
+        "competency.programming-fundamentals.store-timestamps-utc-convert-them",
+        "competency.programming-fundamentals.represent-money-integer-minor-unit",
+        "competency.programming-fundamentals.treat-user-text-unicode-normalize"
+      ],
+      "sourceIds": [
+        "swebok",
+        "python"
+      ]
+    },
+    {
+      "code": "topic.collections",
+      "domainCode": "domain.data-structures-algorithms",
+      "title": "Collections and complexity",
+      "scope": "Arrays, maps, sets, queues, search, sorting and time/space trade-offs.",
+      "milestone": "foundations",
+      "competencyCodes": [
+        "competency.data-structures-algorithms.analyze-time-space-complexity-common",
+        "competency.data-structures-algorithms.choose-among-arrays-slices-maps",
+        "competency.data-structures-algorithms.choose-among-scanning-indexing-hashing",
+        "competency.data-structures-algorithms.identify-memory-versus-time-trade",
+        "competency.data-structures-algorithms.avoid-sophisticated-data-structures-simple"
+      ],
+      "sourceIds": [
+        "algorithms"
+      ]
+    },
+    {
+      "code": "topic.traversal",
+      "domainCode": "domain.data-structures-algorithms",
+      "title": "Trees, graphs and traversal",
+      "scope": "Tree and graph models, DFS/BFS, invariants and workload-driven choices.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.data-structures-algorithms.explain-trees-heaps-graphs-conceptually",
+        "competency.data-structures-algorithms.traverse-tree-graph-dfs-bfs",
+        "competency.data-structures-algorithms.choose-data-structure-dominant-operation"
+      ],
+      "sourceIds": [
+        "algorithms"
+      ]
+    },
+    {
+      "code": "topic.go-modeling",
+      "domainCode": "domain.go",
+      "title": "Go packages, types and interfaces",
+      "scope": "Modules, package boundaries, structs, small interfaces, slices and maps.",
+      "milestone": "foundations",
+      "competencyCodes": [
+        "competency.go.organize-go-application-packages-clear",
+        "competency.go.use-modules-manage-dependencies",
+        "competency.go.model-domain-using-structs-types",
+        "competency.go.use-small-interfaces-defined-consumer",
+        "competency.go.predict-effects-copying-mutating-passing",
+        "competency.go.use-slices-maps-without-ignoring"
+      ],
+      "sourceIds": [
+        "go",
+        "go-docs"
+      ]
+    },
+    {
+      "code": "topic.go-errors",
+      "domainCode": "domain.go",
+      "title": "Go errors and resource lifetime",
+      "scope": "Error wrapping, errors.Is/As, defer, panic boundaries and context cancellation.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.go.create-propagate-errors-context",
+        "competency.go.wrap-errors-context-use-errors",
+        "competency.go.keep-expected-failures-error-flow",
+        "competency.go.use-defer-deliberately",
+        "competency.go.use-context-context-cancellation-deadlines"
+      ],
+      "sourceIds": [
+        "go",
+        "go-docs"
+      ]
+    },
+    {
+      "code": "topic.go-services",
+      "domainCode": "domain.go",
+      "title": "Go HTTP services and persistence",
+      "scope": "Handlers, middleware, JSON validation and database access.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.go.create-http-handlers-middleware-clients",
+        "competency.go.serialize-validate-process-json",
+        "competency.go.access-relational-database-idiomatically"
+      ],
+      "sourceIds": [
+        "go",
+        "go-docs"
+      ]
+    },
+    {
+      "code": "topic.go-tooling",
+      "domainCode": "domain.go",
+      "title": "Go testing and delivery tools",
+      "scope": "Table-driven tests, formatter, vet, build configuration and standard library documentation.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.go.express-repeated-input-output-cases",
+        "competency.go.use-go-fmt-go-test",
+        "competency.go.create-reproducible-builds-configure-go",
+        "competency.go.read-standard-library-documentation-source",
+        "competency.go.explain-idiomatic-decisions-go-code"
+      ],
+      "sourceIds": [
+        "go",
+        "go-docs"
+      ]
+    },
+    {
+      "code": "topic.go-concurrency",
+      "domainCode": "domain.go",
+      "title": "Go generics and concurrency",
+      "scope": "Useful generic contracts, goroutines, channels, mutexes and race detection.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.go.use-generics-they-reduce-duplication",
+        "competency.go.use-goroutines-channels-mutexes-synchronization",
+        "competency.go.detect-race-conditions-using-language"
+      ],
+      "sourceIds": [
+        "go",
+        "go-docs"
+      ]
+    },
+    {
+      "code": "topic.typescript-contracts",
+      "domainCode": "domain.typescript-node-js",
+      "title": "TypeScript types and runtime validation",
+      "scope": "Narrowing, unions, interfaces, generics and validation at runtime boundaries.",
+      "milestone": "foundations",
+      "competencyCodes": [
+        "competency.typescript-node-js.explain-typescript-checks-transforms-source",
+        "competency.typescript-node-js.use-inference-annotations-unions-intersections",
+        "competency.typescript-node-js.model-contracts-type-interface-deliberately",
+        "competency.typescript-node-js.use-generics-they-increase-safety",
+        "competency.typescript-node-js.avoid-any-type-assertions-without",
+        "competency.typescript-node-js.distinguish-compile-time-validation-runtime"
+      ],
+      "sourceIds": [
+        "typescript",
+        "node"
+      ]
+    },
+    {
+      "code": "topic.node-async",
+      "domainCode": "domain.typescript-node-js",
+      "title": "Node.js asynchronous execution",
+      "scope": "Promises, async/await, error propagation and event-loop blocking.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.typescript-node-js.work-promises-async-await",
+        "competency.typescript-node-js.predict-ordering-synchronous-work-promises",
+        "competency.typescript-node-js.handle-asynchronous-errors-propagate-context"
+      ],
+      "sourceIds": [
+        "typescript",
+        "node"
+      ]
+    },
+    {
+      "code": "topic.node-services",
+      "domainCode": "domain.typescript-node-js",
+      "title": "Node.js modules and API delivery",
+      "scope": "Module boundaries, validated APIs, tests, builds and explaining delivered behavior.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.typescript-node-js.organize-modules-dependencies-without-unnecessary",
+        "competency.typescript-node-js.create-node-js-api-validation",
+        "competency.typescript-node-js.configure-linting-formatting-type-checking",
+        "competency.typescript-node-js.explain-behavior-typescript-node-js"
+      ],
+      "sourceIds": [
+        "typescript",
+        "node"
+      ]
+    },
+    {
+      "code": "topic.node-dependencies",
+      "domainCode": "domain.typescript-node-js",
+      "title": "Node.js dependencies and runtime diagnosis",
+      "scope": "Dependency selection, semver, lockfiles, module failures and memory diagnosis.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.typescript-node-js.evaluate-dependencies-before-adding-them",
+        "competency.typescript-node-js.explain-how-semantic-version-ranges",
+        "competency.typescript-node-js.diagnose-common-runtime-module-memory"
+      ],
+      "sourceIds": [
+        "typescript",
+        "node"
+      ]
+    },
+    {
+      "code": "topic.python-basics",
+      "domainCode": "domain.python",
+      "title": "Python collections, functions and modules",
+      "scope": "Readable functions, collection choice, type hints, exceptions and modules.",
+      "milestone": "foundations",
+      "competencyCodes": [
+        "competency.python.write-readable-python-scripts-automation",
+        "competency.python.choose-among-lists-tuples-dictionaries",
+        "competency.python.create-simple-functions-modules-packages",
+        "competency.python.use-type-hints-make-contracts",
+        "competency.python.handle-exceptions-without-hiding-failures"
+      ],
+      "sourceIds": [
+        "python"
+      ]
+    },
+    {
+      "code": "topic.python-services",
+      "domainCode": "domain.python",
+      "title": "Python environments, testing and APIs",
+      "scope": "Reproducible environments, automated tests, API clients and workers.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.python.use-virtual-environments-manage-dependencies",
+        "competency.python.write-automated-tests-python-components",
+        "competency.python.consume-apis-create-small-api"
+      ],
+      "sourceIds": [
+        "python"
+      ]
+    },
+    {
+      "code": "topic.python-data",
+      "domainCode": "domain.python",
+      "title": "Python data processing and AI integration",
+      "scope": "JSON/CSV, iterators, notebooks, AI libraries and integration boundaries.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.python.read-write-json-csv-tabular",
+        "competency.python.use-iterators-generators-they-provide",
+        "competency.python.work-notebooks-without-turning-them",
+        "competency.python.use-libraries-ai-data-ecosystem",
+        "competency.python.integrate-python-component-go-typescript",
+        "competency.python.decide-python-more-appropriate-than"
+      ],
+      "sourceIds": [
+        "python"
+      ]
+    },
+    {
+      "code": "topic.git-changes",
+      "domainCode": "domain.git-development-workflow",
+      "title": "Git commits, branches and pull requests",
+      "scope": "Repository setup, coherent commits, branches, review context and keeping secrets out.",
+      "milestone": "foundations",
+      "competencyCodes": [
+        "competency.git-development-workflow.initialize-clone-configure-repository",
+        "competency.git-development-workflow.create-small-coherent-commits-useful",
+        "competency.git-development-workflow.work-branches-remotes",
+        "competency.git-development-workflow.review-history-before-publishing-change",
+        "competency.git-development-workflow.open-pull-request-context-scope",
+        "competency.git-development-workflow.keep-secrets-artifacts-local-files"
+      ],
+      "sourceIds": [
+        "git"
+      ]
+    },
+    {
+      "code": "topic.git-collaboration",
+      "domainCode": "domain.git-development-workflow",
+      "title": "Git collaboration and safe recovery",
+      "scope": "Merge/rebase, resolving conflicts, reviewing changes, revert and team conventions.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.git-development-workflow.explain-merge-rebase-choose-deliberately",
+        "competency.git-development-workflow.resolve-conflicts-without-losing-changes",
+        "competency.git-development-workflow.review-another-persons-pull-request",
+        "competency.git-development-workflow.use-revert-undo-changes-safely",
+        "competency.git-development-workflow.adapt-workflow-conventions-existing-team"
+      ],
+      "sourceIds": [
+        "git"
+      ]
+    },
+    {
+      "code": "topic.git-release",
+      "domainCode": "domain.git-development-workflow",
+      "title": "Git investigation and release workflow",
+      "scope": "Recovering references, stash, bisect, tags and integration strategies.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.git-development-workflow.recover-commits-references-without-impulsively",
+        "competency.git-development-workflow.use-stash-deliberately",
+        "competency.git-development-workflow.use-git-bisect-equivalent-strategy",
+        "competency.git-development-workflow.create-use-tags-releases",
+        "competency.git-development-workflow.compare-trunk-based-development-feature"
+      ],
+      "sourceIds": [
+        "git"
+      ]
+    },
+    {
+      "code": "topic.shell",
+      "domainCode": "domain.linux-runtime-environment",
+      "title": "Terminal, paths and shell pipelines",
+      "scope": "Filesystem navigation, relative paths, pipes, redirection and text search.",
+      "milestone": "foundations",
+      "competencyCodes": [
+        "competency.linux-runtime-environment.navigate-search-copy-move-inspect",
+        "competency.linux-runtime-environment.resolve-absolute-relative-paths-known",
+        "competency.linux-runtime-environment.use-pipes-redirection-combine-commands",
+        "competency.linux-runtime-environment.search-text-files-efficiently"
+      ],
+      "sourceIds": [
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.processes",
+      "domainCode": "domain.linux-runtime-environment",
+      "title": "Processes, configuration and logs",
+      "scope": "Permissions, environment variables, process/port inspection, logs and SSH keys.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.linux-runtime-environment.work-permissions-users-groups-without",
+        "competency.linux-runtime-environment.configure-environment-variables-understand-environment",
+        "competency.linux-runtime-environment.list-start-stop-investigate-processes",
+        "competency.linux-runtime-environment.identify-processes-listening-port",
+        "competency.linux-runtime-environment.read-application-service-logs",
+        "competency.linux-runtime-environment.use-ssh-keys-appropriate-practices"
+      ],
+      "sourceIds": [
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.runtime-operations",
+      "domainCode": "domain.linux-runtime-environment",
+      "title": "Runtime diagnosis and service lifecycle",
+      "scope": "Safe scripts, signals, resource inspection, services and server failure diagnosis.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.linux-runtime-environment.create-small-safe-shell-scripts",
+        "competency.linux-runtime-environment.explain-handle-sigint-sigterm-so",
+        "competency.linux-runtime-environment.inspect-cpu-memory-disk-network",
+        "competency.linux-runtime-environment.configure-linux-service-start-stop",
+        "competency.linux-runtime-environment.install-update-packages-deliberately",
+        "competency.linux-runtime-environment.diagnose-why-application-works-locally"
+      ],
+      "sourceIds": [
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.cohesion",
+      "domainCode": "domain.software-design-code-quality",
+      "title": "Cohesion, coupling and clear contracts",
+      "scope": "Intentional naming, encapsulated rules, small modules, explicit dependencies and simple APIs.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.software-design-code-quality.choose-names-communicate-intent",
+        "competency.software-design-code-quality.create-cohesive-functions-classes-modules",
+        "competency.software-design-code-quality.reduce-coupling-without-introducing-unnecessary",
+        "competency.software-design-code-quality.encapsulate-invariants-hide-details-should",
+        "competency.software-design-code-quality.apply-kiss-yagni-deliberately",
+        "competency.software-design-code-quality.design-coherent-apis-internal-contracts",
+        "competency.software-design-code-quality.make-dependencies-side-effects-explicit"
+      ],
+      "sourceIds": [
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.boundaries",
+      "domainCode": "domain.software-design-code-quality",
+      "title": "Dependency inversion and testable boundaries",
+      "scope": "Composition, shared knowledge, dependency direction and rules independent of transport/storage.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.software-design-code-quality.use-composition-has-capability-relationships",
+        "competency.software-design-code-quality.recognize-meaningful-duplication-distinguish-accidental",
+        "competency.software-design-code-quality.use-dependency-inversion-protects-core",
+        "competency.software-design-code-quality.keep-domain-rule-executable-without",
+        "competency.software-design-code-quality.improve-testability-through-design"
+      ],
+      "sourceIds": [
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.refactoring",
+      "domainCode": "domain.software-design-code-quality",
+      "title": "Refactoring and abstraction trade-offs",
+      "scope": "Code smells, incremental refactors, design patterns and cost of change.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.software-design-code-quality.recognize-code-smells-propose-incremental",
+        "competency.software-design-code-quality.use-design-pattern-only-name",
+        "competency.software-design-code-quality.evaluate-readability-maintainability-cost-change",
+        "competency.software-design-code-quality.justify-why-abstraction-exists",
+        "competency.software-design-code-quality.remove-abstraction-no-longer-repays"
+      ],
+      "sourceIds": [
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.test-behavior",
+      "domainCode": "domain.testing",
+      "title": "Behavior tests and regression coverage",
+      "scope": "Test boundaries, business rules, edge cases and reproducing bugs as tests.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.testing.classify-test-unit-integration-contract",
+        "competency.testing.choose-justify-lowest-test-level",
+        "competency.testing.test-business-rule-through-public",
+        "competency.testing.derive-edge-cases-boundaries-empty",
+        "competency.testing.reproduce-bug-failing-automated-test"
+      ],
+      "sourceIds": [
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.test-isolation",
+      "domainCode": "domain.testing",
+      "title": "Test isolation and determinism",
+      "scope": "Test doubles, controlled time/I/O, meaningful coverage and testability.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.testing.use-mocks-stubs-fakes-control",
+        "competency.testing.make-tests-deterministic-controlling-time",
+        "competency.testing.use-coverage-locate-untested-risk",
+        "competency.testing.justify-leaving-code-untested-risk",
+        "competency.testing.isolate-side-effects-inject-uncontrollable"
+      ],
+      "sourceIds": [
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.test-integration",
+      "domainCode": "domain.testing",
+      "title": "Database, API and failure-path tests",
+      "scope": "Real schemas, authorization paths, persistence failures and flaky test diagnosis.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.testing.test-repository-behavior-against-real",
+        "competency.testing.test-apis-success-validation-authentication",
+        "competency.testing.force-dependency-validation-timeout-authorization",
+        "competency.testing.diagnose-flaky-test-reproducing-isolating"
+      ],
+      "sourceIds": [
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.relational-modeling",
+      "domainCode": "domain.databases-sql",
+      "title": "Relational modeling and constraints",
+      "scope": "Entities, cardinality, normalization, nullability, keys and referential actions.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.databases-sql.model-entities-cardinalities-nullability-uniqueness",
+        "competency.databases-sql.transform-model-update-insertion-deletion",
+        "competency.databases-sql.enforce-domain-invariants-using-not",
+        "competency.databases-sql.define-foreign-key-actions-deliberately"
+      ],
+      "sourceIds": [
+        "postgres"
+      ]
+    },
+    {
+      "code": "topic.sql-queries",
+      "domainCode": "domain.databases-sql",
+      "title": "SQL queries, joins and aggregation",
+      "scope": "Parameterized reads/writes, joins, GROUP BY, HAVING and null behavior.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.databases-sql.write-parameterized-select-insert-update",
+        "competency.databases-sql.choose-write-inner-left-self",
+        "competency.databases-sql.group-data-calculate-aggregate-values"
+      ],
+      "sourceIds": [
+        "postgres"
+      ]
+    },
+    {
+      "code": "topic.transactions",
+      "domainCode": "domain.databases-sql",
+      "title": "Database transactions and isolation",
+      "scope": "Atomicity boundaries, commit/rollback, ACID and isolation anomalies.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.databases-sql.identify-atomicity-boundary-implement-commit",
+        "competency.databases-sql.explain-how-atomicity-consistency-isolation",
+        "competency.databases-sql.compare-common-isolation-levels-anomalies"
+      ],
+      "sourceIds": [
+        "postgres-transactions",
+        "postgres-isolation"
+      ]
+    },
+    {
+      "code": "topic.query-performance",
+      "domainCode": "domain.databases-sql",
+      "title": "Indexes, query plans and pagination",
+      "scope": "Composite indexes, N+1 queries, stable pagination, EXPLAIN and write costs.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.databases-sql.derive-candidate-single-composite-index",
+        "competency.databases-sql.detect-n-1-behavior-repeated",
+        "competency.databases-sql.choose-offset-cursor-pagination-dataset",
+        "competency.databases-sql.explain-indexs-storage-write-amplification",
+        "competency.databases-sql.read-execution-plan-scans-joins"
+      ],
+      "sourceIds": [
+        "postgres"
+      ]
+    },
+    {
+      "code": "topic.advanced-sql",
+      "domainCode": "domain.databases-sql",
+      "title": "Advanced SQL and read models",
+      "scope": "Measured denormalization, subqueries, CTEs and window functions.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.databases-sql.denormalize-only-after-identifying-measured",
+        "competency.databases-sql.use-scalar-correlated-set-subquery",
+        "competency.databases-sql.use-cte-name-multi-step",
+        "competency.databases-sql.use-window-function-rows-need"
+      ],
+      "sourceIds": [
+        "postgres"
+      ]
+    },
+    {
+      "code": "topic.database-concurrency",
+      "domainCode": "domain.databases-sql",
+      "title": "Database locks, MVCC and pools",
+      "scope": "Lock order, deadlocks, row versions and connection-pool saturation.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.databases-sql.explain-which-rows-resources-operation",
+        "competency.databases-sql.draw-conflicting-lock-order-produces",
+        "competency.databases-sql.explain-how-mvcc-lets-readers",
+        "competency.databases-sql.size-configure-connection-pool-database"
+      ],
+      "sourceIds": [
+        "postgres"
+      ]
+    },
+    {
+      "code": "topic.database-evolution",
+      "domainCode": "domain.databases-sql",
+      "title": "Migrations, backfills and recovery",
+      "scope": "Compatible schema changes, resumable backfills and verified backup restoration.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.databases-sql.create-execute-migration-compatibility-locking",
+        "competency.databases-sql.plan-backfill-batching-resumability-validation",
+        "competency.databases-sql.create-database-backup-restore-separate"
+      ],
+      "sourceIds": [
+        "postgres"
+      ]
+    },
+    {
+      "code": "topic.storage-choice",
+      "domainCode": "domain.databases-sql",
+      "title": "Storage engines and Redis trade-offs",
+      "scope": "Relational, document, search, time-series and vector stores; cache eviction and failures.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.databases-sql.choose-among-relational-database-key",
+        "competency.databases-sql.use-redis-equivalent-store-cache"
+      ],
+      "sourceIds": [
+        "postgres"
+      ]
+    },
+    {
+      "code": "topic.http-basics",
+      "domainCode": "domain.networking-http-apis",
+      "title": "HTTP requests, responses and network foundations",
+      "scope": "Request lifecycle, endpoints, HTTP methods, status codes and headers.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.networking-http-apis.explain-client-dns-tcp-tls",
+        "competency.networking-http-apis.trace-how-ip-address-port",
+        "competency.networking-http-apis.select-get-post-put-patch",
+        "competency.networking-http-apis.select-status-codes-distinguish-successful",
+        "competency.networking-http-apis.use-request-response-headers-content"
+      ],
+      "sourceIds": [
+        "http",
+        "mdn"
+      ]
+    },
+    {
+      "code": "topic.network-transport",
+      "domainCode": "domain.networking-http-apis",
+      "title": "DNS, TCP, sockets and TLS",
+      "scope": "Name resolution, connections, certificate verification and connection reuse.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.networking-http-apis.explain-connection-establishment-ordered-delivery",
+        "competency.networking-http-apis.explain-how-application-uses-socket",
+        "competency.networking-http-apis.trace-hostname-through-dns-resolution",
+        "competency.networking-http-apis.explain-certificate-validation-hostname-verification",
+        "competency.networking-http-apis.explain-how-connection-reuse-reduces"
+      ],
+      "sourceIds": [
+        "http",
+        "mdn"
+      ]
+    },
+    {
+      "code": "topic.browser-http",
+      "domainCode": "domain.networking-http-apis",
+      "title": "Cookies, CORS and HTTP caching",
+      "scope": "Cookie scope and safety, cross-origin policy, freshness and cache validation.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.networking-http-apis.configure-cookies-appropriate-scope-expiration",
+        "competency.networking-http-apis.explain-why-browser-blocks-cross",
+        "competency.networking-http-apis.define-cacheability-freshness-validation-invalidation"
+      ],
+      "sourceIds": [
+        "http",
+        "mdn"
+      ]
+    },
+    {
+      "code": "topic.api-contracts",
+      "domainCode": "domain.networking-http-apis",
+      "title": "API contracts, pagination and evolution",
+      "scope": "Resource models, stable ordering, filtering, safe errors and compatibility.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.networking-http-apis.model-resources-relationships-stable-urls",
+        "competency.networking-http-apis.design-offset-cursor-pagination-stable",
+        "competency.networking-http-apis.define-allowlisted-filtering-sorting-syntax",
+        "competency.networking-http-apis.create-error-contract-stable-machine",
+        "competency.networking-http-apis.evolve-api-compatibly-identify-breaking"
+      ],
+      "sourceIds": [
+        "http",
+        "mdn"
+      ]
+    },
+    {
+      "code": "topic.api-resilience",
+      "domainCode": "domain.networking-http-apis",
+      "title": "Rate limits, idempotency and webhooks",
+      "scope": "Request budgets, duplicate side effects, signed webhooks and retries.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.networking-http-apis.choose-rate-limit-identity-algorithm",
+        "competency.networking-http-apis.accept-idempotency-key-atomically-store",
+        "competency.networking-http-apis.verify-webhook-authenticity-acknowledge-delivery"
+      ],
+      "sourceIds": [
+        "http",
+        "mdn"
+      ]
+    },
+    {
+      "code": "topic.api-streaming",
+      "domainCode": "domain.networking-http-apis",
+      "title": "WebSockets and RPC trade-offs",
+      "scope": "Connection lifecycle, streaming, contracts and protocol operational cost.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.networking-http-apis.implement-websocket-connection-lifecycle-authentication",
+        "competency.networking-http-apis.compare-rest-rpc-grpc-contract"
+      ],
+      "sourceIds": [
+        "http",
+        "mdn"
+      ]
+    },
+    {
+      "code": "topic.task-lifecycle",
+      "domainCode": "domain.concurrency",
+      "title": "Concurrent tasks and cancellation",
+      "scope": "Shared memory, concurrency versus parallelism, ownership and task termination.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.concurrency.explain-which-memory-resources-are",
+        "competency.concurrency.distinguish-overlapping-progress-simultaneous-execution",
+        "competency.concurrency.trace-every-reader-writer-mutable",
+        "competency.concurrency.propagate-cancellation-caller-every-blocking",
+        "competency.concurrency.prove-every-started-goroutine-task"
+      ],
+      "sourceIds": [
+        "go",
+        "node"
+      ]
+    },
+    {
+      "code": "topic.synchronization",
+      "domainCode": "domain.concurrency",
+      "title": "Races, locks and deadlocks",
+      "scope": "Invariant-preserving synchronization, atomics, wait cycles and starvation.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.concurrency.describe-interleaving-violates-invariant-confirm",
+        "competency.concurrency.protect-smallest-invariant-preserving-critical",
+        "competency.concurrency.identify-read-modify-write-operation",
+        "competency.concurrency.construct-wait-cycle-causes-deadlock",
+        "competency.concurrency.recognize-starvation-caused-unfair-scheduling"
+      ],
+      "sourceIds": [
+        "go",
+        "node"
+      ]
+    },
+    {
+      "code": "topic.bounded-work",
+      "domainCode": "domain.concurrency",
+      "title": "Bounded concurrency and concurrency testing",
+      "scope": "Collecting errors, deadlines, worker pools, capacity and controlled race tests.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.concurrency.start-multiple-tasks-collect-results",
+        "competency.concurrency.place-deadlines-around-bounded-operations",
+        "competency.concurrency.bound-concurrent-work-semaphore-worker",
+        "competency.concurrency.test-concurrent-component-controlled-synchronization",
+        "competency.concurrency.reproduce-concurrency-bug-identify-violated"
+      ],
+      "sourceIds": [
+        "go",
+        "node"
+      ]
+    },
+    {
+      "code": "topic.remote-failures",
+      "domainCode": "domain.distributed-systems-messaging",
+      "title": "Remote failures, deadlines and retries",
+      "scope": "Partial/ambiguous failure, timeout budgets, retry eligibility, backoff and jitter.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.distributed-systems-messaging.enumerate-timeout-refusal-reset-partial",
+        "competency.distributed-systems-messaging.set-connect-request-operation-timeouts",
+        "competency.distributed-systems-messaging.retry-only-transient-safe-idempotent",
+        "competency.distributed-systems-messaging.calculate-exponential-backoff-sequence-cap",
+        "competency.distributed-systems-messaging.add-jitter-retry-timing-explain"
+      ],
+      "sourceIds": [
+        "distributed",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.consistency",
+      "domainCode": "domain.distributed-systems-messaging",
+      "title": "Idempotency, consistency and ordering",
+      "scope": "Atomic deduplication, stale reads, partitions, ordering and delivery guarantees.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.distributed-systems-messaging.define-idempotency-identity-atomically-prevent",
+        "competency.distributed-systems-messaging.describe-which-stale-states-user",
+        "competency.distributed-systems-messaging.identify-operation-requires-reading-latest",
+        "competency.distributed-systems-messaging.design-consumer-detects-safely-tolerates",
+        "competency.distributed-systems-messaging.state-whether-workflow-requires-global",
+        "competency.distributed-systems-messaging.compare-most-once-least-once"
+      ],
+      "sourceIds": [
+        "distributed",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.queues",
+      "domainCode": "domain.distributed-systems-messaging",
+      "title": "Queues, consumers and dead letters",
+      "scope": "Message contracts, acknowledgement, bounded retries, replay and pub/sub.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.distributed-systems-messaging.configure-queue-explicit-delivery-acknowledgement",
+        "competency.distributed-systems-messaging.publish-versioned-message-consume-validation",
+        "competency.distributed-systems-messaging.classify-retryable-failures-define-attempts",
+        "competency.distributed-systems-messaging.move-exhausted-messages-dead-letter",
+        "competency.distributed-systems-messaging.design-pub-sub-flow-which"
+      ],
+      "sourceIds": [
+        "distributed",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.distributed-workflows",
+      "domainCode": "domain.distributed-systems-messaging",
+      "title": "Outbox, sagas and overload protection",
+      "scope": "Backpressure, atomic event handoff, compensation, circuit breakers and bulkheads.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.distributed-systems-messaging.recognize-producers-exceed-consumer-capacity",
+        "competency.distributed-systems-messaging.keep-database-write-message-publish",
+        "competency.distributed-systems-messaging.split-multi-system-workflow-local",
+        "competency.distributed-systems-messaging.isolate-failing-dependency-circuit-breaker"
+      ],
+      "sourceIds": [
+        "distributed",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.distributed-tradeoffs",
+      "domainCode": "domain.distributed-systems-messaging",
+      "title": "Distributed coordination and architectural costs",
+      "scope": "CQRS/event sourcing costs, single points of failure and safe leases.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.distributed-systems-messaging.explain-cqrs-event-sourcing-would",
+        "competency.distributed-systems-messaging.trace-critical-workflow-identify-every",
+        "competency.distributed-systems-messaging.implement-reject-distributed-lock-unique"
+      ],
+      "sourceIds": [
+        "distributed",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.architecture-requirements",
+      "domainCode": "domain.architecture-system-design",
+      "title": "Architecture requirements and constraints",
+      "scope": "Critical flows, measurable quality attributes and real constraints.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.architecture-system-design.turn-stakeholder-needs-explicit-actors",
+        "competency.architecture-system-design.define-measurable-latency-throughput-availability",
+        "competency.architecture-system-design.identify-fixed-technology-budget-deadline"
+      ],
+      "sourceIds": [
+        "swebok",
+        "distributed"
+      ]
+    },
+    {
+      "code": "topic.modular-architecture",
+      "domainCode": "domain.architecture-system-design",
+      "title": "Modular architecture and dependency direction",
+      "scope": "Domain/application/infrastructure boundaries, modular monoliths and ownership.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.architecture-system-design.assign-concrete-rule-dependency-domain",
+        "competency.architecture-system-design.map-responsibilities-allowed-dependencies-across",
+        "competency.architecture-system-design.define-independently-testable-modules-inside",
+        "competency.architecture-system-design.define-module-service-around-cohesive"
+      ],
+      "sourceIds": [
+        "swebok",
+        "distributed"
+      ]
+    },
+    {
+      "code": "topic.service-boundaries",
+      "domainCode": "domain.architecture-system-design",
+      "title": "Service boundaries and architecture decisions",
+      "scope": "Deployment autonomy, event-driven trade-offs, ADRs and simplicity.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.architecture-system-design.identify-independent-deployment-data-ownership",
+        "competency.architecture-system-design.choose-monolith-modular-monolith-microservices",
+        "competency.architecture-system-design.model-event-producing-workflow-define",
+        "competency.architecture-system-design.compare-least-two-solutions-against",
+        "competency.architecture-system-design.record-context-decision-alternatives-consequences",
+        "competency.architecture-system-design.remove-defer-component-whose-current"
+      ],
+      "sourceIds": [
+        "swebok",
+        "distributed"
+      ]
+    },
+    {
+      "code": "topic.scaling",
+      "domainCode": "domain.architecture-system-design",
+      "title": "Scaling, caching and replication",
+      "scope": "Stateful/stateless instances, balancing, cache consistency and replica lag.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.architecture-system-design.compare-increasing-resources-one-instance",
+        "competency.architecture-system-design.design-request-handling-so-any",
+        "competency.architecture-system-design.place-multiple-instances-behind-load",
+        "competency.architecture-system-design.identify-repeated-expensive-read-define",
+        "competency.architecture-system-design.explain-leader-follower-replication-replication"
+      ],
+      "sourceIds": [
+        "swebok",
+        "distributed"
+      ]
+    },
+    {
+      "code": "topic.resilient-design",
+      "domainCode": "domain.architecture-system-design",
+      "title": "Failure analysis, capacity and cost",
+      "scope": "Failure modes, redundancy, cost drivers, sizing and partition-key trade-offs.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.architecture-system-design.enumerate-component-dependency-overload-network",
+        "competency.architecture-system-design.trace-critical-workflow-identify-every",
+        "competency.architecture-system-design.attribute-services-cost-compute-data",
+        "competency.architecture-system-design.estimate-average-peak-requests-events",
+        "competency.architecture-system-design.choose-candidate-partition-key-explain"
+      ],
+      "sourceIds": [
+        "swebok",
+        "distributed"
+      ]
+    },
+    {
+      "code": "topic.access-control",
+      "domainCode": "domain.security",
+      "title": "Authentication, sessions and authorization",
+      "scope": "Identity, password hashing, session/JWT validation, ownership and least privilege.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.security.separate-identity-verification-permission-checks",
+        "competency.security.hash-verify-passwords-password-specific",
+        "competency.security.implement-session-creation-secure-cookie",
+        "competency.security.validate-jwts-signature-issuer-audience",
+        "competency.security.define-roles-permissions-enforce-them",
+        "competency.security.assign-minimum-permissions-required-user"
+      ],
+      "sourceIds": [
+        "owasp"
+      ]
+    },
+    {
+      "code": "topic.input-security",
+      "domainCode": "domain.security",
+      "title": "Input validation, injection and safe failure",
+      "scope": "Secrets hygiene, parameterized queries, trust boundaries, fail-closed behavior and redaction.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.security.keep-secrets-out-code-images",
+        "competency.security.demonstrate-how-sql-injection-occurs",
+        "competency.security.validate-type-shape-range-length",
+        "competency.security.fail-closed-authentication-authorization-validation",
+        "competency.security.keep-secrets-tokens-personal-data"
+      ],
+      "sourceIds": [
+        "owasp"
+      ]
+    },
+    {
+      "code": "topic.identity-providers",
+      "domainCode": "domain.security",
+      "title": "Identity providers and credential lifecycle",
+      "scope": "Authentication abuse, OAuth/PKCE, OpenID Connect and secret rotation.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.security.throttle-authentication-attempts-appropriate-identities",
+        "competency.security.trace-oauth-2-0-authorization",
+        "competency.security.explain-how-openid-connect-adds",
+        "competency.security.provision-secrets-per-environment-least"
+      ],
+      "sourceIds": [
+        "owasp"
+      ]
+    },
+    {
+      "code": "topic.web-security",
+      "domainCode": "domain.security",
+      "title": "Browser, server-request and upload security",
+      "scope": "XSS, CSRF, SSRF, upload limits and storage isolation.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.security.prevent-stored-reflected-xss-through",
+        "competency.security.explain-browser-credentials-make-request",
+        "competency.security.identify-server-side-requests-influenced",
+        "competency.security.constrain-upload-size-type-count"
+      ],
+      "sourceIds": [
+        "owasp"
+      ]
+    },
+    {
+      "code": "topic.data-security",
+      "domainCode": "domain.security",
+      "title": "Tenant isolation, privacy and encryption",
+      "scope": "Data classification, tenant/resource checks, encryption and data retention/deletion.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.security.classify-data-public-internal-confidential",
+        "competency.security.isolate-tenant-data-queries-caches",
+        "competency.security.enforce-role-resource-ownership-checks",
+        "competency.security.encrypt-data-transit-current-tls",
+        "competency.security.trace-personal-data-collection-through"
+      ],
+      "sourceIds": [
+        "owasp"
+      ]
+    },
+    {
+      "code": "topic.security-operations",
+      "domainCode": "domain.security",
+      "title": "Supply chain, threat modeling and incident response",
+      "scope": "Vulnerable dependencies, protected builds, audit events, credential compromise and abuse cases.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.security.identify-vulnerable-direct-transitive-dependencies",
+        "competency.security.pin-verify-dependencies-build-inputs",
+        "competency.security.log-authentication-authorization-credential-administrative",
+        "competency.security.revoke-rotate-compromised-credential-identify",
+        "competency.security.map-assets-actors-trust-boundaries"
+      ],
+      "sourceIds": [
+        "owasp"
+      ]
+    },
+    {
+      "code": "topic.containers",
+      "domainCode": "domain.docker-ci-cd-infrastructure",
+      "title": "Containers and local environments",
+      "scope": "Images, layers, builds, storage, networks, Compose and configuration.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.docker-ci-cd-infrastructure.create-minimal-non-root-reproducible",
+        "competency.docker-ci-cd-infrastructure.order-dockerfile-instructions-maximize-reusable",
+        "competency.docker-ci-cd-infrastructure.separate-dependency-build-runtime-stages",
+        "competency.docker-ci-cd-infrastructure.choose-between-ephemeral-container-storage",
+        "competency.docker-ci-cd-infrastructure.connect-containers-through-isolated-network",
+        "competency.docker-ci-cd-infrastructure.define-local-multi-service-environment",
+        "competency.docker-ci-cd-infrastructure.separate-non-secret-configuration-secrets"
+      ],
+      "sourceIds": [
+        "docker",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.continuous-delivery",
+      "domainCode": "domain.docker-ci-cd-infrastructure",
+      "title": "CI, deployments and rollback",
+      "scope": "Deterministic checks, immutable artifacts, deployment health and compatible rollback.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.docker-ci-cd-infrastructure.create-ci-pipeline-triggered-repository",
+        "competency.docker-ci-cd-infrastructure.make-pipeline-run-same-deterministic",
+        "competency.docker-ci-cd-infrastructure.generate-immutable-versioned-artifact-image",
+        "competency.docker-ci-cd-infrastructure.deploy-immutable-artifact-controlled-configuration",
+        "competency.docker-ci-cd-infrastructure.restore-previous-working-application-configuration",
+        "competency.docker-ci-cd-infrastructure.define-which-configuration-data-access"
+      ],
+      "sourceIds": [
+        "docker",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.cloud-networking",
+      "domainCode": "domain.docker-ci-cd-infrastructure",
+      "title": "Cloud networking and access",
+      "scope": "DNS, TLS, reverse proxies, cloud primitives and IAM.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.docker-ci-cd-infrastructure.configure-required-dns-records-verify",
+        "competency.docker-ci-cd-infrastructure.provision-renew-certificate-redirect-http",
+        "competency.docker-ci-cd-infrastructure.configure-reverse-proxy-terminate-tls",
+        "competency.docker-ci-cd-infrastructure.map-application-requirement-compute-managed",
+        "competency.docker-ci-cd-infrastructure.define-iam-principal-role-policy"
+      ],
+      "sourceIds": [
+        "docker",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.infrastructure-changes",
+      "domainCode": "domain.docker-ci-cd-infrastructure",
+      "title": "Infrastructure as code and safe rollout",
+      "scope": "Declarative state, orchestration basics, feature flags and rollout strategy.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.docker-ci-cd-infrastructure.describe-infrastructure-declarative-reviewable-repeatable",
+        "competency.docker-ci-cd-infrastructure.explain-how-kubernetes-deployment-maintains",
+        "competency.docker-ci-cd-infrastructure.hide-incomplete-risky-behavior-behind",
+        "competency.docker-ci-cd-infrastructure.choose-between-rolling-blue-green"
+      ],
+      "sourceIds": [
+        "docker",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.structured-logs",
+      "domainCode": "domain.observability-reliability",
+      "title": "Structured logs and request correlation",
+      "scope": "Useful log fields/levels, correlation IDs and tracing a request through logs.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.observability-reliability.produce-machine-parseable-logs-timestamp",
+        "competency.observability-reliability.assign-debug-info-warn-error",
+        "competency.observability-reliability.accept-generate-request-correlation-id",
+        "competency.observability-reliability.use-propagated-correlation-context-reconstruct"
+      ],
+      "sourceIds": [
+        "otel",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.service-telemetry",
+      "domainCode": "domain.observability-reliability",
+      "title": "Metrics, traces and operational dashboards",
+      "scope": "Bounded labels, latency distributions, traffic, errors, saturation, tracing and alerts.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.observability-reliability.choose-counter-gauge-histogram-metrics",
+        "competency.observability-reliability.measure-end-end-dependency-latency",
+        "competency.observability-reliability.measure-requests-events-bytes-per",
+        "competency.observability-reliability.define-eligible-operations-measure-failed",
+        "competency.observability-reliability.observe-cpu-memory-threads-goroutines",
+        "competency.observability-reliability.instrument-service-vendor-neutral-traces",
+        "competency.observability-reliability.build-dashboard-answers-current-user",
+        "competency.observability-reliability.create-alert-tied-user-impact"
+      ],
+      "sourceIds": [
+        "otel",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.service-objectives",
+      "domainCode": "domain.observability-reliability",
+      "title": "Service objectives, health and degradation",
+      "scope": "Availability, SLIs/SLOs, error budgets, health checks and fallback behavior.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.observability-reliability.define-calculate-availability-eligible-successful",
+        "competency.observability-reliability.define-measurable-sli-user-visible",
+        "competency.observability-reliability.set-slo-target-time-window",
+        "competency.observability-reliability.distinguish-internal-slo-contractual-sla",
+        "competency.observability-reliability.separate-liveness-readiness-startup-checks",
+        "competency.observability-reliability.identify-non-critical-dependency-define"
+      ],
+      "sourceIds": [
+        "otel",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.incident-response",
+      "domainCode": "domain.observability-reliability",
+      "title": "Incident diagnosis and recovery",
+      "scope": "Impact assessment, rollback, causal analysis, postmortems and recovery objectives.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.observability-reliability.identify-affected-users-operations-tenants",
+        "competency.observability-reliability.decide-whether-rollback-safe-schema",
+        "competency.observability-reliability.construct-incident-timeline-telemetry-changes",
+        "competency.observability-reliability.write-blameless-postmortem-impact-detection",
+        "competency.observability-reliability.state-rpo-rto-service-map"
+      ],
+      "sourceIds": [
+        "otel",
+        "sre"
+      ]
+    },
+    {
+      "code": "topic.performance-measurement",
+      "domainCode": "domain.performance",
+      "title": "Performance baselines and profiling",
+      "scope": "Representative workloads, percentiles, CPU/heap/I/O profiling and reproducible benchmarks.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.performance.do-not-optimize-without-measuring",
+        "competency.performance.define-representative-workload-environment-record",
+        "competency.performance.collect-latency-distribution-over-stated",
+        "competency.performance.measure-completed-operations-per-unit",
+        "competency.performance.measure-process-container-host-cpu",
+        "competency.performance.measure-working-set-heap-allocation",
+        "competency.performance.measure-disk-network-database-o",
+        "competency.performance.capture-interpret-profiler-output-identify",
+        "competency.performance.create-reproducible-benchmark-controlled-inputs",
+        "competency.performance.identify-whether-bottleneck-application-database"
+      ],
+      "sourceIds": [
+        "sre",
+        "node"
+      ]
+    },
+    {
+      "code": "topic.performance-improvements",
+      "domainCode": "domain.performance",
+      "title": "Query, cache and throughput improvements",
+      "scope": "Slow queries, bounded caches, batching, async work, pool tuning and before/after evidence.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.performance.identify-slow-high-impact-queries",
+        "competency.performance.evaluate-caching-read-frequency-computation",
+        "competency.performance.evaluate-batching-per-operation-overhead",
+        "competency.performance.evaluate-asynchronous-processing-response-time",
+        "competency.performance.evaluate-connection-pool-changes-database",
+        "competency.performance.compare-same-workload-environment-before",
+        "competency.performance.state-target-metric-measured-improvement"
+      ],
+      "sourceIds": [
+        "sre",
+        "node"
+      ]
+    },
+    {
+      "code": "topic.safe-maintenance",
+      "domainCode": "domain.maintenance-evolution",
+      "title": "Code comprehension and incremental maintenance",
+      "scope": "Tracing existing behavior, impact analysis, focused fixes, refactoring and dependency changes.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.maintenance-evolution.trace-unfamiliar-codebase-entry-points",
+        "competency.maintenance-evolution.identify-callers-contracts-data-migrations",
+        "competency.maintenance-evolution.fix-bug-without-using-excuse",
+        "competency.maintenance-evolution.preserve-behavior-tests-make-one",
+        "competency.maintenance-evolution.update-dependency-reviewing-release-notes",
+        "competency.maintenance-evolution.improve-system-did-not-create"
+      ],
+      "sourceIds": [
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.system-evolution",
+      "domainCode": "domain.maintenance-evolution",
+      "title": "Compatibility, data migration and technical debt",
+      "scope": "Contract evolution, deprecation, recoverable migrations and actionable debt.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.maintenance-evolution.evolve-interface-schema-without-breaking",
+        "competency.maintenance-evolution.define-replacement-guidance-compatibility-period",
+        "competency.maintenance-evolution.migrate-data-through-validated-resumable",
+        "competency.maintenance-evolution.identify-technical-debt-recurring-delivery",
+        "competency.maintenance-evolution.document-debt-context-impact-risk"
+      ],
+      "sourceIds": [
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.requirements",
+      "domainCode": "domain.product-requirements-domain",
+      "title": "Problem framing and acceptance criteria",
+      "scope": "Users, outcomes, stakeholders, rules, edge cases, assumptions and observable acceptance.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.product-requirements-domain.turn-vague-need-questions-about",
+        "competency.product-requirements-domain.identify-people-who-use-approve",
+        "competency.product-requirements-domain.distinguish-person-requesting-feature-person",
+        "competency.product-requirements-domain.describe-user-problem-outcome-independently",
+        "competency.product-requirements-domain.express-business-rules-inputs-conditions",
+        "competency.product-requirements-domain.derive-edge-cases-boundaries-missing",
+        "competency.product-requirements-domain.record-each-assumption-why-believed",
+        "competency.product-requirements-domain.write-acceptance-criteria-observable-preconditions"
+      ],
+      "sourceIds": [
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.scope-tradeoffs",
+      "domainCode": "domain.product-requirements-domain",
+      "title": "Scope, risk and business trade-offs",
+      "scope": "Vertical slices, early risk validation, scope negotiation and business impact.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.product-requirements-domain.split-feature-independently-valuable-deployable",
+        "competency.product-requirements-domain.identify-technical-risks-likelihood-impact",
+        "competency.product-requirements-domain.explain-trade-offs-non-technical",
+        "competency.product-requirements-domain.challenge-technically-poor-requirement-without",
+        "competency.product-requirements-domain.present-must-have-outcomes-removable",
+        "competency.product-requirements-domain.connect-technical-decision-user-business"
+      ],
+      "sourceIds": [
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.collaboration",
+      "domainCode": "domain.professional-work-autonomy",
+      "title": "Collaboration, planning and asking for help",
+      "scope": "Reviewable tasks, estimates with uncertainty, clear help requests, blockers and review.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.professional-work-autonomy.decompose-problem-reviewable-tasks-dependencies",
+        "competency.professional-work-autonomy.estimate-work-range-state-assumptions",
+        "competency.professional-work-autonomy.ask-help-problem-expected-actual",
+        "competency.professional-work-autonomy.communicate-blocker-before-threatens-delivery",
+        "competency.professional-work-autonomy.review-change-behavior-design-fit"
+      ],
+      "sourceIds": [
+        "sfia",
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.feature-ownership",
+      "domainCode": "domain.professional-work-autonomy",
+      "title": "Feature ownership and technical decisions",
+      "scope": "Delivery ownership, existing codebases, ambiguity, risk and decision scope.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.professional-work-autonomy.receive-reasonably-defined-feature-drive",
+        "competency.professional-work-autonomy.take-responsibility-failure-something-delivered",
+        "competency.professional-work-autonomy.work-productively-codebase-did-not",
+        "competency.professional-work-autonomy.receive-partially-ambiguous-problem-discover",
+        "competency.professional-work-autonomy.identify-product-data-dependency-security",
+        "competency.professional-work-autonomy.make-local-technical-decisions-without",
+        "competency.professional-work-autonomy.recognize-decision-exceeds-scope-requires"
+      ],
+      "sourceIds": [
+        "sfia",
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.technical-communication",
+      "domainCode": "domain.professional-work-autonomy",
+      "title": "Technical communication, mentoring and judgment",
+      "scope": "Decision records, RFCs, explaining trade-offs, evidence, mentoring and ethical judgment.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.professional-work-autonomy.document-important-decision-context-options",
+        "competency.professional-work-autonomy.write-short-rfc-design-note",
+        "competency.professional-work-autonomy.present-solutions-problem-constraints-architecture",
+        "competency.professional-work-autonomy.defend-decision-arguments-evidence",
+        "competency.professional-work-autonomy.change-mind-response-better-evidence",
+        "competency.professional-work-autonomy.help-less-experienced-person-understand",
+        "competency.professional-work-autonomy.refuse-change-unsafe-dishonest-illegal"
+      ],
+      "sourceIds": [
+        "sfia",
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.model-integration",
+      "domainCode": "domain.ai-engineering",
+      "title": "Model APIs and structured responses",
+      "scope": "Typed model clients, controlled sampling, output schemas, streaming and cancellation.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.ai-engineering.integrate-llm-api-authenticated-configuration",
+        "competency.ai-engineering.vary-temperature-sampling-output-limits",
+        "competency.ai-engineering.define-schema-request-structured-output",
+        "competency.ai-engineering.stream-model-output-cancellation-partial"
+      ],
+      "sourceIds": [
+        "nist",
+        "ai-outputs"
+      ]
+    },
+    {
+      "code": "topic.model-operations",
+      "domainCode": "domain.ai-engineering",
+      "title": "Prompt context, cost and model observability",
+      "scope": "Trusted context, token budgets, cost, bounded retries and execution telemetry.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.ai-engineering.assemble-prompts-versioned-instructions-trusted",
+        "competency.ai-engineering.estimate-how-input-output-tools",
+        "competency.ai-engineering.estimate-per-request-end-end",
+        "competency.ai-engineering.apply-timeout-cancellation-retry-only",
+        "competency.ai-engineering.record-model-provider-version-prompt"
+      ],
+      "sourceIds": [
+        "nist"
+      ]
+    },
+    {
+      "code": "topic.responsible-ai",
+      "domainCode": "domain.ai-engineering",
+      "title": "AI privacy, risk and human oversight",
+      "scope": "Data boundaries, human review, retention and choosing deterministic solutions.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.ai-engineering.decide-what-data-may-leave",
+        "competency.ai-engineering.identify-ai-feature-cause-unfair",
+        "competency.ai-engineering.state-which-data-logs-model",
+        "competency.ai-engineering.reject-ai-deterministic-logic-search"
+      ],
+      "sourceIds": [
+        "nist"
+      ]
+    },
+    {
+      "code": "topic.tool-use",
+      "domainCode": "domain.ai-engineering",
+      "title": "Tool calling, state and prompt versions",
+      "scope": "Narrow authorized tools, user-isolated state, prompt releases and untrusted content.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.ai-engineering.expose-tool-narrow-schema-description",
+        "competency.ai-engineering.select-persist-trim-summarize-reconstruct",
+        "competency.ai-engineering.assign-immutable-prompt-version-each",
+        "competency.ai-engineering.keep-trusted-system-developer-instructions"
+      ],
+      "sourceIds": [
+        "nist",
+        "ai-tools"
+      ]
+    },
+    {
+      "code": "topic.ai-evaluation",
+      "domainCode": "domain.ai-engineering",
+      "title": "AI evaluation and error analysis",
+      "scope": "Representative cases, version comparisons, failure clusters and calibrated human/model judging.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.ai-engineering.create-representative-normal-boundary-adversarial",
+        "competency.ai-engineering.run-same-evaluation-set-against",
+        "competency.ai-engineering.inspect-traces-cluster-failures-cause",
+        "competency.ai-engineering.choose-among-exact-code-based"
+      ],
+      "sourceIds": [
+        "nist",
+        "evals"
+      ]
+    },
+    {
+      "code": "topic.retrieval",
+      "domainCode": "domain.ai-engineering",
+      "title": "Embeddings, search and RAG",
+      "scope": "Similarity, filtered retrieval, hybrid search, chunks, grounding and retrieval evaluation.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.ai-engineering.explain-how-embeddings-map-content",
+        "competency.ai-engineering.ingest-content-create-embeddings-store",
+        "competency.ai-engineering.combine-lexical-vector-retrieval-apply",
+        "competency.ai-engineering.build-rag-flow-ingestion-chunking",
+        "competency.ai-engineering.choose-chunk-boundaries-size-overlap",
+        "competency.ai-engineering.score-whether-retrieval-returned-necessary"
+      ],
+      "sourceIds": [
+        "nist",
+        "rag",
+        "evals"
+      ]
+    },
+    {
+      "code": "topic.bounded-agents",
+      "domainCode": "domain.ai-engineering",
+      "title": "Bounded agents and safe tool execution",
+      "scope": "Tool protocols, stopping conditions, budgets, authorization, prompt injection and approval boundaries.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.ai-engineering.expose-tools-through-narrow-authenticated",
+        "competency.ai-engineering.implement-agent-loop-selects-narrow",
+        "competency.ai-engineering.enforce-maximum-iterations-time-tokens",
+        "competency.ai-engineering.validate-tool-schemas-results-authorize",
+        "competency.ai-engineering.account-prompt-injection-untrusted-data",
+        "competency.ai-engineering.identify-irreversible-external-financial-permission"
+      ],
+      "sourceIds": [
+        "nist",
+        "ai-tools"
+      ]
+    },
+    {
+      "code": "topic.ai-routing",
+      "domainCode": "domain.ai-engineering",
+      "title": "Model routing, caching and Python integration",
+      "scope": "Quality/cost-aware routing, safe cache keys and specialist Python components.",
+      "milestone": "strong",
+      "competencyCodes": [
+        "competency.ai-engineering.route-cache-model-calls-model",
+        "competency.ai-engineering.use-python-library-model-does"
+      ],
+      "sourceIds": [
+        "nist"
+      ]
+    },
+    {
+      "code": "topic.web-interface",
+      "domainCode": "domain.frontend-literacy",
+      "title": "Accessible web interfaces and forms",
+      "scope": "Semantic HTML, responsive CSS, browser events, forms and keyboard access.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.frontend-literacy.structure-page-meaningful-landmarks-headings",
+        "competency.frontend-literacy.build-responsive-one-two-dimensional",
+        "competency.frontend-literacy.explain-debug-how-browser-javascript",
+        "competency.frontend-literacy.inspect-modify-dom-through-events",
+        "competency.frontend-literacy.build-accessible-form-labels-native",
+        "competency.frontend-literacy.provide-semantic-structure-keyboard-access",
+        "competency.frontend-literacy.make-interface-usable-across-narrow"
+      ],
+      "sourceIds": [
+        "mdn"
+      ]
+    },
+    {
+      "code": "topic.frontend-data",
+      "domainCode": "domain.frontend-literacy",
+      "title": "Client state, API access and rendering",
+      "scope": "Storage, session boundaries, API states, components, developer tools and rendering trade-offs.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.frontend-literacy.choose-among-cookies-localstorage-sessionstorage",
+        "competency.frontend-literacy.call-api-loading-success-empty",
+        "competency.frontend-literacy.support-login-logout-session-refresh",
+        "competency.frontend-literacy.split-interface-components-clear-inputs",
+        "competency.frontend-literacy.place-state-smallest-shared-owner",
+        "competency.frontend-literacy.inspect-request-url-method-headers",
+        "competency.frontend-literacy.implement-react-screen-routing-forms",
+        "competency.frontend-literacy.explain-what-triggers-render-identify",
+        "competency.frontend-literacy.choose-client-side-server-side"
+      ],
+      "sourceIds": [
+        "mdn"
+      ]
+    },
+    {
+      "code": "topic.ai-assisted-work",
+      "domainCode": "domain.engineering-with-ai",
+      "title": "Bounded AI assistance and change review",
+      "scope": "Clear task boundaries, verifiers, isolated credentials, authoritative API checks and owning the result.",
+      "milestone": "junior",
+      "competencyCodes": [
+        "competency.engineering-with-ai.delegate-task-explicit-goal-boundaries",
+        "competency.engineering-with-ai.provide-agent-current-architecture-ownership",
+        "competency.engineering-with-ai.give-agent-verifier-run-itself",
+        "competency.engineering-with-ai.keep-agent-away-production-credentials",
+        "competency.engineering-with-ai.review-every-changed-file-intended",
+        "competency.engineering-with-ai.verify-generated-library-api-against",
+        "competency.engineering-with-ai.require-tests-changes-behavior-failure",
+        "competency.engineering-with-ai.explain-merged-changes-control-flow"
+      ],
+      "sourceIds": [
+        "nist",
+        "swebok"
+      ]
+    },
+    {
+      "code": "topic.ai-assisted-judgment",
+      "domainCode": "domain.engineering-with-ai",
+      "title": "AI-assisted debugging and architectural judgment",
+      "scope": "Dependency direction, unnecessary abstractions, independent diagnosis, high-risk review and work coordination.",
+      "milestone": "mid",
+      "competencyCodes": [
+        "competency.engineering-with-ai.trace-generated-change-against-dependency",
+        "competency.engineering-with-ai.identify-generated-layer-interface-factory",
+        "competency.engineering-with-ai.reproduce-ai-produced-defect-form",
+        "competency.engineering-with-ai.change-generated-control-flow-data",
+        "competency.engineering-with-ai.conduct-technical-investigation-without-accepting",
+        "competency.engineering-with-ai.use-ai-accelerate-exploration-without",
+        "competency.engineering-with-ai.stop-failing-agent-path-revert",
+        "competency.engineering-with-ai.identify-ai-generated-changes-involving",
+        "competency.engineering-with-ai.split-large-change-across-agents"
+      ],
+      "sourceIds": [
+        "nist",
+        "swebok"
+      ]
+    }
+  ]
+}

@@ -25,7 +25,7 @@ function Sidebar({ standardVersion }: { standardVersion: string }) {
       <div className="mt-12"><SidebarMenu label="Main navigation" /></div>
       <div className="flex-1" />
       <div className="flex items-center justify-between px-3 pt-5 text-xs text-ink-faint">
-        <span>Standard v{standardVersion}</span>
+        <span>Path v2 · Skills v{standardVersion}</span>
         <SignOut />
       </div>
     </aside>

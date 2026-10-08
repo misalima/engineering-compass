@@ -2,51 +2,99 @@ import type { ReactNode } from "react";
 import { MainContentContainer } from "@/components/layout/main-content-container";
 
 /** A placeholder shape. `onCanvas` is for bones outside panels, which sit on a darker background. */
-export function Bone({ className = "", onCanvas = false }: { className?: string; onCanvas?: boolean }) {
-  return <div className={`animate-pulse rounded-[var(--radius-sm)] ${onCanvas ? "bg-surface-panel" : "bg-surface-raised"} ${className}`} />;
+export function Bone({
+  className = "",
+  onCanvas = false,
+}: {
+  className?: string;
+  onCanvas?: boolean;
+}) {
+  return (
+    <div
+      className={`animate-pulse rounded-[var(--radius-sm)] ${onCanvas ? "bg-surface-panel" : "bg-surface-raised"} ${className}`}
+    />
+  );
 }
 
 export function SkeletonPage({ children }: { children: ReactNode }) {
   return (
     <MainContentContainer aria-busy="true">
-      <span className="sr-only" role="status">Loading…</span>
+      <span className="sr-only" role="status">
+        Loading…
+      </span>
       {children}
     </MainContentContainer>
   );
 }
 
 /** Mirrors PageHeader. */
-export function SkeletonHeader({ eyebrow = false, description = true, aside = false }: { eyebrow?: boolean; description?: boolean; aside?: boolean }) {
+export function SkeletonHeader({
+  eyebrow = false,
+  description = true,
+  aside = false,
+}: {
+  eyebrow?: boolean;
+  description?: boolean;
+  aside?: boolean;
+}) {
   return (
-    <div className="flex items-end justify-between gap-8 pb-2">
+    <div className="flex items-end justify-between gap-8 pb-2 max-[640px]:flex-col max-[640px]:items-start max-[640px]:gap-3">
       <div className="grid w-full max-w-[40rem] gap-3">
         {eyebrow ? <Bone onCanvas className="h-3 w-28" /> : null}
         <Bone onCanvas className="h-9 w-72 max-w-full" />
         {description ? <Bone onCanvas className="mt-1 h-4 w-full" /> : null}
       </div>
-      {aside ? <Bone onCanvas className="h-4 w-24 shrink-0 max-[640px]:hidden" /> : null}
+      {aside ? <Bone onCanvas className="h-4 w-24 shrink-0" /> : null}
     </div>
   );
 }
 
 /** Mirrors Section: a panel with a title. */
-export function SkeletonPanel({ children, title = true, className = "" }: { children?: ReactNode; title?: boolean; className?: string }) {
+export function SkeletonPanel({
+  children,
+  title = true,
+  className = "",
+  variant = "panel",
+}: {
+  children?: ReactNode;
+  title?: boolean;
+  className?: string;
+  variant?: "panel" | "plain";
+}) {
   return (
-    <div className={`rounded-[var(--radius-lg)] bg-surface-panel p-6 sm:p-8 ${className}`}>
-      {title ? <Bone className="mb-6 h-5 w-44" /> : null}
+    <div
+      className={`${variant === "plain" ? "min-w-0" : "rounded-[var(--radius-lg)] bg-surface-panel p-6 sm:p-8"} ${className}`}
+    >
+      {title ? (
+        <Bone
+          onCanvas={variant === "plain"}
+          className="mb-5 h-5 w-44 max-w-full"
+        />
+      ) : null}
       {children}
     </div>
   );
 }
 
 /** Mirrors the clickable item lists: text on the left, status badge on the right. */
-export function SkeletonRows({ count, twoLine = false }: { count: number; twoLine?: boolean }) {
+export function SkeletonRows({
+  count,
+  twoLine = false,
+}: {
+  count: number;
+  twoLine?: boolean;
+}) {
   return (
     <div className="grid gap-1">
       {Array.from({ length: count }, (_, i) => (
-        <div key={i} className="flex items-start justify-between gap-6 px-3 py-3">
+        <div
+          key={i}
+          className="flex items-start justify-between gap-6 px-3 py-3"
+        >
           <div className="grid w-full max-w-[36rem] gap-2">
-            <Bone className={`h-4 ${twoLine ? "w-48" : i % 3 === 1 ? "w-3/4" : "w-full"}`} />
+            <Bone
+              className={`h-4 max-w-full ${twoLine ? "w-48" : i % 3 === 1 ? "w-3/4" : "w-full"}`}
+            />
             {twoLine ? <Bone className="h-4 w-full" /> : null}
           </div>
           <Bone className="h-4 w-20 shrink-0" />
@@ -70,7 +118,11 @@ export function SkeletonMeter() {
 }
 
 /** Mirrors the header of competency, experience, and criterion pages: breadcrumb, chips, statement. */
-export function SkeletonItemHeader({ statement = false }: { statement?: boolean }) {
+export function SkeletonItemHeader({
+  statement = false,
+}: {
+  statement?: boolean;
+}) {
   return (
     <div className="grid gap-4">
       <Bone onCanvas className="h-3 w-40" />
@@ -103,7 +155,9 @@ export function SkeletonAssessment() {
       <SkeletonPanel>
         <div className="grid gap-6">
           <div className="grid gap-2 sm:grid-cols-4">
-            {[0, 1, 2, 3].map((i) => <Bone key={i} className="h-11" />)}
+            {[0, 1, 2, 3].map((i) => (
+              <Bone key={i} className="h-11" />
+            ))}
           </div>
           <SkeletonField tall />
           <SkeletonField tall />
@@ -141,10 +195,51 @@ export function SkeletonForm({ fields }: { fields: number }) {
   return (
     <div className="grid gap-5">
       <div className="grid gap-4 sm:grid-cols-2">
-        {Array.from({ length: fields }, (_, i) => <SkeletonField key={i} />)}
+        {Array.from({ length: fields }, (_, i) => (
+          <SkeletonField key={i} />
+        ))}
       </div>
       <SkeletonField tall />
       <Bone className="h-11 w-36" />
+    </div>
+  );
+}
+
+/** Topic/date selectors, notes, optional URL, and submit action. */
+export function SkeletonStudyForm() {
+  return (
+    <div className="grid gap-4">
+      <div className="grid gap-4 sm:grid-cols-2">
+        <SkeletonField />
+        <SkeletonField />
+      </div>
+      <SkeletonField tall />
+      <SkeletonField />
+      <Bone className="h-11 w-32" />
+    </div>
+  );
+}
+
+/** Study entries and their domain badges; counts vary with the owner's history. */
+export function SkeletonStudies({
+  count = 3,
+  onCanvas = false,
+}: {
+  count?: number;
+  onCanvas?: boolean;
+}) {
+  return (
+    <div className="divide-y divide-line">
+      {Array.from({ length: count }, (_, i) => (
+        <div key={i} className="grid gap-3 py-5 first:pt-0 last:pb-0">
+          <div className="flex justify-between gap-3">
+            <Bone onCanvas={onCanvas} className="h-4 w-2/3" />
+            <Bone onCanvas={onCanvas} className="h-3 w-16 shrink-0" />
+          </div>
+          <Bone onCanvas={onCanvas} className="h-6 w-24 rounded-full" />
+          <Bone onCanvas={onCanvas} className="h-4 w-full" />
+        </div>
+      ))}
     </div>
   );
 }

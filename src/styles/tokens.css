@@ -31,6 +31,7 @@
   --line: var(--brand-line);
   --line-strong: light-dark(#c4cecb, #343d3b);
   --accent: var(--brand-accent);
+  --accent-hover: light-dark(#075c53, #52cbbd);
   --accent-strong: var(--brand-accent-strong);
   --accent-ink: var(--brand-accent-ink);
   --warning: light-dark(#8a5a00, #e8c270);
@@ -67,6 +68,7 @@
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
   --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
   --color-accent-strong: var(--accent-strong);
   --color-accent-ink: var(--accent-ink);
   --color-warning: var(--warning);

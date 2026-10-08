@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { boolean, check, index, integer, pgEnum, pgTable, serial, smallint, text, timestamp, unique } from "drizzle-orm/pg-core";
+import { boolean, check, date, index, integer, primaryKey, pgEnum, pgTable, serial, smallint, text, timestamp, unique } from "drizzle-orm/pg-core";
 import { ITEM_KINDS } from "../standard/schema";
 
 export const requiredLevel = pgEnum("required_level", ["L1", "L2", "L3", "L4"]);
@@ -170,3 +170,45 @@ export const profileSettings = pgTable(
   },
   () => [check("profile_settings_singleton", sql`id = 1`)],
 );
+
+// Career path v2 extends the immutable v1.1 competency identities.
+export const careerGoal = pgEnum("career_goal", ["backend_ai", "backend"]);
+export const primaryStack = pgEnum("primary_stack", ["go", "typescript", "python"]);
+export const careerMilestone = pgEnum("career_milestone", ["foundations", "junior", "mid", "strong"]);
+
+export const careerProfiles = pgTable("career_profiles", {
+  id: integer("id").primaryKey().default(1),
+  goal: careerGoal("goal").notNull().default("backend_ai"),
+  primaryStack: primaryStack("primary_stack").notNull().default("go"),
+  stackTools: text("stack_tools").array().notNull().default(sql`'{"PostgreSQL","Docker"}'::text[]`),
+  targetMilestone: careerMilestone("target_milestone").notNull().default("junior"),
+  updatedAt: updatedAt(),
+}, () => [check("career_profiles_singleton", sql`id = 1`)]);
+
+export const studyTopics = pgTable("study_topics", {
+  code: text("code").primaryKey(),
+  catalogVersion: text("catalog_version").notNull(),
+  domainId: integer("domain_id").notNull().references(() => domains.id),
+  title: text("title").notNull(),
+  scope: text("scope").notNull(),
+  firstMilestone: careerMilestone("first_milestone").notNull(),
+  sourceIds: text("source_ids").array().notNull(),
+}, (t) => [index().on(t.domainId)]);
+
+export const topicCompetencies = pgTable("topic_competencies", {
+  topicCode: text("topic_code").notNull().references(() => studyTopics.code),
+  competencyId: integer("competency_id").notNull().references(() => competencies.id),
+}, (t) => [primaryKey({ columns: [t.topicCode, t.competencyId] }), index().on(t.competencyId)]);
+
+export const studyEntries = pgTable("study_entries", {
+  id: serial("id").primaryKey(),
+  topicCode: text("topic_code").notNull().references(() => studyTopics.code),
+  studiedOn: date("studied_on").notNull(),
+  notes: text("notes"),
+  link: text("link"),
+  createdAt: createdAt(),
+  updatedAt: updatedAt(),
+}, (t) => [index().on(t.topicCode, t.studiedOn), index().on(t.studiedOn, t.id),
+  check("study_entries_notes_length", sql`notes IS NULL OR length(notes) <= 5000`),
+  check("study_entries_link_http", sql`link IS NULL OR link ~ '^https?://'`),
+]);

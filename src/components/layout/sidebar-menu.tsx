@@ -5,12 +5,13 @@ import { usePathname } from "next/navigation";
 import { IconDepth, IconFolder, IconHistory, IconLibrary, IconOverview, IconRoute, IconSettings } from "@/components/icons";
 
 const navigation = [
-  { label: "Dashboard", href: "/", icon: IconOverview, match: ["/", "/levels"] },
-  { label: "Domains", href: "/domains", icon: IconLibrary, match: ["/domains", "/competencies"] },
-  { label: "Experience Matrix", href: "/experiences", icon: IconRoute, match: ["/experiences"] },
-  { label: "Depth Gates", href: "/depth-gates", icon: IconDepth, match: ["/depth-gates", "/depth-criteria"] },
-  { label: "Projects", href: "/projects", icon: IconFolder, match: ["/projects"] },
-  { label: "History", href: "/history", icon: IconHistory, match: ["/history"] },
+  { label: "My compass", href: "/", icon: IconOverview, match: ["/"] },
+  { label: "Study topics", href: "/topics", icon: IconLibrary, match: ["/topics"] },
+  { label: "Study log", href: "/study-log", icon: IconHistory, match: ["/study-log"] },
+  { label: "Career milestones", href: "/milestones", icon: IconRoute, match: ["/milestones"] },
+  { label: "Standard reference", href: "/domains", icon: IconDepth, match: ["/domains", "/competencies", "/levels", "/experiences", "/depth-gates", "/depth-criteria"] },
+  { label: "Projects & evidence", href: "/projects", icon: IconFolder, match: ["/projects"] },
+  { label: "Assessment history", href: "/history", icon: IconHistory, match: ["/history"] },
   { label: "Settings", href: "/settings", icon: IconSettings, match: ["/settings"] },
 ] as const;
 

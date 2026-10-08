@@ -1,6 +1,6 @@
 "use server";
 
-import { refresh } from "next/cache";
+import { invalidateOwnerViews } from "@/data/invalidate";
 import { redirect, unstable_rethrow } from "next/navigation";
 import type { ActionState } from "@/app/(app)/actions";
 import { createProject, deleteProject, updateProject } from "@/data/projects";
@@ -17,7 +17,7 @@ export async function saveProjectAction(id: number | null, _prev: ActionState, f
   try {
     if (id !== null) {
       await updateProject(id, parsed.data);
-      refresh();
+      invalidateOwnerViews();
       return { ok: true, message: "Saved." };
     }
     createdId = await createProject(parsed.data);
@@ -26,10 +26,12 @@ export async function saveProjectAction(id: number | null, _prev: ActionState, f
     console.error("saveProject failed", { id, error: (error as Error).message });
     return { ok: false, message: "Could not save the project. Try again." };
   }
+  invalidateOwnerViews();
   redirect(`/projects/${createdId}`);
 }
 
 export async function deleteProjectAction(id: number) {
   if (isId(id)) await deleteProject(id);
+  invalidateOwnerViews();
   redirect("/projects");
 }

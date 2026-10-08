@@ -1,6 +1,7 @@
 import "server-only";
 import { cache } from "react";
-import { getActiveVersion, loadAssessmentDetails, loadStandard, toAssessments } from "@/db/queries";
+import { getActiveVersion, loadAssessmentDetails, toAssessments } from "@/db/queries";
+import { STANDARD_V1_1 } from "@/standard";
 import { progression } from "@/progression";
 import type { Standard } from "@/standard/schema";
 import { ownerDb } from "./auth";
@@ -14,7 +15,7 @@ export const getActiveStandard = cache(async () => {
   const db = await ownerDb();
   activeStandard ??= (async () => {
     const version = await getActiveVersion(db);
-    return { versionId: version.id, standard: await loadStandard(db, version.id) };
+    return { versionId: version.id, standard: STANDARD_V1_1 };
   })().catch((error) => {
     activeStandard = undefined;
     throw error;
