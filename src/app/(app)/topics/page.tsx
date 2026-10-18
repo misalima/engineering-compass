@@ -2,17 +2,19 @@ import type { Metadata } from "next";
 import { MainContentContainer } from "@/components/layout/main-content-container";
 import { PageHeader } from "@/components/ui/page-header";
 import { TopicCatalog } from "@/components/growth/topic-catalog";
-import { getGrowth } from "@/data/growth";
+import { getGrowth, getSubtopicStudyCounts } from "@/data/growth";
 import { MILESTONE_INFO } from "@/growth/model";
 import { getActiveStandard } from "@/data/standard";
 
 export const metadata: Metadata = { title: "Study topics" };
 export default async function TopicsPage() {
-  const [growth, { standard }] = await Promise.all([
+  const [growth, { standard }, subtopicCounts] = await Promise.all([
     getGrowth(),
     getActiveStandard(),
+    getSubtopicStudyCounts(),
   ]);
   const names = new Map(standard.domains.map((d) => [d.code, d.title]));
+  const counts = new Map(subtopicCounts.map((s) => [s.topicCode, s.count]));
   const cards = growth.topics.map(
     ({
       code,
@@ -25,6 +27,7 @@ export default async function TopicsPage() {
       done,
       total,
       studyCount,
+      subtopics,
     }) => ({
       code,
       title,
@@ -41,6 +44,8 @@ export default async function TopicsPage() {
       done,
       total,
       studyCount,
+      studiedSubtopicCount: counts.get(code) ?? 0,
+      subtopicCount: subtopics.length,
     }),
   );
   return (

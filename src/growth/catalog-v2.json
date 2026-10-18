@@ -1,7 +1,7 @@
 {
-  "version": "2.0",
+  "version": "2.1",
   "competencyStandardVersion": "1.1",
-  "reviewedAt": "2026-10-05",
+  "reviewedAt": "2026-10-18",
   "sources": [
     {
       "id": "sfia",
@@ -122,6 +122,16 @@
       "id": "evals",
       "title": "Google Cloud — Gen AI evaluation overview",
       "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/evaluation-overview"
+    },
+    {
+      "id": "python-collections",
+      "title": "Python Tutorial — Data Structures",
+      "url": "https://docs.python.org/3/tutorial/datastructures.html"
+    },
+    {
+      "id": "mdn-collections",
+      "title": "MDN — Keyed collections",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Keyed_collections"
     }
   ],
   "topics": [
@@ -141,12 +151,38 @@
       "sourceIds": [
         "swebok",
         "python"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.problem-solving.inputs-outputs-and-problem-decomposition",
+          "title": "Inputs, outputs and problem decomposition"
+        },
+        {
+          "code": "topic.problem-solving.primitive-types-and-choosing-data-representations",
+          "title": "Primitive types and choosing data representations"
+        },
+        {
+          "code": "topic.problem-solving.conditionals-and-boolean-expressions",
+          "title": "Conditionals and boolean expressions"
+        },
+        {
+          "code": "topic.problem-solving.loops-and-termination-conditions",
+          "title": "Loops and termination conditions"
+        },
+        {
+          "code": "topic.problem-solving.functions-parameters-and-return-values",
+          "title": "Functions, parameters and return values"
+        },
+        {
+          "code": "topic.problem-solving.recursion-and-iterative-alternatives",
+          "title": "Recursion and iterative alternatives"
+        }
       ]
     },
     {
       "code": "topic.memory",
       "domainCode": "domain.programming-fundamentals",
-      "title": "Scope, references and mutation",
+      "title": "Variable scope and how data changes",
       "scope": "Variable lifetime, aliasing, copying and visible state changes.",
       "milestone": "foundations",
       "competencyCodes": [
@@ -156,6 +192,28 @@
       "sourceIds": [
         "swebok",
         "python"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.memory.local-block-and-outer-variable-scope",
+          "title": "Local, block and outer variable scope"
+        },
+        {
+          "code": "topic.memory.variable-lifetime-and-captured-variables",
+          "title": "Variable lifetime and captured variables"
+        },
+        {
+          "code": "topic.memory.values-references-and-aliasing",
+          "title": "Values, references and aliasing"
+        },
+        {
+          "code": "topic.memory.shallow-copies-and-deep-copies",
+          "title": "Shallow copies and deep copies"
+        },
+        {
+          "code": "topic.memory.mutation-immutability-and-side-effects",
+          "title": "Mutation, immutability and side effects"
+        }
       ]
     },
     {
@@ -175,6 +233,28 @@
       "sourceIds": [
         "swebok",
         "python"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.debugging.reading-a-program-and-tracing-its-execution",
+          "title": "Reading a program and tracing its execution"
+        },
+        {
+          "code": "topic.debugging.exceptions-error-values-and-failure-paths",
+          "title": "Exceptions, error values and failure paths"
+        },
+        {
+          "code": "topic.debugging.breakpoints-and-inspecting-variables",
+          "title": "Breakpoints and inspecting variables"
+        },
+        {
+          "code": "topic.debugging.diagnostic-logs-and-stack-traces",
+          "title": "Diagnostic logs and stack traces"
+        },
+        {
+          "code": "topic.debugging.file-input-output-and-resource-cleanup",
+          "title": "File input/output and resource cleanup"
+        }
       ]
     },
     {
@@ -192,6 +272,28 @@
       "sourceIds": [
         "swebok",
         "python"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.data-correctness.deterministic-behavior-and-explicit-inputs",
+          "title": "Deterministic behavior and explicit inputs"
+        },
+        {
+          "code": "topic.data-correctness.utc-local-time-and-time-zones",
+          "title": "UTC, local time and time zones"
+        },
+        {
+          "code": "topic.data-correctness.instants-calendar-dates-and-durations",
+          "title": "Instants, calendar dates and durations"
+        },
+        {
+          "code": "topic.data-correctness.money-decimal-arithmetic-and-rounding",
+          "title": "Money, decimal arithmetic and rounding"
+        },
+        {
+          "code": "topic.data-correctness.unicode-encoding-and-string-comparison",
+          "title": "Unicode, encoding and string comparison"
+        }
       ]
     },
     {
@@ -208,7 +310,47 @@
         "competency.data-structures-algorithms.avoid-sophisticated-data-structures-simple"
       ],
       "sourceIds": [
-        "algorithms"
+        "algorithms",
+        "python-collections",
+        "mdn-collections"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.collections.arrays-and-lists-access-insertion-and-removal",
+          "title": "Arrays and lists: access, insertion and removal"
+        },
+        {
+          "code": "topic.collections.maps-keys-values-and-lookup",
+          "title": "Maps: keys, values and lookup"
+        },
+        {
+          "code": "topic.collections.sets-uniqueness-union-and-intersection",
+          "title": "Sets: uniqueness, union and intersection"
+        },
+        {
+          "code": "topic.collections.stacks-last-in-first-out",
+          "title": "Stacks: last in, first out"
+        },
+        {
+          "code": "topic.collections.queues-first-in-first-out",
+          "title": "Queues: first in, first out"
+        },
+        {
+          "code": "topic.collections.linear-search-and-binary-search",
+          "title": "Linear search and binary search"
+        },
+        {
+          "code": "topic.collections.sorting-and-comparison-functions",
+          "title": "Sorting and comparison functions"
+        },
+        {
+          "code": "topic.collections.time-complexity-o-1-o-log-n-o-n-and-o-n",
+          "title": "Time complexity: O(1), O(log n), O(n) and O(n²)"
+        },
+        {
+          "code": "topic.collections.space-complexity-and-collection-trade-offs",
+          "title": "Space complexity and collection trade-offs"
+        }
       ]
     },
     {
@@ -224,6 +366,32 @@
       ],
       "sourceIds": [
         "algorithms"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.traversal.tree-nodes-edges-and-hierarchies",
+          "title": "Tree nodes, edges and hierarchies"
+        },
+        {
+          "code": "topic.traversal.graphs-adjacency-lists-and-cycles",
+          "title": "Graphs, adjacency lists and cycles"
+        },
+        {
+          "code": "topic.traversal.depth-first-traversal-dfs",
+          "title": "Depth-first traversal (DFS)"
+        },
+        {
+          "code": "topic.traversal.breadth-first-traversal-bfs",
+          "title": "Breadth-first traversal (BFS)"
+        },
+        {
+          "code": "topic.traversal.visited-sets-and-traversal-invariants",
+          "title": "Visited sets and traversal invariants"
+        },
+        {
+          "code": "topic.traversal.choosing-a-traversal-for-the-workload",
+          "title": "Choosing a traversal for the workload"
+        }
       ]
     },
     {
@@ -243,6 +411,28 @@
       "sourceIds": [
         "go",
         "go-docs"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.go-modeling.modules-packages-and-exported-names",
+          "title": "Modules, packages and exported names"
+        },
+        {
+          "code": "topic.go-modeling.structs-methods-and-receivers",
+          "title": "Structs, methods and receivers"
+        },
+        {
+          "code": "topic.go-modeling.interfaces-and-implicit-implementation",
+          "title": "Interfaces and implicit implementation"
+        },
+        {
+          "code": "topic.go-modeling.slices-backing-arrays-and-append",
+          "title": "Slices, backing arrays and append"
+        },
+        {
+          "code": "topic.go-modeling.maps-zero-values-and-missing-keys",
+          "title": "Maps, zero values and missing keys"
+        }
       ]
     },
     {
@@ -261,6 +451,28 @@
       "sourceIds": [
         "go",
         "go-docs"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.go-errors.returning-and-handling-errors",
+          "title": "Returning and handling errors"
+        },
+        {
+          "code": "topic.go-errors.error-wrapping-and-errors-is-errors-as",
+          "title": "Error wrapping and errors.Is / errors.As"
+        },
+        {
+          "code": "topic.go-errors.defer-and-resource-cleanup",
+          "title": "defer and resource cleanup"
+        },
+        {
+          "code": "topic.go-errors.panic-recover-and-process-boundaries",
+          "title": "panic, recover and process boundaries"
+        },
+        {
+          "code": "topic.go-errors.context-deadlines-and-cancellation",
+          "title": "Context deadlines and cancellation"
+        }
       ]
     },
     {
@@ -277,6 +489,28 @@
       "sourceIds": [
         "go",
         "go-docs"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.go-services.http-handlers-and-routing",
+          "title": "HTTP handlers and routing"
+        },
+        {
+          "code": "topic.go-services.middleware-and-request-context",
+          "title": "Middleware and request context"
+        },
+        {
+          "code": "topic.go-services.json-decoding-and-input-validation",
+          "title": "JSON decoding and input validation"
+        },
+        {
+          "code": "topic.go-services.http-responses-and-safe-error-handling",
+          "title": "HTTP responses and safe error handling"
+        },
+        {
+          "code": "topic.go-services.database-queries-and-connection-handling",
+          "title": "Database queries and connection handling"
+        }
       ]
     },
     {
@@ -295,6 +529,28 @@
       "sourceIds": [
         "go",
         "go-docs"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.go-tooling.table-driven-tests-and-subtests",
+          "title": "Table-driven tests and subtests"
+        },
+        {
+          "code": "topic.go-tooling.go-fmt-and-go-vet",
+          "title": "go fmt and go vet"
+        },
+        {
+          "code": "topic.go-tooling.test-execution-and-coverage",
+          "title": "Test execution and coverage"
+        },
+        {
+          "code": "topic.go-tooling.build-flags-and-configuration",
+          "title": "Build flags and configuration"
+        },
+        {
+          "code": "topic.go-tooling.reading-standard-library-documentation",
+          "title": "Reading standard library documentation"
+        }
       ]
     },
     {
@@ -311,6 +567,28 @@
       "sourceIds": [
         "go",
         "go-docs"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.go-concurrency.type-parameters-and-useful-generic-constraints",
+          "title": "Type parameters and useful generic constraints"
+        },
+        {
+          "code": "topic.go-concurrency.goroutines-and-their-lifetime",
+          "title": "Goroutines and their lifetime"
+        },
+        {
+          "code": "topic.go-concurrency.channels-select-and-cancellation",
+          "title": "Channels, select and cancellation"
+        },
+        {
+          "code": "topic.go-concurrency.mutexes-and-shared-state",
+          "title": "Mutexes and shared state"
+        },
+        {
+          "code": "topic.go-concurrency.race-detection-with-go-test-race",
+          "title": "Race detection with go test -race"
+        }
       ]
     },
     {
@@ -330,6 +608,28 @@
       "sourceIds": [
         "typescript",
         "node"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.typescript-contracts.type-aliases-and-interfaces",
+          "title": "Type aliases and interfaces"
+        },
+        {
+          "code": "topic.typescript-contracts.unions-narrowing-and-type-guards",
+          "title": "Unions, narrowing and type guards"
+        },
+        {
+          "code": "topic.typescript-contracts.generics-and-constraints",
+          "title": "Generics and constraints"
+        },
+        {
+          "code": "topic.typescript-contracts.unknown-any-and-unsafe-assertions",
+          "title": "unknown, any and unsafe assertions"
+        },
+        {
+          "code": "topic.typescript-contracts.runtime-validation-at-external-boundaries",
+          "title": "Runtime validation at external boundaries"
+        }
       ]
     },
     {
@@ -346,6 +646,28 @@
       "sourceIds": [
         "typescript",
         "node"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.node-async.promises-and-asynchronous-results",
+          "title": "Promises and asynchronous results"
+        },
+        {
+          "code": "topic.node-async.async-await-and-sequential-work",
+          "title": "async / await and sequential work"
+        },
+        {
+          "code": "topic.node-async.rejected-promises-and-error-propagation",
+          "title": "Rejected promises and error propagation"
+        },
+        {
+          "code": "topic.node-async.concurrent-work-and-promise-all",
+          "title": "Concurrent work and Promise.all"
+        },
+        {
+          "code": "topic.node-async.event-loop-and-blocking-operations",
+          "title": "Event loop and blocking operations"
+        }
       ]
     },
     {
@@ -363,6 +685,28 @@
       "sourceIds": [
         "typescript",
         "node"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.node-services.es-modules-and-module-boundaries",
+          "title": "ES modules and module boundaries"
+        },
+        {
+          "code": "topic.node-services.http-routing-and-request-validation",
+          "title": "HTTP routing and request validation"
+        },
+        {
+          "code": "topic.node-services.api-responses-and-error-handling",
+          "title": "API responses and error handling"
+        },
+        {
+          "code": "topic.node-services.service-tests-and-api-contracts",
+          "title": "Service tests and API contracts"
+        },
+        {
+          "code": "topic.node-services.build-outputs-and-running-the-service",
+          "title": "Build outputs and running the service"
+        }
       ]
     },
     {
@@ -379,6 +723,28 @@
       "sourceIds": [
         "typescript",
         "node"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.node-dependencies.dependency-selection-and-maintenance-signals",
+          "title": "Dependency selection and maintenance signals"
+        },
+        {
+          "code": "topic.node-dependencies.semantic-versioning-and-version-ranges",
+          "title": "Semantic versioning and version ranges"
+        },
+        {
+          "code": "topic.node-dependencies.lockfiles-and-reproducible-installs",
+          "title": "Lockfiles and reproducible installs"
+        },
+        {
+          "code": "topic.node-dependencies.module-resolution-and-startup-failures",
+          "title": "Module resolution and startup failures"
+        },
+        {
+          "code": "topic.node-dependencies.memory-usage-leaks-and-runtime-diagnostics",
+          "title": "Memory usage, leaks and runtime diagnostics"
+        }
       ]
     },
     {
@@ -396,6 +762,28 @@
       ],
       "sourceIds": [
         "python"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.python-basics.lists-dictionaries-sets-and-tuples",
+          "title": "Lists, dictionaries, sets and tuples"
+        },
+        {
+          "code": "topic.python-basics.functions-arguments-and-comprehensions",
+          "title": "Functions, arguments and comprehensions"
+        },
+        {
+          "code": "topic.python-basics.type-hints-and-readable-interfaces",
+          "title": "Type hints and readable interfaces"
+        },
+        {
+          "code": "topic.python-basics.exceptions-and-context-managers",
+          "title": "Exceptions and context managers"
+        },
+        {
+          "code": "topic.python-basics.modules-packages-and-imports",
+          "title": "Modules, packages and imports"
+        }
       ]
     },
     {
@@ -411,6 +799,28 @@
       ],
       "sourceIds": [
         "python"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.python-services.virtual-environments-and-dependency-isolation",
+          "title": "Virtual environments and dependency isolation"
+        },
+        {
+          "code": "topic.python-services.reproducible-dependency-installation",
+          "title": "Reproducible dependency installation"
+        },
+        {
+          "code": "topic.python-services.automated-tests-and-fixtures",
+          "title": "Automated tests and fixtures"
+        },
+        {
+          "code": "topic.python-services.http-clients-timeouts-and-errors",
+          "title": "HTTP clients, timeouts and errors"
+        },
+        {
+          "code": "topic.python-services.api-endpoints-and-background-workers",
+          "title": "API endpoints and background workers"
+        }
       ]
     },
     {
@@ -429,6 +839,28 @@
       ],
       "sourceIds": [
         "python"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.python-data.reading-and-writing-json",
+          "title": "Reading and writing JSON"
+        },
+        {
+          "code": "topic.python-data.reading-and-writing-csv",
+          "title": "Reading and writing CSV"
+        },
+        {
+          "code": "topic.python-data.iterators-generators-and-bounded-memory",
+          "title": "Iterators, generators and bounded memory"
+        },
+        {
+          "code": "topic.python-data.reproducible-notebook-execution",
+          "title": "Reproducible notebook execution"
+        },
+        {
+          "code": "topic.python-data.ai-library-clients-and-integration-boundaries",
+          "title": "AI library clients and integration boundaries"
+        }
       ]
     },
     {
@@ -447,6 +879,28 @@
       ],
       "sourceIds": [
         "git"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.git-changes.repository-setup-and-ignored-files",
+          "title": "Repository setup and ignored files"
+        },
+        {
+          "code": "topic.git-changes.staging-and-coherent-commits",
+          "title": "Staging and coherent commits"
+        },
+        {
+          "code": "topic.git-changes.branches-and-switching-work",
+          "title": "Branches and switching work"
+        },
+        {
+          "code": "topic.git-changes.pull-requests-and-review-context",
+          "title": "Pull requests and review context"
+        },
+        {
+          "code": "topic.git-changes.preventing-secrets-in-commits",
+          "title": "Preventing secrets in commits"
+        }
       ]
     },
     {
@@ -464,6 +918,28 @@
       ],
       "sourceIds": [
         "git"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.git-collaboration.merging-branches",
+          "title": "Merging branches"
+        },
+        {
+          "code": "topic.git-collaboration.rebasing-local-work",
+          "title": "Rebasing local work"
+        },
+        {
+          "code": "topic.git-collaboration.resolving-merge-conflicts",
+          "title": "Resolving merge conflicts"
+        },
+        {
+          "code": "topic.git-collaboration.reviewing-diffs-and-team-conventions",
+          "title": "Reviewing diffs and team conventions"
+        },
+        {
+          "code": "topic.git-collaboration.reverting-a-change-safely",
+          "title": "Reverting a change safely"
+        }
       ]
     },
     {
@@ -481,6 +957,28 @@
       ],
       "sourceIds": [
         "git"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.git-release.reflog-and-recovering-lost-references",
+          "title": "Reflog and recovering lost references"
+        },
+        {
+          "code": "topic.git-release.stashing-unfinished-changes",
+          "title": "Stashing unfinished changes"
+        },
+        {
+          "code": "topic.git-release.bisecting-to-find-a-regression",
+          "title": "Bisecting to find a regression"
+        },
+        {
+          "code": "topic.git-release.tags-and-release-references",
+          "title": "Tags and release references"
+        },
+        {
+          "code": "topic.git-release.choosing-an-integration-strategy",
+          "title": "Choosing an integration strategy"
+        }
       ]
     },
     {
@@ -497,6 +995,28 @@
       ],
       "sourceIds": [
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.shell.absolute-and-relative-paths",
+          "title": "Absolute and relative paths"
+        },
+        {
+          "code": "topic.shell.navigating-and-managing-files",
+          "title": "Navigating and managing files"
+        },
+        {
+          "code": "topic.shell.pipes-and-process-output",
+          "title": "Pipes and process output"
+        },
+        {
+          "code": "topic.shell.redirection-and-exit-codes",
+          "title": "Redirection and exit codes"
+        },
+        {
+          "code": "topic.shell.searching-text-and-files",
+          "title": "Searching text and files"
+        }
       ]
     },
     {
@@ -515,6 +1035,28 @@
       ],
       "sourceIds": [
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.processes.users-groups-and-file-permissions",
+          "title": "Users, groups and file permissions"
+        },
+        {
+          "code": "topic.processes.environment-variables-and-configuration",
+          "title": "Environment variables and configuration"
+        },
+        {
+          "code": "topic.processes.inspecting-processes-and-listening-ports",
+          "title": "Inspecting processes and listening ports"
+        },
+        {
+          "code": "topic.processes.reading-and-following-logs",
+          "title": "Reading and following logs"
+        },
+        {
+          "code": "topic.processes.ssh-keys-and-remote-access",
+          "title": "SSH keys and remote access"
+        }
       ]
     },
     {
@@ -533,6 +1075,28 @@
       ],
       "sourceIds": [
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.runtime-operations.shell-scripts-and-safe-failure-handling",
+          "title": "Shell scripts and safe failure handling"
+        },
+        {
+          "code": "topic.runtime-operations.signals-and-graceful-shutdown",
+          "title": "Signals and graceful shutdown"
+        },
+        {
+          "code": "topic.runtime-operations.cpu-memory-and-disk-inspection",
+          "title": "CPU, memory and disk inspection"
+        },
+        {
+          "code": "topic.runtime-operations.service-startup-and-restart-behavior",
+          "title": "Service startup and restart behavior"
+        },
+        {
+          "code": "topic.runtime-operations.diagnosing-server-and-runtime-failures",
+          "title": "Diagnosing server and runtime failures"
+        }
       ]
     },
     {
@@ -552,6 +1116,28 @@
       ],
       "sourceIds": [
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.cohesion.names-that-express-domain-intent",
+          "title": "Names that express domain intent"
+        },
+        {
+          "code": "topic.cohesion.encapsulation-of-business-rules",
+          "title": "Encapsulation of business rules"
+        },
+        {
+          "code": "topic.cohesion.cohesion-and-module-responsibilities",
+          "title": "Cohesion and module responsibilities"
+        },
+        {
+          "code": "topic.cohesion.coupling-and-explicit-dependencies",
+          "title": "Coupling and explicit dependencies"
+        },
+        {
+          "code": "topic.cohesion.small-apis-and-clear-contracts",
+          "title": "Small APIs and clear contracts"
+        }
       ]
     },
     {
@@ -569,6 +1155,28 @@
       ],
       "sourceIds": [
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.boundaries.composition-and-dependency-injection",
+          "title": "Composition and dependency injection"
+        },
+        {
+          "code": "topic.boundaries.dependency-inversion-and-ownership-of-interfaces",
+          "title": "Dependency inversion and ownership of interfaces"
+        },
+        {
+          "code": "topic.boundaries.domain-rules-independent-of-transport",
+          "title": "Domain rules independent of transport"
+        },
+        {
+          "code": "topic.boundaries.domain-rules-independent-of-storage",
+          "title": "Domain rules independent of storage"
+        },
+        {
+          "code": "topic.boundaries.shared-knowledge-and-duplication-boundaries",
+          "title": "Shared knowledge and duplication boundaries"
+        }
       ]
     },
     {
@@ -586,6 +1194,28 @@
       ],
       "sourceIds": [
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.refactoring.recognizing-code-smells",
+          "title": "Recognizing code smells"
+        },
+        {
+          "code": "topic.refactoring.behavior-preserving-refactoring-steps",
+          "title": "Behavior-preserving refactoring steps"
+        },
+        {
+          "code": "topic.refactoring.regression-protection-during-refactoring",
+          "title": "Regression protection during refactoring"
+        },
+        {
+          "code": "topic.refactoring.design-patterns-and-their-trade-offs",
+          "title": "Design patterns and their trade-offs"
+        },
+        {
+          "code": "topic.refactoring.abstraction-costs-and-cost-of-change",
+          "title": "Abstraction costs and cost of change"
+        }
       ]
     },
     {
@@ -603,6 +1233,28 @@
       ],
       "sourceIds": [
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.test-behavior.unit-integration-and-end-to-end-test-boundaries",
+          "title": "Unit, integration and end-to-end test boundaries"
+        },
+        {
+          "code": "topic.test-behavior.business-rules-and-observable-behavior",
+          "title": "Business rules and observable behavior"
+        },
+        {
+          "code": "topic.test-behavior.edge-cases-and-invalid-inputs",
+          "title": "Edge cases and invalid inputs"
+        },
+        {
+          "code": "topic.test-behavior.regression-tests-from-reported-bugs",
+          "title": "Regression tests from reported bugs"
+        },
+        {
+          "code": "topic.test-behavior.assertions-that-explain-failures",
+          "title": "Assertions that explain failures"
+        }
       ]
     },
     {
@@ -620,6 +1272,28 @@
       ],
       "sourceIds": [
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.test-isolation.stubs-fakes-and-mocks",
+          "title": "Stubs, fakes and mocks"
+        },
+        {
+          "code": "topic.test-isolation.controlling-time-and-randomness",
+          "title": "Controlling time and randomness"
+        },
+        {
+          "code": "topic.test-isolation.isolating-network-filesystem-and-database-i-o",
+          "title": "Isolating network, filesystem and database I/O"
+        },
+        {
+          "code": "topic.test-isolation.independent-tests-and-fixture-cleanup",
+          "title": "Independent tests and fixture cleanup"
+        },
+        {
+          "code": "topic.test-isolation.coverage-limits-and-testability",
+          "title": "Coverage limits and testability"
+        }
       ]
     },
     {
@@ -636,6 +1310,28 @@
       ],
       "sourceIds": [
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.test-integration.testing-against-real-database-schemas",
+          "title": "Testing against real database schemas"
+        },
+        {
+          "code": "topic.test-integration.api-contracts-and-authorization-cases",
+          "title": "API contracts and authorization cases"
+        },
+        {
+          "code": "topic.test-integration.transactions-persistence-and-failure-paths",
+          "title": "Transactions, persistence and failure paths"
+        },
+        {
+          "code": "topic.test-integration.external-service-failures-and-timeouts",
+          "title": "External service failures and timeouts"
+        },
+        {
+          "code": "topic.test-integration.diagnosing-flaky-tests",
+          "title": "Diagnosing flaky tests"
+        }
       ]
     },
     {
@@ -652,6 +1348,32 @@
       ],
       "sourceIds": [
         "postgres"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.relational-modeling.entities-and-relationship-cardinality",
+          "title": "Entities and relationship cardinality"
+        },
+        {
+          "code": "topic.relational-modeling.primary-keys-and-foreign-keys",
+          "title": "Primary keys and foreign keys"
+        },
+        {
+          "code": "topic.relational-modeling.normalization-and-duplicated-data",
+          "title": "Normalization and duplicated data"
+        },
+        {
+          "code": "topic.relational-modeling.null-not-null-and-default-values",
+          "title": "NULL, NOT NULL and default values"
+        },
+        {
+          "code": "topic.relational-modeling.unique-and-check-constraints",
+          "title": "Unique and check constraints"
+        },
+        {
+          "code": "topic.relational-modeling.delete-and-update-referential-actions",
+          "title": "Delete and update referential actions"
+        }
       ]
     },
     {
@@ -667,6 +1389,32 @@
       ],
       "sourceIds": [
         "postgres"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.sql-queries.select-filtering-and-ordering",
+          "title": "SELECT, filtering and ordering"
+        },
+        {
+          "code": "topic.sql-queries.parameterized-insert-update-and-delete",
+          "title": "Parameterized INSERT, UPDATE and DELETE"
+        },
+        {
+          "code": "topic.sql-queries.inner-join-and-outer-joins",
+          "title": "INNER JOIN and outer joins"
+        },
+        {
+          "code": "topic.sql-queries.group-by-and-aggregate-functions",
+          "title": "GROUP BY and aggregate functions"
+        },
+        {
+          "code": "topic.sql-queries.having-and-grouped-filtering",
+          "title": "HAVING and grouped filtering"
+        },
+        {
+          "code": "topic.sql-queries.null-comparisons-and-three-valued-logic",
+          "title": "NULL comparisons and three-valued logic"
+        }
       ]
     },
     {
@@ -683,6 +1431,32 @@
       "sourceIds": [
         "postgres-transactions",
         "postgres-isolation"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.transactions.atomicity-boundaries-and-transaction-scope",
+          "title": "Atomicity boundaries and transaction scope"
+        },
+        {
+          "code": "topic.transactions.begin-commit-and-rollback",
+          "title": "BEGIN, COMMIT and ROLLBACK"
+        },
+        {
+          "code": "topic.transactions.acid-properties-and-failure-behavior",
+          "title": "ACID properties and failure behavior"
+        },
+        {
+          "code": "topic.transactions.isolation-levels-and-read-anomalies",
+          "title": "Isolation levels and read anomalies"
+        },
+        {
+          "code": "topic.transactions.concurrent-writes-and-lost-updates",
+          "title": "Concurrent writes and lost updates"
+        },
+        {
+          "code": "topic.transactions.testing-partial-failure-and-rollback",
+          "title": "Testing partial failure and rollback"
+        }
       ]
     },
     {
@@ -700,6 +1474,32 @@
       ],
       "sourceIds": [
         "postgres"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.query-performance.single-column-and-composite-indexes",
+          "title": "Single-column and composite indexes"
+        },
+        {
+          "code": "topic.query-performance.index-order-and-supported-queries",
+          "title": "Index order and supported queries"
+        },
+        {
+          "code": "topic.query-performance.explain-and-execution-plans",
+          "title": "EXPLAIN and execution plans"
+        },
+        {
+          "code": "topic.query-performance.n-1-queries-and-batched-reads",
+          "title": "N+1 queries and batched reads"
+        },
+        {
+          "code": "topic.query-performance.stable-ordering-and-pagination",
+          "title": "Stable ordering and pagination"
+        },
+        {
+          "code": "topic.query-performance.index-maintenance-and-write-costs",
+          "title": "Index maintenance and write costs"
+        }
       ]
     },
     {
@@ -716,6 +1516,28 @@
       ],
       "sourceIds": [
         "postgres"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.advanced-sql.subqueries-and-correlated-queries",
+          "title": "Subqueries and correlated queries"
+        },
+        {
+          "code": "topic.advanced-sql.common-table-expressions-ctes",
+          "title": "Common table expressions (CTEs)"
+        },
+        {
+          "code": "topic.advanced-sql.window-functions-and-partitions",
+          "title": "Window functions and partitions"
+        },
+        {
+          "code": "topic.advanced-sql.read-models-and-denormalization",
+          "title": "Read models and denormalization"
+        },
+        {
+          "code": "topic.advanced-sql.measuring-read-write-trade-offs",
+          "title": "Measuring read/write trade-offs"
+        }
       ]
     },
     {
@@ -732,6 +1554,28 @@
       ],
       "sourceIds": [
         "postgres"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.database-concurrency.row-locks-and-lock-scope",
+          "title": "Row locks and lock scope"
+        },
+        {
+          "code": "topic.database-concurrency.lock-ordering-and-deadlocks",
+          "title": "Lock ordering and deadlocks"
+        },
+        {
+          "code": "topic.database-concurrency.mvcc-and-row-visibility",
+          "title": "MVCC and row visibility"
+        },
+        {
+          "code": "topic.database-concurrency.long-running-transactions",
+          "title": "Long-running transactions"
+        },
+        {
+          "code": "topic.database-concurrency.connection-pools-and-saturation",
+          "title": "Connection pools and saturation"
+        }
       ]
     },
     {
@@ -747,6 +1591,28 @@
       ],
       "sourceIds": [
         "postgres"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.database-evolution.backward-compatible-schema-migrations",
+          "title": "Backward-compatible schema migrations"
+        },
+        {
+          "code": "topic.database-evolution.expand-and-contract-changes",
+          "title": "Expand-and-contract changes"
+        },
+        {
+          "code": "topic.database-evolution.resumable-data-backfills",
+          "title": "Resumable data backfills"
+        },
+        {
+          "code": "topic.database-evolution.backups-and-restore-procedures",
+          "title": "Backups and restore procedures"
+        },
+        {
+          "code": "topic.database-evolution.verifying-recovery-and-data-integrity",
+          "title": "Verifying recovery and data integrity"
+        }
       ]
     },
     {
@@ -761,6 +1627,28 @@
       ],
       "sourceIds": [
         "postgres"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.storage-choice.relational-and-document-store-trade-offs",
+          "title": "Relational and document store trade-offs"
+        },
+        {
+          "code": "topic.storage-choice.search-and-time-series-stores",
+          "title": "Search and time-series stores"
+        },
+        {
+          "code": "topic.storage-choice.vector-storage-and-retrieval-workloads",
+          "title": "Vector storage and retrieval workloads"
+        },
+        {
+          "code": "topic.storage-choice.redis-cache-keys-and-data-lifetime",
+          "title": "Redis cache keys and data lifetime"
+        },
+        {
+          "code": "topic.storage-choice.eviction-policies-and-cache-failures",
+          "title": "Eviction policies and cache failures"
+        }
       ]
     },
     {
@@ -779,6 +1667,28 @@
       "sourceIds": [
         "http",
         "mdn"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.http-basics.client-server-request-lifecycle",
+          "title": "Client/server request lifecycle"
+        },
+        {
+          "code": "topic.http-basics.urls-endpoints-and-resources",
+          "title": "URLs, endpoints and resources"
+        },
+        {
+          "code": "topic.http-basics.http-methods-and-their-semantics",
+          "title": "HTTP methods and their semantics"
+        },
+        {
+          "code": "topic.http-basics.status-codes-and-error-responses",
+          "title": "Status codes and error responses"
+        },
+        {
+          "code": "topic.http-basics.headers-bodies-and-content-types",
+          "title": "Headers, bodies and content types"
+        }
       ]
     },
     {
@@ -797,6 +1707,28 @@
       "sourceIds": [
         "http",
         "mdn"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.network-transport.dns-resolution-and-records",
+          "title": "DNS resolution and records"
+        },
+        {
+          "code": "topic.network-transport.tcp-connections-and-sockets",
+          "title": "TCP connections and sockets"
+        },
+        {
+          "code": "topic.network-transport.tls-handshakes-and-certificate-validation",
+          "title": "TLS handshakes and certificate validation"
+        },
+        {
+          "code": "topic.network-transport.connection-reuse-and-keep-alive",
+          "title": "Connection reuse and keep-alive"
+        },
+        {
+          "code": "topic.network-transport.diagnosing-connection-failures",
+          "title": "Diagnosing connection failures"
+        }
       ]
     },
     {
@@ -813,6 +1745,28 @@
       "sourceIds": [
         "http",
         "mdn"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.browser-http.cookie-scope-expiry-and-security-flags",
+          "title": "Cookie scope, expiry and security flags"
+        },
+        {
+          "code": "topic.browser-http.origins-and-same-origin-policy",
+          "title": "Origins and same-origin policy"
+        },
+        {
+          "code": "topic.browser-http.cors-preflight-and-allowed-origins",
+          "title": "CORS preflight and allowed origins"
+        },
+        {
+          "code": "topic.browser-http.cache-control-and-response-freshness",
+          "title": "Cache-Control and response freshness"
+        },
+        {
+          "code": "topic.browser-http.etag-and-conditional-requests",
+          "title": "ETag and conditional requests"
+        }
       ]
     },
     {
@@ -831,6 +1785,28 @@
       "sourceIds": [
         "http",
         "mdn"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.api-contracts.resource-models-and-request-schemas",
+          "title": "Resource models and request schemas"
+        },
+        {
+          "code": "topic.api-contracts.validation-errors-and-safe-error-responses",
+          "title": "Validation errors and safe error responses"
+        },
+        {
+          "code": "topic.api-contracts.filtering-and-stable-ordering",
+          "title": "Filtering and stable ordering"
+        },
+        {
+          "code": "topic.api-contracts.pagination-and-cursors",
+          "title": "Pagination and cursors"
+        },
+        {
+          "code": "topic.api-contracts.backward-compatibility-and-api-evolution",
+          "title": "Backward compatibility and API evolution"
+        }
       ]
     },
     {
@@ -847,6 +1823,28 @@
       "sourceIds": [
         "http",
         "mdn"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.api-resilience.rate-limits-and-request-budgets",
+          "title": "Rate limits and request budgets"
+        },
+        {
+          "code": "topic.api-resilience.idempotency-keys-and-duplicate-requests",
+          "title": "Idempotency keys and duplicate requests"
+        },
+        {
+          "code": "topic.api-resilience.webhook-signatures-and-replay-protection",
+          "title": "Webhook signatures and replay protection"
+        },
+        {
+          "code": "topic.api-resilience.retry-eligibility-and-delivery-attempts",
+          "title": "Retry eligibility and delivery attempts"
+        },
+        {
+          "code": "topic.api-resilience.timeouts-and-downstream-failure-handling",
+          "title": "Timeouts and downstream failure handling"
+        }
       ]
     },
     {
@@ -862,6 +1860,28 @@
       "sourceIds": [
         "http",
         "mdn"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.api-streaming.websocket-connection-lifecycle",
+          "title": "WebSocket connection lifecycle"
+        },
+        {
+          "code": "topic.api-streaming.streaming-responses-and-cancellation",
+          "title": "Streaming responses and cancellation"
+        },
+        {
+          "code": "topic.api-streaming.rpc-schemas-and-compatibility",
+          "title": "RPC schemas and compatibility"
+        },
+        {
+          "code": "topic.api-streaming.connection-recovery-and-delivery-behavior",
+          "title": "Connection recovery and delivery behavior"
+        },
+        {
+          "code": "topic.api-streaming.protocol-selection-and-operational-costs",
+          "title": "Protocol selection and operational costs"
+        }
       ]
     },
     {
@@ -880,6 +1900,28 @@
       "sourceIds": [
         "go",
         "node"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.task-lifecycle.concurrency-versus-parallelism",
+          "title": "Concurrency versus parallelism"
+        },
+        {
+          "code": "topic.task-lifecycle.shared-memory-and-task-ownership",
+          "title": "Shared memory and task ownership"
+        },
+        {
+          "code": "topic.task-lifecycle.starting-and-joining-concurrent-tasks",
+          "title": "Starting and joining concurrent tasks"
+        },
+        {
+          "code": "topic.task-lifecycle.cancellation-propagation",
+          "title": "Cancellation propagation"
+        },
+        {
+          "code": "topic.task-lifecycle.resource-cleanup-and-task-termination",
+          "title": "Resource cleanup and task termination"
+        }
       ]
     },
     {
@@ -898,6 +1940,28 @@
       "sourceIds": [
         "go",
         "node"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.synchronization.data-races-and-shared-invariants",
+          "title": "Data races and shared invariants"
+        },
+        {
+          "code": "topic.synchronization.mutexes-and-critical-sections",
+          "title": "Mutexes and critical sections"
+        },
+        {
+          "code": "topic.synchronization.atomic-operations-and-their-limits",
+          "title": "Atomic operations and their limits"
+        },
+        {
+          "code": "topic.synchronization.deadlocks-and-wait-cycles",
+          "title": "Deadlocks and wait cycles"
+        },
+        {
+          "code": "topic.synchronization.starvation-and-contention",
+          "title": "Starvation and contention"
+        }
       ]
     },
     {
@@ -916,6 +1980,28 @@
       "sourceIds": [
         "go",
         "node"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.bounded-work.worker-pools-and-concurrency-limits",
+          "title": "Worker pools and concurrency limits"
+        },
+        {
+          "code": "topic.bounded-work.queue-capacity-and-admission-control",
+          "title": "Queue capacity and admission control"
+        },
+        {
+          "code": "topic.bounded-work.deadlines-and-cancellation-of-grouped-work",
+          "title": "Deadlines and cancellation of grouped work"
+        },
+        {
+          "code": "topic.bounded-work.collecting-results-and-errors",
+          "title": "Collecting results and errors"
+        },
+        {
+          "code": "topic.bounded-work.testing-races-with-controlled-scheduling",
+          "title": "Testing races with controlled scheduling"
+        }
       ]
     },
     {
@@ -934,6 +2020,28 @@
       "sourceIds": [
         "distributed",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.remote-failures.partial-failures-and-ambiguous-outcomes",
+          "title": "Partial failures and ambiguous outcomes"
+        },
+        {
+          "code": "topic.remote-failures.timeouts-and-end-to-end-deadline-budgets",
+          "title": "Timeouts and end-to-end deadline budgets"
+        },
+        {
+          "code": "topic.remote-failures.retryable-and-non-retryable-operations",
+          "title": "Retryable and non-retryable operations"
+        },
+        {
+          "code": "topic.remote-failures.exponential-backoff-and-jitter",
+          "title": "Exponential backoff and jitter"
+        },
+        {
+          "code": "topic.remote-failures.limiting-retry-amplification",
+          "title": "Limiting retry amplification"
+        }
       ]
     },
     {
@@ -953,6 +2061,28 @@
       "sourceIds": [
         "distributed",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.consistency.atomic-deduplication-and-idempotency",
+          "title": "Atomic deduplication and idempotency"
+        },
+        {
+          "code": "topic.consistency.stale-reads-and-consistency-guarantees",
+          "title": "Stale reads and consistency guarantees"
+        },
+        {
+          "code": "topic.consistency.network-partitions-and-availability-trade-offs",
+          "title": "Network partitions and availability trade-offs"
+        },
+        {
+          "code": "topic.consistency.message-ordering-and-sequence-boundaries",
+          "title": "Message ordering and sequence boundaries"
+        },
+        {
+          "code": "topic.consistency.at-most-once-and-at-least-once-delivery",
+          "title": "At-most-once and at-least-once delivery"
+        }
       ]
     },
     {
@@ -971,6 +2101,28 @@
       "sourceIds": [
         "distributed",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.queues.message-schemas-and-compatibility",
+          "title": "Message schemas and compatibility"
+        },
+        {
+          "code": "topic.queues.consumer-acknowledgements-and-redelivery",
+          "title": "Consumer acknowledgements and redelivery"
+        },
+        {
+          "code": "topic.queues.bounded-retries-and-dead-letter-queues",
+          "title": "Bounded retries and dead-letter queues"
+        },
+        {
+          "code": "topic.queues.replay-and-poison-message-handling",
+          "title": "Replay and poison message handling"
+        },
+        {
+          "code": "topic.queues.work-queues-versus-publish-subscribe",
+          "title": "Work queues versus publish/subscribe"
+        }
       ]
     },
     {
@@ -988,6 +2140,28 @@
       "sourceIds": [
         "distributed",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.distributed-workflows.backpressure-and-overload-handling",
+          "title": "Backpressure and overload handling"
+        },
+        {
+          "code": "topic.distributed-workflows.transactional-outbox-and-event-handoff",
+          "title": "Transactional outbox and event handoff"
+        },
+        {
+          "code": "topic.distributed-workflows.sagas-and-compensating-actions",
+          "title": "Sagas and compensating actions"
+        },
+        {
+          "code": "topic.distributed-workflows.circuit-breakers-and-recovery-probes",
+          "title": "Circuit breakers and recovery probes"
+        },
+        {
+          "code": "topic.distributed-workflows.bulkheads-and-failure-isolation",
+          "title": "Bulkheads and failure isolation"
+        }
       ]
     },
     {
@@ -1004,6 +2178,28 @@
       "sourceIds": [
         "distributed",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.distributed-tradeoffs.cqrs-and-separate-read-write-models",
+          "title": "CQRS and separate read/write models"
+        },
+        {
+          "code": "topic.distributed-tradeoffs.event-sourcing-and-replay-costs",
+          "title": "Event sourcing and replay costs"
+        },
+        {
+          "code": "topic.distributed-tradeoffs.single-points-of-failure",
+          "title": "Single points of failure"
+        },
+        {
+          "code": "topic.distributed-tradeoffs.leases-expiry-and-fencing",
+          "title": "Leases, expiry and fencing"
+        },
+        {
+          "code": "topic.distributed-tradeoffs.coordination-costs-and-simpler-alternatives",
+          "title": "Coordination costs and simpler alternatives"
+        }
       ]
     },
     {
@@ -1020,6 +2216,28 @@
       "sourceIds": [
         "swebok",
         "distributed"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.architecture-requirements.critical-user-and-system-flows",
+          "title": "Critical user and system flows"
+        },
+        {
+          "code": "topic.architecture-requirements.measurable-quality-attributes",
+          "title": "Measurable quality attributes"
+        },
+        {
+          "code": "topic.architecture-requirements.technical-and-organizational-constraints",
+          "title": "Technical and organizational constraints"
+        },
+        {
+          "code": "topic.architecture-requirements.capacity-and-reliability-requirements",
+          "title": "Capacity and reliability requirements"
+        },
+        {
+          "code": "topic.architecture-requirements.comparing-designs-against-requirements",
+          "title": "Comparing designs against requirements"
+        }
       ]
     },
     {
@@ -1037,6 +2255,28 @@
       "sourceIds": [
         "swebok",
         "distributed"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.modular-architecture.domain-application-and-infrastructure-roles",
+          "title": "Domain, application and infrastructure roles"
+        },
+        {
+          "code": "topic.modular-architecture.dependency-direction-across-layers",
+          "title": "Dependency direction across layers"
+        },
+        {
+          "code": "topic.modular-architecture.modular-monolith-boundaries",
+          "title": "Modular monolith boundaries"
+        },
+        {
+          "code": "topic.modular-architecture.module-apis-and-data-ownership",
+          "title": "Module APIs and data ownership"
+        },
+        {
+          "code": "topic.modular-architecture.testing-architectural-boundaries",
+          "title": "Testing architectural boundaries"
+        }
       ]
     },
     {
@@ -1056,6 +2296,28 @@
       "sourceIds": [
         "swebok",
         "distributed"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.service-boundaries.service-boundaries-and-deployment-autonomy",
+          "title": "Service boundaries and deployment autonomy"
+        },
+        {
+          "code": "topic.service-boundaries.synchronous-versus-event-driven-communication",
+          "title": "Synchronous versus event-driven communication"
+        },
+        {
+          "code": "topic.service-boundaries.distributed-ownership-and-coordination-costs",
+          "title": "Distributed ownership and coordination costs"
+        },
+        {
+          "code": "topic.service-boundaries.architecture-decision-records-adrs",
+          "title": "Architecture decision records (ADRs)"
+        },
+        {
+          "code": "topic.service-boundaries.choosing-a-simpler-architecture",
+          "title": "Choosing a simpler architecture"
+        }
       ]
     },
     {
@@ -1074,6 +2336,28 @@
       "sourceIds": [
         "swebok",
         "distributed"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.scaling.stateless-and-stateful-instances",
+          "title": "Stateless and stateful instances"
+        },
+        {
+          "code": "topic.scaling.load-balancing-and-horizontal-scaling",
+          "title": "Load balancing and horizontal scaling"
+        },
+        {
+          "code": "topic.scaling.cache-invalidation-and-consistency",
+          "title": "Cache invalidation and consistency"
+        },
+        {
+          "code": "topic.scaling.replication-and-replica-lag",
+          "title": "Replication and replica lag"
+        },
+        {
+          "code": "topic.scaling.scaling-bottlenecks-and-trade-offs",
+          "title": "Scaling bottlenecks and trade-offs"
+        }
       ]
     },
     {
@@ -1092,6 +2376,28 @@
       "sourceIds": [
         "swebok",
         "distributed"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.resilient-design.failure-modes-and-dependency-analysis",
+          "title": "Failure modes and dependency analysis"
+        },
+        {
+          "code": "topic.resilient-design.redundancy-and-failure-isolation",
+          "title": "Redundancy and failure isolation"
+        },
+        {
+          "code": "topic.resilient-design.capacity-estimates-and-headroom",
+          "title": "Capacity estimates and headroom"
+        },
+        {
+          "code": "topic.resilient-design.infrastructure-cost-drivers",
+          "title": "Infrastructure cost drivers"
+        },
+        {
+          "code": "topic.resilient-design.partition-keys-hotspots-and-distribution",
+          "title": "Partition keys, hotspots and distribution"
+        }
       ]
     },
     {
@@ -1110,6 +2416,28 @@
       ],
       "sourceIds": [
         "owasp"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.access-control.authentication-versus-authorization",
+          "title": "Authentication versus authorization"
+        },
+        {
+          "code": "topic.access-control.password-hashing-and-verification",
+          "title": "Password hashing and verification"
+        },
+        {
+          "code": "topic.access-control.session-and-jwt-validation",
+          "title": "Session and JWT validation"
+        },
+        {
+          "code": "topic.access-control.resource-ownership-checks",
+          "title": "Resource ownership checks"
+        },
+        {
+          "code": "topic.access-control.least-privilege-and-denied-by-default-access",
+          "title": "Least privilege and denied-by-default access"
+        }
       ]
     },
     {
@@ -1127,6 +2455,28 @@
       ],
       "sourceIds": [
         "owasp"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.input-security.input-validation-and-trust-boundaries",
+          "title": "Input validation and trust boundaries"
+        },
+        {
+          "code": "topic.input-security.parameterized-queries-and-injection-prevention",
+          "title": "Parameterized queries and injection prevention"
+        },
+        {
+          "code": "topic.input-security.secret-storage-and-configuration-hygiene",
+          "title": "Secret storage and configuration hygiene"
+        },
+        {
+          "code": "topic.input-security.fail-closed-authorization-and-error-handling",
+          "title": "Fail-closed authorization and error handling"
+        },
+        {
+          "code": "topic.input-security.sensitive-data-redaction",
+          "title": "Sensitive data redaction"
+        }
       ]
     },
     {
@@ -1143,6 +2493,28 @@
       ],
       "sourceIds": [
         "owasp"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.identity-providers.authentication-abuse-and-rate-limiting",
+          "title": "Authentication abuse and rate limiting"
+        },
+        {
+          "code": "topic.identity-providers.oauth-authorization-code-flow-and-pkce",
+          "title": "OAuth authorization code flow and PKCE"
+        },
+        {
+          "code": "topic.identity-providers.openid-connect-and-identity-validation",
+          "title": "OpenID Connect and identity validation"
+        },
+        {
+          "code": "topic.identity-providers.token-lifetime-and-revocation",
+          "title": "Token lifetime and revocation"
+        },
+        {
+          "code": "topic.identity-providers.secret-rotation-and-credential-recovery",
+          "title": "Secret rotation and credential recovery"
+        }
       ]
     },
     {
@@ -1159,6 +2531,28 @@
       ],
       "sourceIds": [
         "owasp"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.web-security.cross-site-scripting-xss-and-output-handling",
+          "title": "Cross-site scripting (XSS) and output handling"
+        },
+        {
+          "code": "topic.web-security.cross-site-request-forgery-csrf",
+          "title": "Cross-site request forgery (CSRF)"
+        },
+        {
+          "code": "topic.web-security.server-side-request-forgery-ssrf",
+          "title": "Server-side request forgery (SSRF)"
+        },
+        {
+          "code": "topic.web-security.upload-size-and-content-validation",
+          "title": "Upload size and content validation"
+        },
+        {
+          "code": "topic.web-security.isolated-upload-storage-and-serving",
+          "title": "Isolated upload storage and serving"
+        }
       ]
     },
     {
@@ -1176,6 +2570,28 @@
       ],
       "sourceIds": [
         "owasp"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.data-security.data-classification-and-minimization",
+          "title": "Data classification and minimization"
+        },
+        {
+          "code": "topic.data-security.tenant-isolation-and-resource-authorization",
+          "title": "Tenant isolation and resource authorization"
+        },
+        {
+          "code": "topic.data-security.encryption-in-transit-and-at-rest",
+          "title": "Encryption in transit and at rest"
+        },
+        {
+          "code": "topic.data-security.data-retention-and-deletion-policies",
+          "title": "Data retention and deletion policies"
+        },
+        {
+          "code": "topic.data-security.preventing-data-exposure-in-logs-and-exports",
+          "title": "Preventing data exposure in logs and exports"
+        }
       ]
     },
     {
@@ -1193,6 +2609,28 @@
       ],
       "sourceIds": [
         "owasp"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.security-operations.dependency-vulnerabilities-and-updates",
+          "title": "Dependency vulnerabilities and updates"
+        },
+        {
+          "code": "topic.security-operations.build-integrity-and-supply-chain-controls",
+          "title": "Build integrity and supply-chain controls"
+        },
+        {
+          "code": "topic.security-operations.threat-modeling-and-abuse-cases",
+          "title": "Threat modeling and abuse cases"
+        },
+        {
+          "code": "topic.security-operations.security-audit-events",
+          "title": "Security audit events"
+        },
+        {
+          "code": "topic.security-operations.responding-to-compromised-credentials",
+          "title": "Responding to compromised credentials"
+        }
       ]
     },
     {
@@ -1213,6 +2651,28 @@
       "sourceIds": [
         "docker",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.containers.images-layers-and-dockerfiles",
+          "title": "Images, layers and Dockerfiles"
+        },
+        {
+          "code": "topic.containers.reproducible-builds-and-small-images",
+          "title": "Reproducible builds and small images"
+        },
+        {
+          "code": "topic.containers.volumes-and-persistent-data",
+          "title": "Volumes and persistent data"
+        },
+        {
+          "code": "topic.containers.container-networking-and-ports",
+          "title": "Container networking and ports"
+        },
+        {
+          "code": "topic.containers.compose-and-local-service-configuration",
+          "title": "Compose and local service configuration"
+        }
       ]
     },
     {
@@ -1232,6 +2692,28 @@
       "sourceIds": [
         "docker",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.continuous-delivery.deterministic-ci-checks",
+          "title": "Deterministic CI checks"
+        },
+        {
+          "code": "topic.continuous-delivery.immutable-build-artifacts",
+          "title": "Immutable build artifacts"
+        },
+        {
+          "code": "topic.continuous-delivery.deployment-configuration-and-secrets",
+          "title": "Deployment configuration and secrets"
+        },
+        {
+          "code": "topic.continuous-delivery.health-checks-after-deployment",
+          "title": "Health checks after deployment"
+        },
+        {
+          "code": "topic.continuous-delivery.rollback-and-schema-compatibility",
+          "title": "Rollback and schema compatibility"
+        }
       ]
     },
     {
@@ -1250,6 +2732,28 @@
       "sourceIds": [
         "docker",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.cloud-networking.dns-and-tls-at-deployment-boundaries",
+          "title": "DNS and TLS at deployment boundaries"
+        },
+        {
+          "code": "topic.cloud-networking.reverse-proxies-and-request-forwarding",
+          "title": "Reverse proxies and request forwarding"
+        },
+        {
+          "code": "topic.cloud-networking.compute-storage-and-network-primitives",
+          "title": "Compute, storage and network primitives"
+        },
+        {
+          "code": "topic.cloud-networking.iam-roles-and-least-privilege",
+          "title": "IAM roles and least privilege"
+        },
+        {
+          "code": "topic.cloud-networking.network-exposure-and-private-connectivity",
+          "title": "Network exposure and private connectivity"
+        }
       ]
     },
     {
@@ -1267,6 +2771,28 @@
       "sourceIds": [
         "docker",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.infrastructure-changes.declarative-infrastructure-and-state",
+          "title": "Declarative infrastructure and state"
+        },
+        {
+          "code": "topic.infrastructure-changes.planning-and-reviewing-infrastructure-changes",
+          "title": "Planning and reviewing infrastructure changes"
+        },
+        {
+          "code": "topic.infrastructure-changes.orchestration-and-service-scheduling-basics",
+          "title": "Orchestration and service scheduling basics"
+        },
+        {
+          "code": "topic.infrastructure-changes.feature-flags-and-gradual-exposure",
+          "title": "Feature flags and gradual exposure"
+        },
+        {
+          "code": "topic.infrastructure-changes.rolling-and-canary-deployments",
+          "title": "Rolling and canary deployments"
+        }
       ]
     },
     {
@@ -1284,6 +2810,28 @@
       "sourceIds": [
         "otel",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.structured-logs.structured-log-fields-and-event-names",
+          "title": "Structured log fields and event names"
+        },
+        {
+          "code": "topic.structured-logs.log-levels-and-actionable-messages",
+          "title": "Log levels and actionable messages"
+        },
+        {
+          "code": "topic.structured-logs.request-and-correlation-identifiers",
+          "title": "Request and correlation identifiers"
+        },
+        {
+          "code": "topic.structured-logs.following-a-request-across-components",
+          "title": "Following a request across components"
+        },
+        {
+          "code": "topic.structured-logs.redacting-secrets-and-personal-data",
+          "title": "Redacting secrets and personal data"
+        }
       ]
     },
     {
@@ -1305,6 +2853,32 @@
       "sourceIds": [
         "otel",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.service-telemetry.metrics-counters-gauges-and-histograms",
+          "title": "Metrics: counters, gauges and histograms"
+        },
+        {
+          "code": "topic.service-telemetry.label-cardinality-and-bounded-dimensions",
+          "title": "Label cardinality and bounded dimensions"
+        },
+        {
+          "code": "topic.service-telemetry.latency-percentiles-and-distributions",
+          "title": "Latency percentiles and distributions"
+        },
+        {
+          "code": "topic.service-telemetry.traffic-errors-and-saturation-signals",
+          "title": "Traffic, errors and saturation signals"
+        },
+        {
+          "code": "topic.service-telemetry.distributed-traces-and-spans",
+          "title": "Distributed traces and spans"
+        },
+        {
+          "code": "topic.service-telemetry.operational-dashboards-and-actionable-alerts",
+          "title": "Operational dashboards and actionable alerts"
+        }
       ]
     },
     {
@@ -1324,6 +2898,32 @@
       "sourceIds": [
         "otel",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.service-objectives.availability-and-user-visible-reliability",
+          "title": "Availability and user-visible reliability"
+        },
+        {
+          "code": "topic.service-objectives.service-level-indicators-slis",
+          "title": "Service level indicators (SLIs)"
+        },
+        {
+          "code": "topic.service-objectives.service-level-objectives-slos",
+          "title": "Service level objectives (SLOs)"
+        },
+        {
+          "code": "topic.service-objectives.error-budgets-and-prioritization",
+          "title": "Error budgets and prioritization"
+        },
+        {
+          "code": "topic.service-objectives.liveness-readiness-and-dependency-checks",
+          "title": "Liveness, readiness and dependency checks"
+        },
+        {
+          "code": "topic.service-objectives.degradation-and-fallback-behavior",
+          "title": "Degradation and fallback behavior"
+        }
       ]
     },
     {
@@ -1342,6 +2942,28 @@
       "sourceIds": [
         "otel",
         "sre"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.incident-response.assessing-impact-and-stabilizing-service",
+          "title": "Assessing impact and stabilizing service"
+        },
+        {
+          "code": "topic.incident-response.rollback-and-recovery-actions",
+          "title": "Rollback and recovery actions"
+        },
+        {
+          "code": "topic.incident-response.building-an-incident-timeline",
+          "title": "Building an incident timeline"
+        },
+        {
+          "code": "topic.incident-response.causal-analysis-and-blameless-postmortems",
+          "title": "Causal analysis and blameless postmortems"
+        },
+        {
+          "code": "topic.incident-response.recovery-time-and-recovery-point-objectives",
+          "title": "Recovery time and recovery point objectives"
+        }
       ]
     },
     {
@@ -1365,6 +2987,32 @@
       "sourceIds": [
         "sre",
         "node"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.performance-measurement.representative-workloads-and-baselines",
+          "title": "Representative workloads and baselines"
+        },
+        {
+          "code": "topic.performance-measurement.latency-percentiles-and-throughput",
+          "title": "Latency percentiles and throughput"
+        },
+        {
+          "code": "topic.performance-measurement.cpu-profiling-and-hot-paths",
+          "title": "CPU profiling and hot paths"
+        },
+        {
+          "code": "topic.performance-measurement.heap-profiling-and-allocation-behavior",
+          "title": "Heap profiling and allocation behavior"
+        },
+        {
+          "code": "topic.performance-measurement.i-o-bottlenecks-and-waiting-time",
+          "title": "I/O bottlenecks and waiting time"
+        },
+        {
+          "code": "topic.performance-measurement.reproducible-benchmarks",
+          "title": "Reproducible benchmarks"
+        }
       ]
     },
     {
@@ -1385,6 +3033,32 @@
       "sourceIds": [
         "sre",
         "node"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.performance-improvements.diagnosing-slow-database-queries",
+          "title": "Diagnosing slow database queries"
+        },
+        {
+          "code": "topic.performance-improvements.bounded-caches-and-invalidation",
+          "title": "Bounded caches and invalidation"
+        },
+        {
+          "code": "topic.performance-improvements.batching-and-reducing-round-trips",
+          "title": "Batching and reducing round trips"
+        },
+        {
+          "code": "topic.performance-improvements.moving-work-off-request-paths",
+          "title": "Moving work off request paths"
+        },
+        {
+          "code": "topic.performance-improvements.tuning-connection-and-worker-pools",
+          "title": "Tuning connection and worker pools"
+        },
+        {
+          "code": "topic.performance-improvements.comparing-before-after-measurements",
+          "title": "Comparing before/after measurements"
+        }
       ]
     },
     {
@@ -1403,6 +3077,28 @@
       ],
       "sourceIds": [
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.safe-maintenance.tracing-behavior-in-unfamiliar-code",
+          "title": "Tracing behavior in unfamiliar code"
+        },
+        {
+          "code": "topic.safe-maintenance.finding-callers-and-affected-boundaries",
+          "title": "Finding callers and affected boundaries"
+        },
+        {
+          "code": "topic.safe-maintenance.focused-bug-fixes-and-regression-protection",
+          "title": "Focused bug fixes and regression protection"
+        },
+        {
+          "code": "topic.safe-maintenance.incremental-refactoring",
+          "title": "Incremental refactoring"
+        },
+        {
+          "code": "topic.safe-maintenance.evaluating-dependency-upgrades",
+          "title": "Evaluating dependency upgrades"
+        }
       ]
     },
     {
@@ -1420,6 +3116,28 @@
       ],
       "sourceIds": [
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.system-evolution.backward-compatible-contract-changes",
+          "title": "Backward-compatible contract changes"
+        },
+        {
+          "code": "topic.system-evolution.deprecation-and-removal-plans",
+          "title": "Deprecation and removal plans"
+        },
+        {
+          "code": "topic.system-evolution.recoverable-data-migrations",
+          "title": "Recoverable data migrations"
+        },
+        {
+          "code": "topic.system-evolution.compatibility-across-deployed-versions",
+          "title": "Compatibility across deployed versions"
+        },
+        {
+          "code": "topic.system-evolution.prioritizing-technical-debt-with-evidence",
+          "title": "Prioritizing technical debt with evidence"
+        }
       ]
     },
     {
@@ -1440,6 +3158,28 @@
       ],
       "sourceIds": [
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.requirements.users-stakeholders-and-desired-outcomes",
+          "title": "Users, stakeholders and desired outcomes"
+        },
+        {
+          "code": "topic.requirements.business-rules-and-constraints",
+          "title": "Business rules and constraints"
+        },
+        {
+          "code": "topic.requirements.edge-cases-and-error-scenarios",
+          "title": "Edge cases and error scenarios"
+        },
+        {
+          "code": "topic.requirements.assumptions-and-unanswered-questions",
+          "title": "Assumptions and unanswered questions"
+        },
+        {
+          "code": "topic.requirements.observable-acceptance-criteria",
+          "title": "Observable acceptance criteria"
+        }
       ]
     },
     {
@@ -1458,6 +3198,28 @@
       ],
       "sourceIds": [
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.scope-tradeoffs.vertical-slices-and-incremental-delivery",
+          "title": "Vertical slices and incremental delivery"
+        },
+        {
+          "code": "topic.scope-tradeoffs.identifying-the-riskiest-assumptions",
+          "title": "Identifying the riskiest assumptions"
+        },
+        {
+          "code": "topic.scope-tradeoffs.early-validation-of-technical-risks",
+          "title": "Early validation of technical risks"
+        },
+        {
+          "code": "topic.scope-tradeoffs.negotiating-scope-and-trade-offs",
+          "title": "Negotiating scope and trade-offs"
+        },
+        {
+          "code": "topic.scope-tradeoffs.relating-technical-choices-to-business-impact",
+          "title": "Relating technical choices to business impact"
+        }
       ]
     },
     {
@@ -1476,6 +3238,28 @@
       "sourceIds": [
         "sfia",
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.collaboration.breaking-work-into-reviewable-tasks",
+          "title": "Breaking work into reviewable tasks"
+        },
+        {
+          "code": "topic.collaboration.estimates-and-explicit-uncertainty",
+          "title": "Estimates and explicit uncertainty"
+        },
+        {
+          "code": "topic.collaboration.clear-requests-for-help",
+          "title": "Clear requests for help"
+        },
+        {
+          "code": "topic.collaboration.communicating-blockers-early",
+          "title": "Communicating blockers early"
+        },
+        {
+          "code": "topic.collaboration.giving-and-responding-to-code-review",
+          "title": "Giving and responding to code review"
+        }
       ]
     },
     {
@@ -1496,6 +3280,28 @@
       "sourceIds": [
         "sfia",
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.feature-ownership.tracing-an-existing-feature-end-to-end",
+          "title": "Tracing an existing feature end to end"
+        },
+        {
+          "code": "topic.feature-ownership.planning-delivery-and-validation",
+          "title": "Planning delivery and validation"
+        },
+        {
+          "code": "topic.feature-ownership.clarifying-ambiguous-requirements",
+          "title": "Clarifying ambiguous requirements"
+        },
+        {
+          "code": "topic.feature-ownership.managing-delivery-risks-and-dependencies",
+          "title": "Managing delivery risks and dependencies"
+        },
+        {
+          "code": "topic.feature-ownership.choosing-when-to-decide-or-escalate",
+          "title": "Choosing when to decide or escalate"
+        }
       ]
     },
     {
@@ -1516,6 +3322,32 @@
       "sourceIds": [
         "sfia",
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.technical-communication.writing-architecture-decision-records",
+          "title": "Writing architecture decision records"
+        },
+        {
+          "code": "topic.technical-communication.rfcs-and-proposals-for-discussion",
+          "title": "RFCs and proposals for discussion"
+        },
+        {
+          "code": "topic.technical-communication.explaining-alternatives-and-trade-offs",
+          "title": "Explaining alternatives and trade-offs"
+        },
+        {
+          "code": "topic.technical-communication.supporting-decisions-with-evidence",
+          "title": "Supporting decisions with evidence"
+        },
+        {
+          "code": "topic.technical-communication.mentoring-and-useful-technical-feedback",
+          "title": "Mentoring and useful technical feedback"
+        },
+        {
+          "code": "topic.technical-communication.ethical-judgment-and-professional-responsibility",
+          "title": "Ethical judgment and professional responsibility"
+        }
       ]
     },
     {
@@ -1533,6 +3365,28 @@
       "sourceIds": [
         "nist",
         "ai-outputs"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.model-integration.typed-model-clients-and-api-errors",
+          "title": "Typed model clients and API errors"
+        },
+        {
+          "code": "topic.model-integration.sampling-parameters-and-output-variability",
+          "title": "Sampling parameters and output variability"
+        },
+        {
+          "code": "topic.model-integration.structured-responses-and-schema-validation",
+          "title": "Structured responses and schema validation"
+        },
+        {
+          "code": "topic.model-integration.streaming-model-responses",
+          "title": "Streaming model responses"
+        },
+        {
+          "code": "topic.model-integration.request-cancellation-and-timeouts",
+          "title": "Request cancellation and timeouts"
+        }
       ]
     },
     {
@@ -1550,6 +3404,28 @@
       ],
       "sourceIds": [
         "nist"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.model-operations.prompt-context-and-trust-boundaries",
+          "title": "Prompt context and trust boundaries"
+        },
+        {
+          "code": "topic.model-operations.token-limits-and-context-budgets",
+          "title": "Token limits and context budgets"
+        },
+        {
+          "code": "topic.model-operations.tracking-usage-and-cost",
+          "title": "Tracking usage and cost"
+        },
+        {
+          "code": "topic.model-operations.bounded-retries-and-model-failures",
+          "title": "Bounded retries and model failures"
+        },
+        {
+          "code": "topic.model-operations.tracing-prompts-models-and-execution-metadata",
+          "title": "Tracing prompts, models and execution metadata"
+        }
       ]
     },
     {
@@ -1566,6 +3442,28 @@
       ],
       "sourceIds": [
         "nist"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.responsible-ai.data-disclosure-and-provider-boundaries",
+          "title": "Data disclosure and provider boundaries"
+        },
+        {
+          "code": "topic.responsible-ai.retention-and-privacy-requirements",
+          "title": "Retention and privacy requirements"
+        },
+        {
+          "code": "topic.responsible-ai.human-review-of-consequential-outputs",
+          "title": "Human review of consequential outputs"
+        },
+        {
+          "code": "topic.responsible-ai.documenting-risks-and-failure-modes",
+          "title": "Documenting risks and failure modes"
+        },
+        {
+          "code": "topic.responsible-ai.choosing-deterministic-alternatives",
+          "title": "Choosing deterministic alternatives"
+        }
       ]
     },
     {
@@ -1583,6 +3481,28 @@
       "sourceIds": [
         "nist",
         "ai-tools"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.tool-use.tool-schemas-and-narrow-capabilities",
+          "title": "Tool schemas and narrow capabilities"
+        },
+        {
+          "code": "topic.tool-use.authorization-before-tool-execution",
+          "title": "Authorization before tool execution"
+        },
+        {
+          "code": "topic.tool-use.user-isolated-conversation-state",
+          "title": "User-isolated conversation state"
+        },
+        {
+          "code": "topic.tool-use.prompt-versions-and-release-tracking",
+          "title": "Prompt versions and release tracking"
+        },
+        {
+          "code": "topic.tool-use.treating-retrieved-content-as-untrusted",
+          "title": "Treating retrieved content as untrusted"
+        }
       ]
     },
     {
@@ -1600,6 +3520,28 @@
       "sourceIds": [
         "nist",
         "evals"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.ai-evaluation.representative-datasets-and-edge-cases",
+          "title": "Representative datasets and edge cases"
+        },
+        {
+          "code": "topic.ai-evaluation.comparing-prompt-and-model-versions",
+          "title": "Comparing prompt and model versions"
+        },
+        {
+          "code": "topic.ai-evaluation.classifying-failure-clusters",
+          "title": "Classifying failure clusters"
+        },
+        {
+          "code": "topic.ai-evaluation.human-judging-and-evaluation-rubrics",
+          "title": "Human judging and evaluation rubrics"
+        },
+        {
+          "code": "topic.ai-evaluation.calibrating-model-based-judges",
+          "title": "Calibrating model-based judges"
+        }
       ]
     },
     {
@@ -1620,6 +3562,28 @@
         "nist",
         "rag",
         "evals"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.retrieval.embeddings-and-similarity-measures",
+          "title": "Embeddings and similarity measures"
+        },
+        {
+          "code": "topic.retrieval.chunking-and-document-metadata",
+          "title": "Chunking and document metadata"
+        },
+        {
+          "code": "topic.retrieval.filtered-and-hybrid-retrieval",
+          "title": "Filtered and hybrid retrieval"
+        },
+        {
+          "code": "topic.retrieval.grounding-answers-in-retrieved-content",
+          "title": "Grounding answers in retrieved content"
+        },
+        {
+          "code": "topic.retrieval.measuring-retrieval-quality",
+          "title": "Measuring retrieval quality"
+        }
       ]
     },
     {
@@ -1639,6 +3603,28 @@
       "sourceIds": [
         "nist",
         "ai-tools"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.bounded-agents.tool-protocols-and-execution-contracts",
+          "title": "Tool protocols and execution contracts"
+        },
+        {
+          "code": "topic.bounded-agents.stopping-conditions-and-step-budgets",
+          "title": "Stopping conditions and step budgets"
+        },
+        {
+          "code": "topic.bounded-agents.authorization-and-approval-boundaries",
+          "title": "Authorization and approval boundaries"
+        },
+        {
+          "code": "topic.bounded-agents.prompt-injection-and-untrusted-inputs",
+          "title": "Prompt injection and untrusted inputs"
+        },
+        {
+          "code": "topic.bounded-agents.safe-tool-execution-and-failure-recovery",
+          "title": "Safe tool execution and failure recovery"
+        }
       ]
     },
     {
@@ -1653,6 +3639,28 @@
       ],
       "sourceIds": [
         "nist"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.ai-routing.routing-by-task-quality-requirements",
+          "title": "Routing by task quality requirements"
+        },
+        {
+          "code": "topic.ai-routing.comparing-model-cost-and-latency",
+          "title": "Comparing model cost and latency"
+        },
+        {
+          "code": "topic.ai-routing.cache-keys-privacy-and-invalidation",
+          "title": "Cache keys, privacy and invalidation"
+        },
+        {
+          "code": "topic.ai-routing.fallback-behavior-and-routing-evaluation",
+          "title": "Fallback behavior and routing evaluation"
+        },
+        {
+          "code": "topic.ai-routing.python-components-and-integration-contracts",
+          "title": "Python components and integration contracts"
+        }
       ]
     },
     {
@@ -1672,6 +3680,28 @@
       ],
       "sourceIds": [
         "mdn"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.web-interface.semantic-html-and-document-structure",
+          "title": "Semantic HTML and document structure"
+        },
+        {
+          "code": "topic.web-interface.responsive-css-and-layout",
+          "title": "Responsive CSS and layout"
+        },
+        {
+          "code": "topic.web-interface.browser-events-and-form-behavior",
+          "title": "Browser events and form behavior"
+        },
+        {
+          "code": "topic.web-interface.labels-validation-and-error-messages",
+          "title": "Labels, validation and error messages"
+        },
+        {
+          "code": "topic.web-interface.keyboard-navigation-and-focus",
+          "title": "Keyboard navigation and focus"
+        }
       ]
     },
     {
@@ -1693,6 +3723,28 @@
       ],
       "sourceIds": [
         "mdn"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.frontend-data.component-boundaries-and-rendering",
+          "title": "Component boundaries and rendering"
+        },
+        {
+          "code": "topic.frontend-data.local-state-and-persistent-browser-storage",
+          "title": "Local state and persistent browser storage"
+        },
+        {
+          "code": "topic.frontend-data.api-loading-empty-and-error-states",
+          "title": "API loading, empty and error states"
+        },
+        {
+          "code": "topic.frontend-data.session-boundaries-and-cache-isolation",
+          "title": "Session boundaries and cache isolation"
+        },
+        {
+          "code": "topic.frontend-data.browser-developer-tools-and-network-diagnosis",
+          "title": "Browser developer tools and network diagnosis"
+        }
       ]
     },
     {
@@ -1714,6 +3766,28 @@
       "sourceIds": [
         "nist",
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.ai-assisted-work.defining-bounded-tasks-for-ai-assistance",
+          "title": "Defining bounded tasks for AI assistance"
+        },
+        {
+          "code": "topic.ai-assisted-work.independent-tests-and-verification",
+          "title": "Independent tests and verification"
+        },
+        {
+          "code": "topic.ai-assisted-work.isolating-credentials-and-tool-access",
+          "title": "Isolating credentials and tool access"
+        },
+        {
+          "code": "topic.ai-assisted-work.checking-apis-against-authoritative-docs",
+          "title": "Checking APIs against authoritative docs"
+        },
+        {
+          "code": "topic.ai-assisted-work.reviewing-generated-changes-and-owning-results",
+          "title": "Reviewing generated changes and owning results"
+        }
       ]
     },
     {
@@ -1736,6 +3810,28 @@
       "sourceIds": [
         "nist",
         "swebok"
+      ],
+      "subtopics": [
+        {
+          "code": "topic.ai-assisted-judgment.reviewing-dependency-direction",
+          "title": "Reviewing dependency direction"
+        },
+        {
+          "code": "topic.ai-assisted-judgment.spotting-unnecessary-generated-abstractions",
+          "title": "Spotting unnecessary generated abstractions"
+        },
+        {
+          "code": "topic.ai-assisted-judgment.diagnosing-failures-independently",
+          "title": "Diagnosing failures independently"
+        },
+        {
+          "code": "topic.ai-assisted-judgment.reviewing-high-risk-code-and-data-changes",
+          "title": "Reviewing high-risk code and data changes"
+        },
+        {
+          "code": "topic.ai-assisted-judgment.coordinating-ai-assisted-work-and-integration",
+          "title": "Coordinating AI-assisted work and integration"
+        }
       ]
     }
   ]

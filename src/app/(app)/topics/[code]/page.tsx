@@ -3,9 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MainContentContainer } from "@/components/layout/main-content-container";
 import { PageHeader, Section } from "@/components/ui/page-header";
-import { StudyForm } from "@/components/growth/forms";
+import { StudyDialog } from "@/components/growth/study-dialog";
 import { StudyList } from "@/components/growth/study-list";
-import { getGrowth, getStudies } from "@/data/growth";
+import { SubtopicChecklist } from "@/components/growth/subtopic-checklist";
+import { getGrowth, getStudies, getSubtopicCompletions } from "@/data/growth";
 import { getActiveStandard } from "@/data/standard";
 import { GROWTH_CATALOG, TOPIC_BY_CODE } from "@/growth/catalog";
 import { MILESTONE_INFO, ABILITY_LABEL } from "@/growth/model";
@@ -21,10 +22,11 @@ export default async function TopicPage({
 }: PageProps<"/topics/[code]">) {
   const { code } = await params;
   if (!TOPIC_BY_CODE.has(code)) notFound();
-  const [growth, studies, { standard }] = await Promise.all([
+  const [growth, studies, { standard }, completions] = await Promise.all([
     getGrowth(),
     getStudies({ topicCode: code, pageSize: 5 }),
     getActiveStandard(),
+    getSubtopicCompletions(code),
   ]);
   const topic = growth.topics.find((t) => t.code === code)!;
   const statements = new Map(
@@ -42,8 +44,17 @@ export default async function TopicPage({
         }
         title={topic.title}
         description={topic.scope}
+        aside={
+          <StudyDialog
+            topics={[{ code: topic.code, title: topic.title }]}
+            topicCode={topic.code}
+          />
+        }
       />
       <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-secondary">
+        <span>
+          {completions.length}/{topic.subtopics.length} subtopics studied
+        </span>
         <span>{topic.studyCount} studies recorded</span>
         <span>
           {topic.done}/{topic.total} capabilities self-assessed as independent
@@ -56,7 +67,12 @@ export default async function TopicPage({
       </p>
       <div className="grid items-start gap-6 xl:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
         <div className="grid gap-6">
-          <Section title="What can you do with this knowledge?">
+          <SubtopicChecklist
+            topicCode={code}
+            subtopics={topic.subtopics}
+            completions={completions}
+          />
+          <Section variant="plain" title="What can you do with this knowledge?">
             <p className="mb-4 text-sm text-ink-muted">
               Assess these when you can apply them. Studying this topic never
               changes an assessment automatically.
@@ -82,6 +98,8 @@ export default async function TopicPage({
             </ul>
           </Section>
           <Section
+            id="study-history"
+            variant="plain"
             title="Study history"
             aside={
               <Link
@@ -93,15 +111,10 @@ export default async function TopicPage({
               </Link>
             }
           >
-            <StudyList entries={studies.rows} />
+            <StudyList entries={studies.rows} editable />
           </Section>
         </div>
         <div className="grid gap-6">
-          <div id="log-study" className="scroll-mt-6">
-            <Section title="I studied this">
-              <StudyForm topics={[topic]} topicCode={topic.code} />
-            </Section>
-          </div>
           <Section title="References & scope">
             <p className="mb-4 text-xs leading-relaxed text-ink-muted">
               Primary references behind this topic. The grouping and milestone

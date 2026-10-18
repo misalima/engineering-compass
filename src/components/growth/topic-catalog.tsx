@@ -17,6 +17,8 @@ export type TopicCard = {
   done: number;
   total: number;
   studyCount: number;
+  studiedSubtopicCount: number;
+  subtopicCount: number;
 };
 export function TopicCatalog({
   topics,
@@ -155,7 +157,7 @@ export function TopicCatalog({
                 </div>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-ink-secondary">
                   <span>
-                    {t.studyCount} {t.studyCount === 1 ? "study" : "studies"}
+                    {t.studiedSubtopicCount}/{t.subtopicCount} studied
                   </span>
                   <span>
                     {t.done}/{t.total} independent{" "}
@@ -188,7 +190,7 @@ export function TopicCatalog({
               </p>
               <p className="mt-2 text-xs text-ink-muted">{t.state}</p>
               <div className="mt-3 flex justify-between gap-3 border-t border-line pt-3 text-xs">
-                <span>{t.studyCount} studies</span>
+                <span>{t.studiedSubtopicCount}/{t.subtopicCount} studied</span>
                 <span>
                   {t.done}/{t.total} independent{" "}
                   <IconArrow className="ml-1 inline-block size-3.5 shrink-0 align-middle" />

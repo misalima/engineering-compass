@@ -43,10 +43,28 @@ export async function seedGrowth(db: Db, versionId: number) {
       .values(topics)
       .onConflictDoUpdate({
         target: t.studyTopics.code,
-        // Bibliography can improve without changing topic meaning, milestone or competency identity.
-        set: { sourceIds: sql`excluded.source_ids` },
-        setWhere: eq(t.studyTopics.catalogVersion, GROWTH_CATALOG.version),
+        // Editorial labels can improve without changing competency identity or milestone requirements.
+        set: {
+          title: sql`excluded.title`,
+          scope: sql`excluded.scope`,
+          catalogVersion: sql`excluded.catalog_version`,
+          sourceIds: sql`excluded.source_ids`,
+        },
       });
     await tx.insert(t.topicCompetencies).values(links).onConflictDoNothing();
+    const subtopics = GROWTH_CATALOG.topics.flatMap((topic) =>
+      topic.subtopics.map((subtopic, order) => ({
+        ...subtopic,
+        topicCode: topic.code,
+        order,
+      })),
+    );
+    await tx
+      .insert(t.studySubtopics)
+      .values(subtopics)
+      .onConflictDoUpdate({
+        target: t.studySubtopics.code,
+        set: { title: sql`excluded.title`, order: sql`excluded.order` },
+      });
   });
 }

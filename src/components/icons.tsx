@@ -12,4 +12,6 @@ export {
   Plus as IconPlus,
   ChevronRight as IconArrow,
   X as IconClose,
+  Check as IconCheck,
+  ChevronDown as IconChevronDown,
 } from "lucide-react";

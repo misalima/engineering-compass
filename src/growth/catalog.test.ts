@@ -20,6 +20,15 @@ describe("published path v2", () => {
     );
     for (const topic of catalog.topics) {
       expect(MILESTONES).toContain(topic.milestone);
+      expect(topic.subtopics.length).toBeGreaterThanOrEqual(3);
+      expect(topic.subtopics.length).toBeLessThanOrEqual(10);
+      expect(new Set(topic.subtopics.map((s) => s.code)).size).toBe(
+        topic.subtopics.length,
+      );
+      for (const subtopic of topic.subtopics) {
+        expect(subtopic.code.startsWith(`${topic.code}.`)).toBe(true);
+        expect(subtopic.title.length).toBeGreaterThan(3);
+      }
       expect(topic.scope.length).toBeGreaterThan(20);
       expect(topic.competencyCodes.length).toBeGreaterThan(0);
       expect(topic.competencyCodes.length).toBeLessThanOrEqual(10);

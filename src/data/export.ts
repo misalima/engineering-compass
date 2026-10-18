@@ -1,5 +1,5 @@
 import "server-only";
-import { allStudies, loadCareerProfile, studySummaries, growthAssessments } from "@/db/growth";
+import { listSubtopicCompletions, allStudies, loadCareerProfile, studySummaries, growthAssessments } from "@/db/growth";
 import { GROWTH_CATALOG } from "@/growth/catalog";
 import { buildGrowth } from "@/growth/progress";
 import { GOALS, STACKS, MILESTONE_INFO } from "@/growth/model";
@@ -12,7 +12,7 @@ import { getOverview } from "./standard";
 export async function exportData() {
   const db = await ownerDb();
   const { versionId, standard, details, progress } = await getOverview();
-  const [projects, events, studies, careerProfile, summaries, growthDetails] = await Promise.all([listProjects(db), listAllEvents(db), allStudies(db), loadCareerProfile(db), studySummaries(db), growthAssessments(db, versionId)]);
+  const [projects, events, studies, careerProfile, summaries, growthDetails, subtopicCompletions] = await Promise.all([listProjects(db), listAllEvents(db), allStudies(db), loadCareerProfile(db), studySummaries(db), growthAssessments(db, versionId), listSubtopicCompletions(db)]);
   const career = buildGrowth(GROWTH_CATALOG, careerProfile, growthDetails, summaries.map((s) => ({ ...s, lastStudiedOn: s.lastStudiedOn! })));
   const entries = (m: Map<string, AssessmentDetail>) => [...m].map(([code, a]) => ({ code, ...a }));
   return {
@@ -25,6 +25,7 @@ export async function exportData() {
     events,
     careerProfile,
     studies,
+    subtopicCompletions,
     careerMilestones: career.milestones.map(({ id, title, done, total, evidenced, complete }) => ({ id, title, done, total, evidenced, complete })),
     pathSnapshot: GROWTH_CATALOG,
     standardSnapshot: standard,
@@ -44,6 +45,16 @@ export function toMarkdown(data: Awaited<ReturnType<typeof exportData>>) {
 
   lines.push("## Career path", "", `- Goal: ${GOALS[data.careerProfile.goal]}`, `- Primary stack: ${STACKS[data.careerProfile.primaryStack]}`, `- Tools: ${data.careerProfile.stackTools.join(", ")}`, `- Target: ${MILESTONE_INFO[data.careerProfile.targetMilestone].title}`, "");
   for (const m of data.careerMilestones) lines.push(`- ${m.title}: ${m.done}/${m.total} capabilities independent; ${m.evidenced} with evidence`);
+  lines.push("", "## Study checklist", "");
+  const completedSubtopics = new Map(data.subtopicCompletions.map((c) => [c.subtopicCode, c.studiedOn]));
+  for (const topic of data.pathSnapshot.topics) {
+    lines.push(`### ${topic.title}`, "");
+    for (const subtopic of topic.subtopics) {
+      const studiedOn = completedSubtopics.get(subtopic.code);
+      lines.push(`- [${studiedOn ? "x" : " "}] ${subtopic.title}${studiedOn ? ` — ${studiedOn}` : ""}`);
+    }
+    lines.push("");
+  }
   lines.push("", "## Study log", "");
   const topics = new Map(data.pathSnapshot.topics.map((t) => [t.code, t.title]));
   for (const study of data.studies) {

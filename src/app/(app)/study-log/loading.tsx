@@ -2,16 +2,12 @@ import {
   SkeletonHeader,
   SkeletonPage,
   SkeletonPanel,
-  SkeletonStudyForm,
   SkeletonStudies,
 } from "@/components/ui/skeleton";
 export default function Loading() {
   return (
     <SkeletonPage>
-      <SkeletonHeader />
-      <SkeletonPanel>
-        <SkeletonStudyForm />
-      </SkeletonPanel>
+      <SkeletonHeader aside />
       <SkeletonPanel>
         <SkeletonStudies />
       </SkeletonPanel>

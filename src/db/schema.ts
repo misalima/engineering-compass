@@ -212,3 +212,17 @@ export const studyEntries = pgTable("study_entries", {
   check("study_entries_notes_length", sql`notes IS NULL OR length(notes) <= 5000`),
   check("study_entries_link_http", sql`link IS NULL OR link ~ '^https?://'`),
 ]);
+
+// Editorial study units and owner progress stay separate from practical assessments.
+export const studySubtopics = pgTable("study_subtopics", {
+  code: text("code").primaryKey(),
+  topicCode: text("topic_code").notNull().references(() => studyTopics.code),
+  title: text("title").notNull(),
+  order: integer("order").notNull(),
+}, (t) => [index().on(t.topicCode)]);
+
+export const subtopicCompletions = pgTable("subtopic_completions", {
+  subtopicCode: text("subtopic_code").primaryKey().references(() => studySubtopics.code),
+  studiedOn: date("studied_on").notNull(),
+  createdAt: createdAt(),
+});

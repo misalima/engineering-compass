@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { MainContentContainer } from "@/components/layout/main-content-container";
 import { PageHeader, Section } from "@/components/ui/page-header";
-import { StudyForm } from "@/components/growth/forms";
+import { StudyDialog } from "@/components/growth/study-dialog";
 import { StudyList } from "@/components/growth/study-list";
 import { getStudies } from "@/data/growth";
 import { GROWTH_CATALOG, TOPIC_BY_CODE } from "@/growth/catalog";
@@ -30,16 +30,16 @@ export default async function StudyLogPage({
       <PageHeader
         title="Your study history"
         description="Capture what you covered, when, and anything worth keeping. Practical capability is assessed separately."
+        aside={
+          <StudyDialog
+            topics={GROWTH_CATALOG.topics.map(({ code, title }) => ({
+              code,
+              title,
+            }))}
+            topicCode={topicCode}
+          />
+        }
       />
-      <Section title="Log a study">
-        <StudyForm
-          topics={GROWTH_CATALOG.topics.map(({ code, title }) => ({
-            code,
-            title,
-          }))}
-          topicCode={topicCode}
-        />
-      </Section>
       <Section
         title={topicCode ? TOPIC_BY_CODE.get(topicCode)!.title : "All studies"}
         aside={

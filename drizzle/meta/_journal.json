@@ -15,6 +15,13 @@
       "when": 1791223585988,
       "tag": "0001_complex_skrulls",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792363946837,
+      "tag": "0002_parallel_tyrannus",
+      "breakpoints": true
     }
   ]
 }

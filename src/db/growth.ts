@@ -1,7 +1,7 @@
-import { count, desc, eq, max, sql } from "drizzle-orm";
+import { and, count, desc, eq, max, sql } from "drizzle-orm";
 import { DEFAULT_PROFILE, type CareerProfile } from "@/growth/model";
 import type { z } from "zod";
-import type { studyInput } from "@/growth/validation";
+import type { studyInput, subtopicInput } from "@/growth/validation";
 import * as t from "./schema";
 import type { Db } from "./types";
 
@@ -93,4 +93,66 @@ export async function growthAssessments(db: Db, versionId: number) {
     )
     .where(eq(t.competencies.standardVersionId, versionId));
   return rows;
+}
+
+export function listSubtopicCompletions(db: Db, topicCode?: string) {
+  return db
+    .select({
+      subtopicCode: t.subtopicCompletions.subtopicCode,
+      studiedOn: t.subtopicCompletions.studiedOn,
+    })
+    .from(t.subtopicCompletions)
+    .innerJoin(
+      t.studySubtopics,
+      eq(t.studySubtopics.code, t.subtopicCompletions.subtopicCode),
+    )
+    .where(topicCode ? eq(t.studySubtopics.topicCode, topicCode) : undefined);
+}
+
+export async function setSubtopicStudied(
+  db: Db,
+  input: z.infer<typeof subtopicInput>,
+) {
+  return db.transaction(async (tx) => {
+    const [subtopic] = await tx
+      .select()
+      .from(t.studySubtopics)
+      .where(
+        and(
+          eq(t.studySubtopics.code, input.subtopicCode),
+          eq(t.studySubtopics.topicCode, input.topicCode),
+        ),
+      );
+    if (!subtopic) throw new Error("Unknown subtopic for this topic");
+    if (!input.checked) {
+      // Unchecking changes coverage while preserving the historical study entry.
+      await tx
+        .delete(t.subtopicCompletions)
+        .where(eq(t.subtopicCompletions.subtopicCode, input.subtopicCode));
+      return;
+    }
+    const inserted = await tx
+      .insert(t.subtopicCompletions)
+      .values({ subtopicCode: input.subtopicCode, studiedOn: input.studiedOn })
+      .onConflictDoNothing()
+      .returning();
+    // Repeated submissions are idempotent; progress and history commit together.
+    if (inserted.length)
+      await tx.insert(t.studyEntries).values({
+        topicCode: input.topicCode,
+        studiedOn: input.studiedOn,
+        notes: `Studied subtopic: ${subtopic.title}`,
+      });
+  });
+}
+
+export function subtopicStudyCounts(db: Db) {
+  return db
+    .select({ topicCode: t.studySubtopics.topicCode, count: count() })
+    .from(t.subtopicCompletions)
+    .innerJoin(
+      t.studySubtopics,
+      eq(t.studySubtopics.code, t.subtopicCompletions.subtopicCode),
+    )
+    .groupBy(t.studySubtopics.topicCode);
 }

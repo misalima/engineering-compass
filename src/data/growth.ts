@@ -3,7 +3,7 @@ import { cache } from "react";
 import * as repo from "@/db/growth";
 import { GROWTH_CATALOG, TOPIC_BY_CODE } from "@/growth/catalog";
 import { buildGrowth } from "@/growth/progress";
-import { profileInput, studyInput } from "@/growth/validation";
+import { profileInput, studyInput, subtopicInput } from "@/growth/validation";
 import { ownerDb } from "./auth";
 import { getActiveStandard } from "./standard";
 
@@ -45,4 +45,20 @@ export async function saveStudy(input: unknown, id?: number) {
 }
 export async function deleteStudy(id: number) {
   await repo.deleteStudy(await ownerDb(), id);
+}
+
+export async function getSubtopicCompletions(topicCode: string) {
+  return repo.listSubtopicCompletions(await ownerDb(), topicCode);
+}
+export async function setSubtopicStudied(input: unknown) {
+  const db = await ownerDb();
+  const parsed = subtopicInput.parse(input);
+  const topic = TOPIC_BY_CODE.get(parsed.topicCode);
+  if (!topic?.subtopics.some((s) => s.code === parsed.subtopicCode))
+    throw new Error("Unknown subtopic");
+  await repo.setSubtopicStudied(db, parsed);
+}
+
+export async function getSubtopicStudyCounts() {
+  return repo.subtopicStudyCounts(await ownerDb());
 }

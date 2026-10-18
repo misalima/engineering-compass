@@ -1,11 +1,12 @@
 "use client";
 
-import { useActionState, useState } from "react";
+import { useActionState, useEffect, useState } from "react";
 import {
   saveStudyAction,
   deleteStudyAction,
 } from "@/app/(app)/study-log/actions";
 import { saveCareerAction } from "@/app/(app)/settings/career-actions";
+import { IconChevronDown } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 import {
   GOALS,
@@ -101,6 +102,8 @@ export function CareerForm({ profile }: { profile: CareerProfile }) {
 type StudyFormProps = {
   topics: { code: string; title: string }[];
   topicCode?: string;
+  onSaved?: () => void;
+  onCancel?: () => void;
   initial?: {
     id: number;
     topicCode: string;
@@ -109,8 +112,17 @@ type StudyFormProps = {
     link: string | null;
   };
 };
-export function StudyForm({ topics, topicCode, initial }: StudyFormProps) {
+export function StudyForm({
+  topics,
+  topicCode,
+  initial,
+  onSaved,
+  onCancel,
+}: StudyFormProps) {
   const [state, action, pending] = useActionState(saveStudyAction, null);
+  useEffect(() => {
+    if (state?.ok) onSaved?.();
+  }, [state, onSaved]);
   // Browser-local date, computed on focus when the user starts a new entry (no server timezone assumption).
   const [date, setDate] = useState(initial?.studiedOn ?? "");
   const [notes, setNotes] = useState(initial?.notes ?? "");
@@ -132,26 +144,42 @@ export function StudyForm({ topics, topicCode, initial }: StudyFormProps) {
   return (
     <form action={action} onFocus={setToday} className="grid gap-4">
       {initial ? <input type="hidden" name="id" value={initial.id} /> : null}
-      <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_12rem]">
-        <label className={label}>
-          Topic
-          <select
-            name="topicCode"
-            required
-            value={selected}
-            onChange={(e) => setSelected(e.target.value)}
-            className={field}
-          >
-            <option value="" disabled>
-              Select what you studied
-            </option>
-            {topics.map((t) => (
-              <option key={t.code} value={t.code}>
-                {t.title}
-              </option>
-            ))}
-          </select>
-        </label>
+      <div className="grid min-w-0 gap-4">
+        {topics.length === 1 && selected === topics[0].code ? (
+          <div className="min-w-0">
+            <p className={label}>Topic</p>
+            <p className="mt-2 break-words text-sm font-medium leading-relaxed">
+              {topics[0].title}
+            </p>
+            <input type="hidden" name="topicCode" value={selected} />
+          </div>
+        ) : (
+          <label className={`${label} min-w-0`}>
+            Topic
+            <span className="relative mt-2 block min-w-0">
+              <select
+                name="topicCode"
+                required
+                value={selected}
+                onChange={(e) => setSelected(e.target.value)}
+                className="block w-full min-w-0 appearance-none truncate rounded-[var(--radius-sm)] border border-line-strong bg-surface-base bg-none py-2.5 pl-3 pr-11 text-sm text-ink focus:border-accent"
+              >
+                <option value="" disabled>
+                  Select what you studied
+                </option>
+                {topics.map((t) => (
+                  <option key={t.code} value={t.code}>
+                    {t.title}
+                  </option>
+                ))}
+              </select>
+              <IconChevronDown
+                aria-hidden="true"
+                className="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2 text-ink-muted"
+              />
+            </span>
+          </label>
+        )}
         <label className={label}>
           Study date
           <input
@@ -193,7 +221,15 @@ export function StudyForm({ topics, topicCode, initial }: StudyFormProps) {
         <Button type="submit" disabled={pending}>
           {pending ? "Saving…" : initial ? "Save changes" : "Log study"}
         </Button>
-        <span role="status" className="text-sm text-ink-secondary">
+        {onCancel ? (
+          <Button variant="secondary" onClick={onCancel} disabled={pending}>
+            Cancel
+          </Button>
+        ) : null}
+        <span
+          role={state?.ok === false ? "alert" : "status"}
+          className="text-sm text-ink-secondary"
+        >
           {state?.message}
         </span>
       </div>

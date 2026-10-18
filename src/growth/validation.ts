@@ -27,3 +27,13 @@ export const profileInput = z.object({
     .transform((a) => [...new Set(a)]),
   targetMilestone: z.enum(MILESTONES),
 });
+
+export const subtopicInput = z.object({
+  topicCode: studyInput.shape.topicCode,
+  subtopicCode: z
+    .string()
+    .max(300)
+    .regex(/^topic\.[a-z0-9-]+\.[a-z0-9-]+$/),
+  checked: z.boolean(),
+  studiedOn: z.iso.date(),
+});

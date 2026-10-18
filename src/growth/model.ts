@@ -63,6 +63,7 @@ export type Topic = {
   milestone: MilestoneId;
   competencyCodes: string[];
   sourceIds: string[];
+  subtopics: { code: string; title: string }[];
 };
 export type Catalog = {
   version: string;
